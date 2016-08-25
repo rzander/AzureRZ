@@ -44,10 +44,11 @@ $credential = New-Object System.Management.Automation.PSCredential("$env:COMPUTE
 
 # Run RZUpdate as the artifactInstaller user
 Enable-PSRemoting -Force -SkipNetworkProfileCheck
-Invoke-Command -ApplicationName $PSScriptRoot + "\RZUpdate.exe"  -Credential $credential -ComputerName $env:COMPUTERNAME -ArgumentList $packageList
+Invoke-Command -ScriptBlock { param ($myPkg,$RZPath) &($RZPath + "\RZUpdate.exe") $myPkg } -Credential $credential -ComputerName $env:COMPUTERNAME -ArgumentList $packageList, $PSScriptRoot
 
 # Delete the artifactInstaller user
 $cn.Delete("User", $userName)
 
 # Delete the artifactInstaller user profile
-gwmi win32_userprofile | where { $_.LocalPath -like "*$userName*" } | foreach { $_.Delete() }
+#gwmi win32_userprofile | where { $_.LocalPath -like "*$userName*" } | foreach { $_.Delete() }
+
