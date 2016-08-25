@@ -1,0 +1,14 @@
+{
+    "$schema": "https://raw.githubusercontent.com/Azure/azure-devtestlab/master/schemas/2015-01-01/dtlArtifacts.json",
+    "title": "Firefox",
+    "description": "Installs Firefox using the RuckZuck package manager",
+    "tags": [
+        "Windows",
+        "Firefox"
+    ],
+    "iconUri": "https://ruckzuck.azurewebsites.net/wcf/GetIcon.ashx?Id=514642",
+    "targetOsType": "Windows",
+    "runCommand": {
+        "commandToExecute": "rzupdate.exe 'Firefox'"
+    }
+}
