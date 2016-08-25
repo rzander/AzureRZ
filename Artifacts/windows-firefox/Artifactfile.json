@@ -10,6 +10,6 @@
     "iconUri": "https://ruckzuck.azurewebsites.net/wcf/GetIcon.ashx?Id=514642",
     "targetOsType": "Windows",
     "runCommand": {
-        "commandToExecute": "RZUpdate.exe Firefox"
+        "commandToExecute": "powershell.exe -ExecutionPolicy bypass -File startRuckZuck.ps1 -PackageList firefox"
     }
 }
