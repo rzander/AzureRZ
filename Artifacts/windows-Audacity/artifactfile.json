@@ -1,0 +1,9 @@
+{
+	"title": "Audacity",
+	"description": "Audacity is a free, easy-to-use, multi-track audio editor and recorder for Windows, Mac OS X, GNU/Linux and other operating systems. The interface is translated into many languages. You can use Audacity to: Record live audio.",
+	"publisher": "Audacity Team",
+	"tags": ["Windows"],
+	"iconUri": "https://ruckzuck.azurewebsites.net/wcf/GetIcon.ashx?Id=421128",
+	"targetOsType": "Windows",
+	"runCommand": { "commandToExecute": "Audacity_setup.exe" }
+}
