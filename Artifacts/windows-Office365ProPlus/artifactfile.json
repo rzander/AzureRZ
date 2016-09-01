@@ -1,0 +1,14 @@
+{
+    "title": "Office365 ProPlus",
+    "description": "Installs Office365 using the RuckZuck package manager",
+	"publisher": "Microsoft",
+    "tags": [
+        "Windows",
+        "Office"
+    ],
+    "iconUri": "https://ruckzuck.azurewebsites.net/wcf/GetIcon.ashx?Id=507134",
+    "targetOsType": "Windows",
+    "runCommand": {
+        "commandToExecute": "Office365 ProPlus_setup.exe"
+    }
+}
