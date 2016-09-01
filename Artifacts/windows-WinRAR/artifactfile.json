@@ -1,0 +1,9 @@
+{
+	"title": "WinRAR",
+	"description": "WinRAR is a shareware file archiver and compressor utility for Windows. It can create archives in RAR or ZIP file formats, and unpack numerous archive file formats. There is an Android app called "RAR for Android", and command-line versions called "RAR" and "UNRAR" (widely released since autumn of 1993), available for Mac OS X, Linux, FreeBSD, Windows console mode, and MS-DOS.",
+	"publisher": "win.rar GmbH",
+	"tags": ["Windows"],
+	"iconUri": "https://ruckzuck.azurewebsites.net/wcf/GetIcon.ashx?Id=512667",
+	"targetOsType": "Windows",
+	"runCommand": { "commandToExecute": "WinRAR_setup.exe" }
+}

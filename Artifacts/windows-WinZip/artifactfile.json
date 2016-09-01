@@ -1,0 +1,9 @@
+{
+	"title": "WinZip",
+	"description": "WinZip is a shareware file archiver and compressor for Windows, OS X, iOS and Android developed by WinZip Computing (formerly Nico Mak Computing). It can create archives in Zip file format, and unpack some other archive file formats.",
+	"publisher": "WinZip Computing, S.L. ",
+	"tags": ["Windows"],
+	"iconUri": "https://ruckzuck.azurewebsites.net/wcf/GetIcon.ashx?Id=485496",
+	"targetOsType": "Windows",
+	"runCommand": { "commandToExecute": "WinZip_setup.exe" }
+}

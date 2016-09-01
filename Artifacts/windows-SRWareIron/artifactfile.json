@@ -1,0 +1,9 @@
+{
+	"title": "SRWare Iron",
+	"description": "The browser is based on the Chromium-source and offers the same features as Chrome - but without the critical points that the privacy concern.",
+	"publisher": "SRWare",
+	"tags": ["Windows"],
+	"iconUri": "https://ruckzuck.azurewebsites.net/wcf/GetIcon.ashx?Id=511048",
+	"targetOsType": "Windows",
+	"runCommand": { "commandToExecute": "SRWareIron_setup.exe" }
+}

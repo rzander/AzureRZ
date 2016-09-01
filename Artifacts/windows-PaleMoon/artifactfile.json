@@ -1,0 +1,9 @@
+{
+	"title": "Pale Moon",
+	"description": "Pale Moon is an Open Source, Firefox-based web browser available for Microsoft Windows, Android and Linux (with other operating systems in development), focusing on efficiency and ease of use. Make sure to get the most out of your browser!",
+	"publisher": "Moonchild Productions",
+	"tags": ["Windows"],
+	"iconUri": "https://ruckzuck.azurewebsites.net/wcf/GetIcon.ashx?Id=512966",
+	"targetOsType": "Windows",
+	"runCommand": { "commandToExecute": "PaleMoon_setup.exe" }
+}

@@ -1,0 +1,9 @@
+{
+	"title": "Maxthon",
+	"description": "Maxthon Cloud Browser for Windows uses a unique, innovative dual-core design that uses both Webkit and Trident. Fast and efficient, our dual-core design displays all web pages quickly and reliably. With its first-place HTML 5 support and "out of the box" features you can't get anywhere else, Maxthon Cloud Browser for Windows frees people to share and send files among different devices and platforms, easily.",
+	"publisher": "Maxthon International Limited",
+	"tags": ["Windows"],
+	"iconUri": "https://ruckzuck.azurewebsites.net/wcf/GetIcon.ashx?Id=493331",
+	"targetOsType": "Windows",
+	"runCommand": { "commandToExecute": "Maxthon_setup.exe" }
+}

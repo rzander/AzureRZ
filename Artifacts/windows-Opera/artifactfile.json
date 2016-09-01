@@ -1,0 +1,9 @@
+{
+	"title": "Opera",
+	"description": "Opera is a web browser developed by Opera Software. The latest version is available for Microsoft Windows, OS X, and Linux operating systems, and uses the Blink layout engine. An earlier version using the Presto layout engine is still supported, and additionally runs on FreeBSD systems. Editions of Opera are available for devices running the Android, iOS, Symbian, Maemo, Bada, BlackBerry and Windows Mobile operating systems, and for Java ME capable devices.",
+	"publisher": "Opera Software",
+	"tags": ["Windows"],
+	"iconUri": "https://ruckzuck.azurewebsites.net/wcf/GetIcon.ashx?Id=509207",
+	"targetOsType": "Windows",
+	"runCommand": { "commandToExecute": "Opera_setup.exe" }
+}

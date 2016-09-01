@@ -1,0 +1,9 @@
+{
+	"title": "Waterfox",
+	"description": "Waterfox is a high performance browser based on the Mozilla platform. Made specifically for 64-Bit systems, Waterfox has one thing in mind: speed.",
+	"publisher": "Mozilla",
+	"tags": ["Windows"],
+	"iconUri": "https://ruckzuck.azurewebsites.net/wcf/GetIcon.ashx?Id=511594",
+	"targetOsType": "Windows",
+	"runCommand": { "commandToExecute": "Waterfox_setup.exe" }
+}

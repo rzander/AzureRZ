@@ -1,0 +1,9 @@
+{
+	"title": "Midori",
+	"description": "Midori is blazing fast, utilizing the latest web technologies and a small but dexterous array of extensions provide all the essential features.",
+	"publisher": "Christian Dywan",
+	"tags": ["Windows"],
+	"iconUri": "https://ruckzuck.azurewebsites.net/wcf/GetIcon.ashx?Id=344451",
+	"targetOsType": "Windows",
+	"runCommand": { "commandToExecute": "Midori_setup.exe" }
+}

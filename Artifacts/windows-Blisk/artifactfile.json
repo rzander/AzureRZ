@@ -1,0 +1,9 @@
+{
+	"title": "Blisk",
+	"description": "Blisk is a Chromium-based browser with essential tools for web development. Use it for simultaneous building and testing both desktop and mobile versions of your website. ",
+	"publisher": "Blisk",
+	"tags": ["Windows"],
+	"iconUri": "https://ruckzuck.azurewebsites.net/wcf/GetIcon.ashx?Id=513198",
+	"targetOsType": "Windows",
+	"runCommand": { "commandToExecute": "Blisk_setup.exe" }
+}
