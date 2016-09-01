@@ -9,6 +9,6 @@
     "iconUri": "https://ruckzuck.azurewebsites.net/wcf/GetIcon.ashx?Id=507134",
     "targetOsType": "Windows",
     "runCommand": {
-        "commandToExecute": "Office365 ProPlus_setup.exe"
+        "commandToExecute": "Office365ProPlus_setup.exe"
     }
 }
