@@ -1,0 +1,14 @@
+{
+    "title": "Notepad++",
+    "description": "Installs Notepad++ using the RuckZuck package manager",
+	"publisher": "Microsoft",
+    "tags": [
+        "Windows",
+        "Office"
+    ],
+    "iconUri": "https://ruckzuck.azurewebsites.net/wcf/GetIcon.ashx?Id=488755",
+    "targetOsType": "Windows",
+    "runCommand": {
+        "commandToExecute": "Notepad_setup.exe"
+    }
+}
