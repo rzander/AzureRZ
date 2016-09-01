@@ -1,0 +1,11 @@
+{
+	"title": "SQLReportBuilder2016",
+	"description": "Report Builder provides a productive report-authoring environment for IT professionals and power users. The download provides a stand-alone installer for Report Builder. Report Builder provides data visualizations that include charts, maps, sparklines, and data bars that can help produce new insights well beyond what can be achieved with standard tables and charts. Use Report Builder to create reports and shared datasets. Publish report parts, and then browse the Report Part Gallery to reuse existing report parts as building blocks for creating new reports quickly with a â€œgrab and goâ€ experience. ",
+	"publisher": "Microsoft Corporation",
+	"tags": ["Windows"
+	, "SysAdmin"
+	],
+	"iconUri": "https://ruckzuck.azurewebsites.net/wcf/GetIcon.ashx?Id=501200",
+	"targetOsType": "Windows",
+	"runCommand": { "commandToExecute": "SQLReportBuilder2016_setup.exe" }
+}

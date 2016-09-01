@@ -1,0 +1,11 @@
+{
+	"title": "ConfigMgrTools",
+	"description": "This toolkit contains fifteen downloadable tools to help you manage and troubleshoot Microsoft System Center 2012 R2 Configuration Manager.",
+	"publisher": "Microsoft Corporation",
+	"tags": ["Windows"
+	, "SysAdmin"
+	],
+	"iconUri": "https://ruckzuck.azurewebsites.net/wcf/GetIcon.ashx?Id=398068",
+	"targetOsType": "Windows",
+	"runCommand": { "commandToExecute": "ConfigMgrTools_setup.exe" }
+}

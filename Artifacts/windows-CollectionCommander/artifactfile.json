@@ -1,0 +1,11 @@
+{
+	"title": "Collection Commander",
+	"description": "The tool is designed for IT Professionals to trigger PowerShell Scripts on a list of devices. Includes Right-Click extension for System Center Configuration Manager 2012 R2. ",
+	"publisher": "Zander Tools",
+	"tags": ["Windows"
+	, "SysAdmin"
+	],
+	"iconUri": "https://ruckzuck.azurewebsites.net/wcf/GetIcon.ashx?Id=94605",
+	"targetOsType": "Windows",
+	"runCommand": { "commandToExecute": "CollectionCommander_setup.exe" }
+}

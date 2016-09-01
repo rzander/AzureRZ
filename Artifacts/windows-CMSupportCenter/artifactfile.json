@@ -1,0 +1,11 @@
+{
+	"title": "CMSupportCenter",
+	"description": "System Center 2012 Configuration Manager Support Center helps you to gather information about System Center 2012 Configuration Manager clients so that you can more easily address issues. ",
+	"publisher": "Microsoft Corporation",
+	"tags": ["Windows"
+	, "SysAdmin"
+	],
+	"iconUri": "https://ruckzuck.azurewebsites.net/wcf/GetIcon.ashx?Id=63326",
+	"targetOsType": "Windows",
+	"runCommand": { "commandToExecute": "CMSupportCenter_setup.exe" }
+}

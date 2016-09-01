@@ -1,0 +1,11 @@
+{
+	"title": "ADK10",
+	"description": "The Windows Assessment and Deployment Kit (Windows ADK) is a collection of tools that you can use to customize, assess, and deploy Windows operating systems to new computers. ",
+	"publisher": "Microsoft Corporation",
+	"tags": ["Windows"
+	, "SysAdmin"
+	],
+	"iconUri": "https://ruckzuck.azurewebsites.net/wcf/GetIcon.ashx?Id=508408",
+	"targetOsType": "Windows",
+	"runCommand": { "commandToExecute": "ADK10_setup.exe" }
+}

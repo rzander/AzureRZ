@@ -1,0 +1,11 @@
+{
+	"title": "RuckZuck provider for OneGet",
+	"description": "Install and update Software from the RuckZuck repository with OneGet",
+	"publisher": "Zander Tools",
+	"tags": ["Windows"
+	, "SysAdmin"
+	],
+	"iconUri": "https://ruckzuck.azurewebsites.net/wcf/GetIcon.ashx?Id=261145",
+	"targetOsType": "Windows",
+	"runCommand": { "commandToExecute": "RuckZuckproviderforOneGet_setup.exe" }
+}

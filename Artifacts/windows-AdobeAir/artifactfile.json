@@ -1,0 +1,11 @@
+{
+	"title": "AdobeAir",
+	"description": "The Adobe AIR runtime enables developers to package the same code into native apps for Windows and Mac OS desktops as well as iPhone, iPad, Kindle Fire, Nook Tablet, and other Android? devices, reaching the mobile app stores for over 500 million devices.",
+	"publisher": "Adobe Systems Incorporated",
+	"tags": ["Windows"
+	, "Runtime"
+	],
+	"iconUri": "https://ruckzuck.azurewebsites.net/wcf/GetIcon.ashx?Id=495806",
+	"targetOsType": "Windows",
+	"runCommand": { "commandToExecute": "AdobeAir_setup.exe" }
+}

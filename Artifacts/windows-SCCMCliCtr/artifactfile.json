@@ -1,0 +1,11 @@
+{
+	"title": "SCCMCliCtr",
+	"description": "The tool is designed for IT Professionals to troubleshoot SCCM Client related Issues. Client Center for Configuration Manager provides a quick and easy overview of client settings, including running services and Agent settings in a good, easy to use user interface. ",
+	"publisher": "Zander Tools",
+	"tags": ["Windows"
+	, "SysAdmin"
+	],
+	"iconUri": "https://ruckzuck.azurewebsites.net/wcf/GetIcon.ashx?Id=489523",
+	"targetOsType": "Windows",
+	"runCommand": { "commandToExecute": "SCCMCliCtr_setup.exe" }
+}

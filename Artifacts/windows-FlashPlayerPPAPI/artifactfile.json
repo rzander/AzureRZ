@@ -1,0 +1,11 @@
+{
+	"title": "FlashPlayerPPAPI",
+	"description": "Flash Player for Opera and Chromium based applications. PPAPI",
+	"publisher": "Adobe Systems Incorporated",
+	"tags": ["Windows"
+	, "Runtime"
+	],
+	"iconUri": "https://ruckzuck.azurewebsites.net/wcf/GetIcon.ashx?Id=500869",
+	"targetOsType": "Windows",
+	"runCommand": { "commandToExecute": "FlashPlayerPPAPI_setup.exe" }
+}

@@ -1,0 +1,11 @@
+{
+	"title": "ShockwavePlayer",
+	"description": "Shockwave Player is the web standard for powerful multimedia playback. The Shockwave Player allows you to view interactive web content like games, business presentations, entertainment, and advertisements from your web browser. The Shockwave Player displays web content created with Adobe Director.",
+	"publisher": "Adobe Systems, Inc",
+	"tags": ["Windows"
+	, "Runtime"
+	],
+	"iconUri": "https://ruckzuck.azurewebsites.net/wcf/GetIcon.ashx?Id=423534",
+	"targetOsType": "Windows",
+	"runCommand": { "commandToExecute": "ShockwavePlayer_setup.exe" }
+}

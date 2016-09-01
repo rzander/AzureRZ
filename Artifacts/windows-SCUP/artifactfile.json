@@ -1,0 +1,11 @@
+{
+	"title": "SCUP",
+	"description": "System Center Updates Publisher enables independent software vendors, OEMs and IT administrators to import, manage and develop software update definitions which can be deployed with System Center Configuration Manager. ",
+	"publisher": "Microsoft Corporation",
+	"tags": ["Windows"
+	, "SysAdmin"
+	],
+	"iconUri": "https://ruckzuck.azurewebsites.net/wcf/GetIcon.ashx?Id=109",
+	"targetOsType": "Windows",
+	"runCommand": { "commandToExecute": "SCUP_setup.exe" }
+}

@@ -1,0 +1,11 @@
+{
+	"title": "VCRedist2015x86",
+	"description": "The Visual C++ Redistributable Packages install run-time components of Visual C++ libraries. These components are required to run C++ applications that are developed using Visual Studio 2015 and link dynamically to Visual C++ libraries. These package can be used to run such applications on a computer even if it does not have Visual Studio 2015 installed. These packages install run-time components of these libraries: C Runtime (CRT), Standard C++, MFC, C++ AMP, and OpenMP.",
+	"publisher": "Microsoft Corporation",
+	"tags": ["Windows"
+	, "Runtime"
+	],
+	"iconUri": "https://ruckzuck.azurewebsites.net/wcf/GetIcon.ashx?Id=497632",
+	"targetOsType": "Windows",
+	"runCommand": { "commandToExecute": "VCRedist2015x86_setup.exe" }
+}

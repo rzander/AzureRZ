@@ -1,0 +1,11 @@
+{
+	"title": "Ghostscript",
+	"description": "Ghostscript is a suite of software based on an interpreter for Adobe Systems' PostScript and Portable Document Format (PDF) page description languages. Its main purposes are the rasterization or rendering of such page description language files, for the display or printing of document pages, and the conversion between PostScript and PDF files.",
+	"publisher": "Artifex Software Inc.",
+	"tags": ["Windows"
+	, "Runtime"
+	],
+	"iconUri": "https://ruckzuck.azurewebsites.net/wcf/GetIcon.ashx?Id=430765",
+	"targetOsType": "Windows",
+	"runCommand": { "commandToExecute": "Ghostscript_setup.exe" }
+}
