@@ -1,0 +1,11 @@
+{
+	"title": "Skype",
+	"description": "Skype is for doing things together, whenever you're apart. Skype's text, voice and video make it simple to share experiences with the people that matter to you, wherever they are.",
+	"publisher": "Skype Technologies S.A.",
+	"tags": ["Windows"
+	, "Messaging"
+	],
+	"iconUri": "https://ruckzuck.azurewebsites.net/wcf/GetIcon.ashx?Id=514514",
+	"targetOsType": "Windows",
+	"runCommand": { "commandToExecute": "Skype_setup.exe" }
+}

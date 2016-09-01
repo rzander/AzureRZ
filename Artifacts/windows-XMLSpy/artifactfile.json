@@ -1,0 +1,11 @@
+{
+	"title": "XMLSpy",
+	"description": "Altova XMLSpy 2016 is the industry's best-selling XML editor for modeling, editing, transforming, and debugging XML-related technologies. It offers the world?s leading graphical schema designer, a code generator, file converters, debuggers, profilers, full database integration, support for XSLT, XPath, XQuery, WSDL, SOAP, XBRL, JSON, and Office Open XML (OOXML) , plus Visual Studio and Eclipse integration, and more.",
+	"publisher": "Altova",
+	"tags": ["Windows"
+	, "Development"
+	],
+	"iconUri": "https://ruckzuck.azurewebsites.net/wcf/GetIcon.ashx?Id=490781",
+	"targetOsType": "Windows",
+	"runCommand": { "commandToExecute": "XMLSpy_setup.exe" }
+}

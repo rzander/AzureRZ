@@ -1,0 +1,11 @@
+{
+	"title": "WebDeploy",
+	"description": "Web Deploy (msdeploy) simplifies deployment of Web applications and Web sites to IIS servers. Administrators can use Web Deploy to synchronize IIS servers or to migrate to newer versions of IIS. Web Deploy Tool also enables administrators and delegated users to use IIS Manager to deploy ASP.NET and PHP applications to an IIS server.",
+	"publisher": "Microsoft Corporation",
+	"tags": ["Windows"
+	, "Development"
+	],
+	"iconUri": "https://ruckzuck.azurewebsites.net/wcf/GetIcon.ashx?Id=251042",
+	"targetOsType": "Windows",
+	"runCommand": { "commandToExecute": "WebDeploy_setup.exe" }
+}

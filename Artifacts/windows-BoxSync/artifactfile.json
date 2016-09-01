@@ -1,0 +1,11 @@
+{
+	"title": "Box Sync",
+	"description": "Use Box to store, manage and share your files securely in the cloud. Access your content anywhere you might need it: web, tablet or phone. Plus, you can share large files with a simple link and work on projects with your friends, family or colleagues from anywhere. ",
+	"publisher": "Box, Inc.",
+	"tags": ["Windows"
+	, "Utilities"
+	],
+	"iconUri": "https://ruckzuck.azurewebsites.net/wcf/GetIcon.ashx?Id=510671",
+	"targetOsType": "Windows",
+	"runCommand": { "commandToExecute": "BoxSync_setup.exe" }
+}

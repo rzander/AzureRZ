@@ -1,0 +1,11 @@
+{
+	"title": "VS2008 Shell Isolated Mode Redist",
+	"description": "The Visual Studio 2008 Shell (isolated mode) redistributable SP1 contains the runtime binaries needed to deploy your Visual Studio 2008 Shell (isolated mode) based application. ",
+	"publisher": "Microsoft",
+	"tags": ["Windows"
+	, "Development"
+	],
+	"iconUri": "https://ruckzuck.azurewebsites.net/wcf/GetIcon.ashx?Id=146",
+	"targetOsType": "Windows",
+	"runCommand": { "commandToExecute": "VS2008ShellIsolatedModeRedist_setup.exe" }
+}

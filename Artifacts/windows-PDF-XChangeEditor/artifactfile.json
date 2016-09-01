@@ -1,0 +1,11 @@
+{
+	"title": "PDF-XChange Editor",
+	"description": "The smallest, fastest, most feature-rich PDF editor/viewer available!  Create, View, Edit, Annotate, OCR and Digitally Sign PDF files plus much more..",
+	"publisher": "Tracker Software Products (Canada) Ltd.",
+	"tags": ["Windows"
+	, "Office"
+	],
+	"iconUri": "https://ruckzuck.azurewebsites.net/wcf/GetIcon.ashx?Id=481789",
+	"targetOsType": "Windows",
+	"runCommand": { "commandToExecute": "PDF-XChangeEditor_setup.exe" }
+}

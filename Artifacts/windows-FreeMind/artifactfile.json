@@ -1,0 +1,11 @@
+{
+	"title": "FreeMind",
+	"description": "A mind mapper, and at the same time an easy-to-operate hierarchical editor with strong emphasis on folding. These two are not really two different things, just two different descriptions of a single application. Often used for knowledge and content management.",
+	"publisher": "",
+	"tags": ["Windows"
+	, "Office"
+	],
+	"iconUri": "https://ruckzuck.azurewebsites.net/wcf/GetIcon.ashx?Id=10732",
+	"targetOsType": "Windows",
+	"runCommand": { "commandToExecute": "FreeMind_setup.exe" }
+}

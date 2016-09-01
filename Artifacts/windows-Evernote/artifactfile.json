@@ -1,0 +1,11 @@
+{
+	"title": "Evernote",
+	"description": "From inspiration to achievement, Evernote is where your work takes shape. Write, collect, find, and present, all from one workspace.",
+	"publisher": "Evernote Corp.",
+	"tags": ["Windows"
+	, "Office"
+	],
+	"iconUri": "https://ruckzuck.azurewebsites.net/wcf/GetIcon.ashx?Id=511867",
+	"targetOsType": "Windows",
+	"runCommand": { "commandToExecute": "Evernote_setup.exe" }
+}

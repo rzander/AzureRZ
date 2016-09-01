@@ -1,0 +1,11 @@
+{
+	"title": "PDF24",
+	"description": "The free PDF24 PDF Creator is a program to create PDF files from almost any application. The PDF software is a free PDF creator to create PDF files from any type of document. With the PDF creator you can convert documents into PDF files very easily. The PDF creator acts as a PDF printer.",
+	"publisher": "www.pdf24.org",
+	"tags": ["Windows"
+	, "Office"
+	],
+	"iconUri": "https://ruckzuck.azurewebsites.net/wcf/GetIcon.ashx?Id=499890",
+	"targetOsType": "Windows",
+	"runCommand": { "commandToExecute": "PDF24_setup.exe" }
+}

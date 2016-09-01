@@ -1,0 +1,11 @@
+{
+	"title": "Open Live Writer",
+	"description": "Open Live Writer is like Word for your blog. Open Live Writer is a powerful, lightweight blog editor that allows you to create blog posts, add photos and videos then publish to your website. You can also compose blogs posts offline and then publish on your return. Open Live Writer works with many popular blog service providers such as WordPress, Blogger, TypePad, Moveable Type, DasBlog and many more.",
+	"publisher": "Open Live Writer",
+	"tags": ["Windows"
+	, "Office"
+	],
+	"iconUri": "https://ruckzuck.azurewebsites.net/wcf/GetIcon.ashx?Id=422797",
+	"targetOsType": "Windows",
+	"runCommand": { "commandToExecute": "OpenLiveWriter_setup.exe" }
+}

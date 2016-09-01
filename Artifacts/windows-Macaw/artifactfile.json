@@ -1,0 +1,11 @@
+{
+	"title": "Macaw",
+	"description": "Stop writing code, start drawing it. Macaw provides the same flexibility as your favorite image editor but also writes semantic HTML and remarkably succinct CSS. It's time to expect more from a web design tool.",
+	"publisher": "Macaw, LLC",
+	"tags": ["Windows"
+	, "Development"
+	],
+	"iconUri": "https://ruckzuck.azurewebsites.net/wcf/GetIcon.ashx?Id=432555",
+	"targetOsType": "Windows",
+	"runCommand": { "commandToExecute": "Macaw_setup.exe" }
+}

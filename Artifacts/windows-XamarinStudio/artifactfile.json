@@ -1,0 +1,11 @@
+{
+	"title": "Xamarin Studio",
+	"description": "For Mac and Windows, you can download Xamarin Studio which is a bundle of MonoDevelop along with Xamarin iOS/Android plugins and branding. Note that a Xamarin license is only required if you develop iOS/Android projects, all other project types are free without restrictions.",
+	"publisher": "Xamarin",
+	"tags": ["Windows"
+	, "Development"
+	],
+	"iconUri": "https://ruckzuck.azurewebsites.net/wcf/GetIcon.ashx?Id=421397",
+	"targetOsType": "Windows",
+	"runCommand": { "commandToExecute": "XamarinStudio_setup.exe" }
+}

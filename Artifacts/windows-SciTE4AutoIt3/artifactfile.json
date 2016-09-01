@@ -1,0 +1,11 @@
+{
+	"title": "SciTE4AutoIt3",
+	"description": "AutoIt Script Editor.(Customised version of SciTE with lots of additional coding tools for AutoIt)",
+	"publisher": "Jos van der Zande",
+	"tags": ["Windows"
+	, "Utilities"
+	],
+	"iconUri": "https://ruckzuck.azurewebsites.net/wcf/GetIcon.ashx?Id=497415",
+	"targetOsType": "Windows",
+	"runCommand": { "commandToExecute": "SciTE4AutoIt3_setup.exe" }
+}

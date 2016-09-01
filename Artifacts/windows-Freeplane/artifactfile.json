@@ -1,0 +1,11 @@
+{
+	"title": "Freeplane",
+	"description": "Application for Mind Mapping, Knowledge Management, Project Management. Develop, organize and communicate your ideas and knowledge in the most effective way.",
+	"publisher": "Open source",
+	"tags": ["Windows"
+	, "Office"
+	],
+	"iconUri": "https://ruckzuck.azurewebsites.net/wcf/GetIcon.ashx?Id=513622",
+	"targetOsType": "Windows",
+	"runCommand": { "commandToExecute": "Freeplane_setup.exe" }
+}

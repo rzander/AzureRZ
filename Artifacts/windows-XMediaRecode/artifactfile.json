@@ -1,0 +1,11 @@
+{
+	"title": "XMedia Recode",
+	"description": "XMedia Recode can convert almost all known audio and video formats. XMedia Recode can only convert unprotected DVDs.",
+	"publisher": "XMedia Recode",
+	"tags": ["Windows"
+	, "Video"
+	],
+	"iconUri": "https://ruckzuck.azurewebsites.net/wcf/GetIcon.ashx?Id=511875",
+	"targetOsType": "Windows",
+	"runCommand": { "commandToExecute": "XMediaRecode_setup.exe" }
+}

@@ -1,0 +1,11 @@
+{
+	"title": "HandBrake",
+	"description": "HandBrake is a tool for converting video from nearly any format to a selection of modern, widely supported codecs.",
+	"publisher": "",
+	"tags": ["Windows"
+	, "Video"
+	],
+	"iconUri": "https://ruckzuck.azurewebsites.net/wcf/GetIcon.ashx?Id=422730",
+	"targetOsType": "Windows",
+	"runCommand": { "commandToExecute": "HandBrake_setup.exe" }
+}

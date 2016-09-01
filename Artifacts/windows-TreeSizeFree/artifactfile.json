@@ -1,0 +1,11 @@
+{
+	"title": "TreeSizeFree",
+	"description": "Even in the times of cheap terabytes a final truth remains: Sooner or later every hard disk will near capacity. But there is help! TreeSize Free tells you where precious disk space has gone.",
+	"publisher": "JAM Software",
+	"tags": ["Windows"
+	, "Utilities"
+	],
+	"iconUri": "https://ruckzuck.azurewebsites.net/wcf/GetIcon.ashx?Id=422870",
+	"targetOsType": "Windows",
+	"runCommand": { "commandToExecute": "TreeSizeFree_setup.exe" }
+}

@@ -1,0 +1,11 @@
+{
+	"title": "AutoHotkey",
+	"description": "AutoHotkey (AHK) is a free, open-source macro-creation and automation software for Windows that allows users to automate repetitive tasks. It is driven by a scripting language that was initially aimed at providing keyboard shortcuts, otherwise known as hotkeys, that over time evolved into a full-fledged scripting language.",
+	"publisher": "Lexikos",
+	"tags": ["Windows"
+	, "Utilities"
+	],
+	"iconUri": "https://ruckzuck.azurewebsites.net/wcf/GetIcon.ashx?Id=508416",
+	"targetOsType": "Windows",
+	"runCommand": { "commandToExecute": "AutoHotkey_setup.exe" }
+}

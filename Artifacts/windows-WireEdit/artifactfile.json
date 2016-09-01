@@ -1,0 +1,11 @@
+{
+	"title": "WireEdit",
+	"description": "A Full Stack WYSIWYG Editor for Network Packets",
+	"publisher": "Omnipacket",
+	"tags": ["Windows"
+	, "Utilities"
+	],
+	"iconUri": "https://ruckzuck.azurewebsites.net/wcf/GetIcon.ashx?Id=483336",
+	"targetOsType": "Windows",
+	"runCommand": { "commandToExecute": "WireEdit_setup.exe" }
+}

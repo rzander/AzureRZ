@@ -1,0 +1,11 @@
+{
+	"title": "XnViewMP",
+	"description": "XnView MP is the enhanced version to XnView ClassicXnView Classic. It is a powerful cross-platform media browser, viewer and converter. Compatible with more than 500 formats500 formats.",
+	"publisher": "Gougelet Pierre-e",
+	"tags": ["Windows"
+	, "Imaging"
+	],
+	"iconUri": "https://ruckzuck.azurewebsites.net/wcf/GetIcon.ashx?Id=498460",
+	"targetOsType": "Windows",
+	"runCommand": { "commandToExecute": "XnViewMP_setup.exe" }
+}

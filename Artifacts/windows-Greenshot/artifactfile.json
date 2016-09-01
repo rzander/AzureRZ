@@ -1,0 +1,11 @@
+{
+	"title": "Greenshot",
+	"description": "Greenshot is an elegant screen capture tool for Windows that offers many of the same features as its proprietary counterparts. Greenshot offers default print screen settings with hotkey combinations that capture a screen, a window, or a region of either. ",
+	"publisher": "Greenshot",
+	"tags": ["Windows"
+	, "Imaging"
+	],
+	"iconUri": "https://ruckzuck.azurewebsites.net/wcf/GetIcon.ashx?Id=387331",
+	"targetOsType": "Windows",
+	"runCommand": { "commandToExecute": "Greenshot_setup.exe" }
+}

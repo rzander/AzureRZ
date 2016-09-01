@@ -1,0 +1,11 @@
+{
+	"title": "RDCMan",
+	"description": "RDCMan manages multiple remote desktop connections. It is useful for managing server labs or large server farms where you need regular access to each machine such as automated checkin systems and data centers. It is similar to the built-in MMC Remote Desktops snap-in, but more flexible. The RDCMan 2.7 version is a major feature release. New features include: - Virtual machine connect-to-console support - Smart groups - Support for credential encryption with certificates - Windows 8 remote action support - Support for Windows 8, Windows 8.1 / Windows Server 2012, Windows Server 2012 R2.",
+	"publisher": "Microsoft Corporation",
+	"tags": ["Windows"
+	, "Utilities"
+	],
+	"iconUri": "https://ruckzuck.azurewebsites.net/wcf/GetIcon.ashx?Id=575",
+	"targetOsType": "Windows",
+	"runCommand": { "commandToExecute": "RDCMan_setup.exe" }
+}

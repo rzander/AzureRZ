@@ -1,0 +1,11 @@
+{
+	"title": "Microsoft Power BI Desktop",
+	"description": "Power BI Desktop puts visual analytics at your fingertips with intuitive report authoring. Drag-and-drop to place content exactly where you want it on the flexible and fluid canvas. Quickly discover patterns as you explore a single unified view of linked, interactive visualizations.",
+	"publisher": "Microsoft Corporation",
+	"tags": ["Windows"
+	, "Office"
+	],
+	"iconUri": "https://ruckzuck.azurewebsites.net/wcf/GetIcon.ashx?Id=514687",
+	"targetOsType": "Windows",
+	"runCommand": { "commandToExecute": "MicrosoftPowerBIDesktop_setup.exe" }
+}

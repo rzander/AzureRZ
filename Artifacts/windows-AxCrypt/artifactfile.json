@@ -1,0 +1,11 @@
+{
+	"title": "AxCrypt",
+	"description": "AxCrypt is the leading open source file encryption software for Windows. It integrates seamlessly with Windows to compress, encrypt, decrypt, store, send and work with individual files. ",
+	"publisher": "AxCrypt AB",
+	"tags": ["Windows"
+	, "Security"
+	],
+	"iconUri": "https://ruckzuck.azurewebsites.net/wcf/GetIcon.ashx?Id=501895",
+	"targetOsType": "Windows",
+	"runCommand": { "commandToExecute": "AxCrypt_setup.exe" }
+}

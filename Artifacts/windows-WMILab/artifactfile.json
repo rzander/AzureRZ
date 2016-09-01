@@ -1,0 +1,11 @@
+{
+	"title": "WMILab",
+	"description": "WMI Lab is a lightweight, open source application based on the .Net Framework 3.5 that expands on functions offered in common WMI tools to allow for the inspection, querying, deeper interrogation and code generation of WMI classes on local or remote Windows systems.",
+	"publisher": "http://cavaliercoder.com",
+	"tags": ["Windows"
+	, "Utilities"
+	],
+	"iconUri": "https://ruckzuck.azurewebsites.net/wcf/GetIcon.ashx?Id=177154",
+	"targetOsType": "Windows",
+	"runCommand": { "commandToExecute": "WMILab_setup.exe" }
+}

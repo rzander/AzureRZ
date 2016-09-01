@@ -1,0 +1,11 @@
+{
+	"title": "Fiddler",
+	"description": "Fiddler captures HTTP and HTTPS traffic and logs it for the user to review (the latter by implementing man-in-the-middle interception using self-signed certificates).",
+	"publisher": "Telerik",
+	"tags": ["Windows"
+	, "Utilities"
+	],
+	"iconUri": "https://ruckzuck.azurewebsites.net/wcf/GetIcon.ashx?Id=502323",
+	"targetOsType": "Windows",
+	"runCommand": { "commandToExecute": "Fiddler_setup.exe" }
+}

@@ -1,0 +1,11 @@
+{
+	"title": "Artisteer",
+	"description": "Artisteer is the first and only Web design automation product that instantly creates fantastic looking, unique website templates and blog themes.",
+	"publisher": "Extensoft",
+	"tags": ["Windows"
+	, "Development"
+	],
+	"iconUri": "https://ruckzuck.azurewebsites.net/wcf/GetIcon.ashx?Id=426565",
+	"targetOsType": "Windows",
+	"runCommand": { "commandToExecute": "Artisteer_setup.exe" }
+}

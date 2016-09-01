@@ -1,0 +1,11 @@
+{
+	"title": "Inkscape",
+	"description": "A Linux, Windows & OSX vector graphics editor (SVG format) featuring transparency, gradients, node editing, pattern fills, PNG export, and more. Aiming for capabilities similar to Illustrator, CorelDraw, Visio, etc.",
+	"publisher": "inkscape.org",
+	"tags": ["Windows"
+	, "Imaging"
+	],
+	"iconUri": "https://ruckzuck.azurewebsites.net/wcf/GetIcon.ashx?Id=74137",
+	"targetOsType": "Windows",
+	"runCommand": { "commandToExecute": "Inkscape_setup.exe" }
+}

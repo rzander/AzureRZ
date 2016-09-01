@@ -1,0 +1,11 @@
+{
+	"title": "WinSCP",
+	"description": "WinSCP (Windows Secure CoPy) is a free and open-source SFTP, SCP and FTP client for Microsoft Windows. Its main function is secure file transfer between a local and a remote computer. Beyond this, WinSCP offers basic file manager and file synchronization functionality. For secure transfers, it uses Secure Shell (SSH) and supports the SCP protocol in addition to SFTP",
+	"publisher": "Martin Prikryl",
+	"tags": ["Windows"
+	, "Utilities"
+	],
+	"iconUri": "https://ruckzuck.azurewebsites.net/wcf/GetIcon.ashx?Id=511815",
+	"targetOsType": "Windows",
+	"runCommand": { "commandToExecute": "WinSCP_setup.exe" }
+}

@@ -1,0 +1,11 @@
+{
+	"title": "WMIX",
+	"description": "With the WMIX module, the complete WMI repository of information and systems management functions is exposed in a friendly graphical manner within the Scope Action module (allowing you to perform WMI based queries and tasks on a wide scope of machines), and via the WMIX application. ",
+	"publisher": "Goverlan, Inc.",
+	"tags": ["Windows"
+	, "Utilities"
+	],
+	"iconUri": "https://ruckzuck.azurewebsites.net/wcf/GetIcon.ashx?Id=333640",
+	"targetOsType": "Windows",
+	"runCommand": { "commandToExecute": "WMIX_setup.exe" }
+}

@@ -1,0 +1,11 @@
+{
+	"title": "SQLLocalDB2016",
+	"description": "Microsoft SQL Server 2016 Express is a powerful and reliable free data management system that delivers a rich and reliable data store for lightweight Web Sites and desktop applications. ",
+	"publisher": "Microsoft Corporation",
+	"tags": ["Windows"
+	, "Development"
+	],
+	"iconUri": "https://ruckzuck.azurewebsites.net/wcf/GetIcon.ashx?Id=497629",
+	"targetOsType": "Windows",
+	"runCommand": { "commandToExecute": "SQLLocalDB2016_setup.exe" }
+}

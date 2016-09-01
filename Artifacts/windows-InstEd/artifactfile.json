@@ -1,0 +1,11 @@
+{
+	"title": "InstEd",
+	"description": "InstEd is a free MSI editor built for professionals. InstEd makes working with files fast and easy. ",
+	"publisher": "instedit.com",
+	"tags": ["Windows"
+	, "Development"
+	],
+	"iconUri": "https://ruckzuck.azurewebsites.net/wcf/GetIcon.ashx?Id=58",
+	"targetOsType": "Windows",
+	"runCommand": { "commandToExecute": "InstEd_setup.exe" }
+}

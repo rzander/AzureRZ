@@ -1,0 +1,11 @@
+{
+	"title": "IcoFX",
+	"description": "IcoFX is an award winning professional icon and cursor editor for Windows. It is an all-in-one solution for icon creation, extraction and editing. It is designed to work with Windows XP, Windows Vista, Windows 7, Windows 8, Windows 10 and Macintosh icons supporting transparency. ",
+	"publisher": "",
+	"tags": ["Windows"
+	, "Imaging"
+	],
+	"iconUri": "https://ruckzuck.azurewebsites.net/wcf/GetIcon.ashx?Id=482616",
+	"targetOsType": "Windows",
+	"runCommand": { "commandToExecute": "IcoFX_setup.exe" }
+}

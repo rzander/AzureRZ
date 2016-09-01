@@ -1,0 +1,11 @@
+{
+	"title": "AdvancedInstaller",
+	"description": "Powerful and easy to use Windows Installer authoring tool. Install, update and configure your products safely, securely and reliably.",
+	"publisher": "Caphyon",
+	"tags": ["Windows"
+	, "Development"
+	],
+	"iconUri": "https://ruckzuck.azurewebsites.net/wcf/GetIcon.ashx?Id=501608",
+	"targetOsType": "Windows",
+	"runCommand": { "commandToExecute": "AdvancedInstaller_setup.exe" }
+}

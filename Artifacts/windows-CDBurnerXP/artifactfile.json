@@ -1,0 +1,11 @@
+{
+	"title": "CDBurnerXP",
+	"description": "CDBurnerXP is a free application to burn CDs and DVDs, including Blu-Ray and HD-DVDs. It also includes the feature to burn and create ISOs, as well as a multilanguage interface. Everyone, even companies, can use it for free.",
+	"publisher": "Canneverbe Limited",
+	"tags": ["Windows"
+	, "Utilities"
+	],
+	"iconUri": "https://ruckzuck.azurewebsites.net/wcf/GetIcon.ashx?Id=507126",
+	"targetOsType": "Windows",
+	"runCommand": { "commandToExecute": "CDBurnerXP_setup.exe" }
+}

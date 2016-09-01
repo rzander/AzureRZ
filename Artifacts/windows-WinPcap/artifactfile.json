@@ -1,0 +1,11 @@
+{
+	"title": "WinPcap",
+	"description": "Unlike original WinPcap, Win10Pcap is compatible with NDIS 6.x driver model to work stably with Windows 10. Win10Pcap has the binary-compatibility with the original WinPcap DLLs. You can run Wireshark or other WinPcap-compatible applications with Win10Pcap by simply installing Win10Pcap DLLs, instead of original WinPcap.",
+	"publisher": "Daiyuu Nobori, University of Tsukuba, Japan",
+	"tags": ["Windows"
+	, "Utilities"
+	],
+	"iconUri": "https://ruckzuck.azurewebsites.net/wcf/GetIcon.ashx?Id=432507",
+	"targetOsType": "Windows",
+	"runCommand": { "commandToExecute": "WinPcap_setup.exe" }
+}

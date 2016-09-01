@@ -1,0 +1,11 @@
+{
+	"title": "BankID",
+	"description": "BankID is a citizen identification solution that allows companies, banks and governments agencies to authenticate and conclude agreements with individuals over the Internet.",
+	"publisher": "Finansiell ID-Teknik BID AB",
+	"tags": ["Windows"
+	, "Security"
+	],
+	"iconUri": "https://ruckzuck.azurewebsites.net/wcf/GetIcon.ashx?Id=493171",
+	"targetOsType": "Windows",
+	"runCommand": { "commandToExecute": "BankID_setup.exe" }
+}

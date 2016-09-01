@@ -1,0 +1,11 @@
+{
+	"title": "Thunderbird",
+	"description": "Mozilla Thunderbird 45.3.0 (x86) Thunderbird Mozilla Thunderbird is a free email application that's easy to set up and customize - and it's loaded with great features!",
+	"publisher": "Mozilla",
+	"tags": ["Windows"
+	, "Messaging"
+	],
+	"iconUri": "https://ruckzuck.azurewebsites.net/wcf/GetIcon.ashx?Id=515400",
+	"targetOsType": "Windows",
+	"runCommand": { "commandToExecute": "Thunderbird_setup.exe" }
+}

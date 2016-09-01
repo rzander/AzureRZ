@@ -1,0 +1,11 @@
+{
+	"title": "PuTTY",
+	"description": "PuTTY is a free implementation of Telnet and SSH for Windows and Unix platforms, along with an xterm terminal emulator. It is written and maintained primarily by Simon Tatham.",
+	"publisher": "Simon Tatham",
+	"tags": ["Windows"
+	, "Development"
+	],
+	"iconUri": "https://ruckzuck.azurewebsites.net/wcf/GetIcon.ashx?Id=423688",
+	"targetOsType": "Windows",
+	"runCommand": { "commandToExecute": "PuTTY_setup.exe" }
+}

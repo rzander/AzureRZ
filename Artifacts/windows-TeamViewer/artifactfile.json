@@ -1,0 +1,11 @@
+{
+	"title": "TeamViewer",
+	"description": "TeamViewer is a proprietary computer software package for remote control, desktop sharing, online meetings, web conferencing and file transfer between computers. Versions are available for the Microsoft Windows, OS X, Desktop Linux, iOS, Android Linux, Windows RTand Windows Phone operating systems. It is also possible to access a machine running TeamViewer with a web browser. While the main focus of the application is remote control of computers, collaboration and presentation features are included.",
+	"publisher": "TeamViewer",
+	"tags": ["Windows"
+	, "Utilities"
+	],
+	"iconUri": "https://ruckzuck.azurewebsites.net/wcf/GetIcon.ashx?Id=514846",
+	"targetOsType": "Windows",
+	"runCommand": { "commandToExecute": "TeamViewer_setup.exe" }
+}

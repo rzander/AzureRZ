@@ -1,0 +1,11 @@
+{
+	"title": "Code",
+	"description": "Build and debug modern web and cloud applications. Code is free and available on your favorite platform - Linux, Mac OSX, and Windows.",
+	"publisher": "Microsoft Corporation",
+	"tags": ["Windows"
+	, "Development"
+	],
+	"iconUri": "https://ruckzuck.azurewebsites.net/wcf/GetIcon.ashx?Id=509847",
+	"targetOsType": "Windows",
+	"runCommand": { "commandToExecute": "Code_setup.exe" }
+}

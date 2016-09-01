@@ -1,0 +1,11 @@
+{
+	"title": "BeyondCompare",
+	"description": "Beyond Compare allows you to quickly and easily compare your files and folders.  By using simple, powerful commands you can focus on the differences you're interested in and ignore those you're not.  You can then merge the changes, synchronize your files, and generate reports for your records.",
+	"publisher": "Scooter Software",
+	"tags": ["Windows"
+	, "Development"
+	],
+	"iconUri": "https://ruckzuck.azurewebsites.net/wcf/GetIcon.ashx?Id=515003",
+	"targetOsType": "Windows",
+	"runCommand": { "commandToExecute": "BeyondCompare_setup.exe" }
+}

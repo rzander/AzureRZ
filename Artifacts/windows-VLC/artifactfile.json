@@ -1,0 +1,11 @@
+{
+	"title": "VLC",
+	"description": "VLC media player (initially VideoLAN Client) is a highly portable multimedia player for various audio and video formats (MPEG, DivX/Xvid, Ogg, and many more) as well as DVDs, VCDs, and various streaming protocols. However in recent years it has also become a extremely powerful server to stream live and on demand video in several formats to our network and the Internet. VLC is made by the non-profit foundation VideoLAN. ",
+	"publisher": "VideoLAN",
+	"tags": ["Windows"
+	, "Video"
+	],
+	"iconUri": "https://ruckzuck.azurewebsites.net/wcf/GetIcon.ashx?Id=493970",
+	"targetOsType": "Windows",
+	"runCommand": { "commandToExecute": "VLC_setup.exe" }
+}

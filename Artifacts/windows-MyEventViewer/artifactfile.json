@@ -1,0 +1,11 @@
+{
+	"title": "MyEventViewer",
+	"description": "MyEventViewer is a simple alternative to the standard event viewer of Windows. As opposed to Windows event viewer, MyEventViewer allows you to watch multiple event logs in one list, as well as the event description and data are displayed in the main window, instead of opening a new one. Also, with MyEventViewer you can easily select multiple event items and then save them to HTML/Text/XML file, or copy them to the clipboard (Ctrl+C) and then paste them into Excel. ",
+	"publisher": "Nir Sofer",
+	"tags": ["Windows"
+	, "Utilities"
+	],
+	"iconUri": "https://ruckzuck.azurewebsites.net/wcf/GetIcon.ashx?Id=302305",
+	"targetOsType": "Windows",
+	"runCommand": { "commandToExecute": "MyEventViewer_setup.exe" }
+}

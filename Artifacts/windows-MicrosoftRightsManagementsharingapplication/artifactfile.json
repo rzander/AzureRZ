@@ -1,0 +1,11 @@
+{
+	"title": "Microsoft Rights Management sharing application",
+	"description": "Microsoft Rights Management sharing application for Windows provides end users a simple interface to RMS-protect and share files of any type. By downloading the software, you agree to the license terms provided at http://go.microsoft.com/fwlink/?LinkId=355394. If you do not agree to the license terms, do not download the software. ",
+	"publisher": "Microsoft Corporation",
+	"tags": ["Windows"
+	, "Office"
+	],
+	"iconUri": "https://ruckzuck.azurewebsites.net/wcf/GetIcon.ashx?Id=501481",
+	"targetOsType": "Windows",
+	"runCommand": { "commandToExecute": "MicrosoftRightsManagementsharingapplication_setup.exe" }
+}

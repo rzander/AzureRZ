@@ -1,0 +1,11 @@
+{
+	"title": "TeamViewer Host",
+	"description": "TeamViewer Host is running as a system service and is used for 24/7 access to remote computers, including login/logout and remote reboot - optimized for server maintenance or home-office access ",
+	"publisher": "TeamViewer",
+	"tags": ["Windows"
+	, "Utilities"
+	],
+	"iconUri": "https://ruckzuck.azurewebsites.net/wcf/GetIcon.ashx?Id=511319",
+	"targetOsType": "Windows",
+	"runCommand": { "commandToExecute": "TeamViewerHost_setup.exe" }
+}

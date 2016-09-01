@@ -1,0 +1,11 @@
+{
+	"title": "LINQPad",
+	"description": "LINQPad lets you interactively query databases in a modern query language: LINQ.  Kiss goodbye to SQL Management Studio! ",
+	"publisher": "Joseph Albahari",
+	"tags": ["Windows"
+	, "Development"
+	],
+	"iconUri": "https://ruckzuck.azurewebsites.net/wcf/GetIcon.ashx?Id=502278",
+	"targetOsType": "Windows",
+	"runCommand": { "commandToExecute": "LINQPad_setup.exe" }
+}

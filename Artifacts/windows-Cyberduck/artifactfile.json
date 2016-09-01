@@ -1,0 +1,11 @@
+{
+	"title": "Cyberduck",
+	"description": "Libre FTP, SFTP, WebDAV, S3 & OpenStack Swift browser  for Mac and Windows. ",
+	"publisher": "iterate GmbH",
+	"tags": ["Windows"
+	, "Utilities"
+	],
+	"iconUri": "https://ruckzuck.azurewebsites.net/wcf/GetIcon.ashx?Id=514644",
+	"targetOsType": "Windows",
+	"runCommand": { "commandToExecute": "Cyberduck_setup.exe" }
+}

@@ -1,0 +1,11 @@
+{
+	"title": "WebSite-Watcher",
+	"description": "WebSite-Watcher detects website updates for you and highlights all changes in the text!",
+	"publisher": "www.aignes.com",
+	"tags": ["Windows"
+	, "Utilities"
+	],
+	"iconUri": "https://ruckzuck.azurewebsites.net/wcf/GetIcon.ashx?Id=495307",
+	"targetOsType": "Windows",
+	"runCommand": { "commandToExecute": "WebSite-Watcher_setup.exe" }
+}

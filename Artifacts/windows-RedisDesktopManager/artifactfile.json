@@ -1,0 +1,11 @@
+{
+	"title": "Redis Desktop Manager",
+	"description": "Cross-platform open source Redis DB management tool",
+	"publisher": "Igor Malinovskiy",
+	"tags": ["Windows"
+	, "Development"
+	],
+	"iconUri": "https://ruckzuck.azurewebsites.net/wcf/GetIcon.ashx?Id=515005",
+	"targetOsType": "Windows",
+	"runCommand": { "commandToExecute": "RedisDesktopManager_setup.exe" }
+}

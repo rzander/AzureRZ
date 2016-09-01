@@ -1,0 +1,11 @@
+{
+	"title": "Babylon",
+	"description": "If it is an online translator you need, you have found the best in here. Babylon puts at your disposal this automatic translator for words, texts, phrases and more. Search for literally millions of terms in Babylon's database of over 1,600 dictionaries and glossaries from the most varied fields of information. All in more than 75 languages. Babylon has over 10 years experience in the field of dictionaries and translation software services. It is one of the most famous and well established companies of information retrieval around the world. ",
+	"publisher": "Babylon",
+	"tags": ["Windows"
+	, "Office"
+	],
+	"iconUri": "https://ruckzuck.azurewebsites.net/wcf/GetIcon.ashx?Id=32357",
+	"targetOsType": "Windows",
+	"runCommand": { "commandToExecute": "Babylon_setup.exe" }
+}

@@ -1,0 +1,11 @@
+{
+	"title": "PSPad editor",
+	"description": "PSPad - text editor for developers for Microsoft Windows systems. The universal (freeware) text editor, useful for people who: work with plain text - the editor has a wealth of formatting functions, including a spell checker ; create web pages - as a web authoring editor, PSPad contains many unique tools that save your time ; want to use a good IDE for their compiler - PSPad catches and parses compiler output, integrates external help files, compares versions and much more",
+	"publisher": "Jan Fiala",
+	"tags": ["Windows"
+	, "Development"
+	],
+	"iconUri": "https://ruckzuck.azurewebsites.net/wcf/GetIcon.ashx?Id=499764",
+	"targetOsType": "Windows",
+	"runCommand": { "commandToExecute": "PSPadeditor_setup.exe" }
+}

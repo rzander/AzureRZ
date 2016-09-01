@@ -1,0 +1,11 @@
+{
+	"title": "Meld",
+	"description": "Meld is a visual diff and merge tool targeted at developers. Meld helps you compare files, directories, and version controlled projects. It provides two- and three-way comparison of both files and directories, and has support for many popular version control systems.",
+	"publisher": "The Meld project",
+	"tags": ["Windows"
+	, "Development"
+	],
+	"iconUri": "https://ruckzuck.azurewebsites.net/wcf/GetIcon.ashx?Id=510262",
+	"targetOsType": "Windows",
+	"runCommand": { "commandToExecute": "Meld_setup.exe" }
+}

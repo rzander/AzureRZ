@@ -1,0 +1,11 @@
+{
+	"title": "NSIS",
+	"description": "NSIS (Nullsoft Scriptable Install System) is a professional open source system to create Windows installers. It is designed to be as small and flexible as possible and is therefore very suitable for internet distribution.",
+	"publisher": "Nullsoft",
+	"tags": ["Windows"
+	, "Development"
+	],
+	"iconUri": "https://ruckzuck.azurewebsites.net/wcf/GetIcon.ashx?Id=502101",
+	"targetOsType": "Windows",
+	"runCommand": { "commandToExecute": "NSIS_setup.exe" }
+}

@@ -1,0 +1,11 @@
+{
+	"title": "AdobeReader DC",
+	"description": "More powerful than other PDF software, Adobe Acrobat Reader DC is the free, trusted standard for viewing, printing, and annotating PDFs. And now, it's connected to Adobe Document Cloud ? so it?s easier than ever to work with PDFs on computers and mobile devices.",
+	"publisher": "Adobe Systems Incorporated",
+	"tags": ["Windows"
+	, "Office"
+	],
+	"iconUri": "https://ruckzuck.azurewebsites.net/wcf/GetIcon.ashx?Id=500766",
+	"targetOsType": "Windows",
+	"runCommand": { "commandToExecute": "AdobeReaderDC_setup.exe" }
+}

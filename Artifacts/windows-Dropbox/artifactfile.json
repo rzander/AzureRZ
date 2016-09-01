@@ -1,0 +1,11 @@
+{
+	"title": "Dropbox",
+	"description": "Dropbox is a home for all your photos, docs, videos, and files. Anything you add to Dropbox will automatically show up on all your computers, phones and even the Dropbox website ? so you can access your stuff from anywhere.",
+	"publisher": "Dropbox, Inc.",
+	"tags": ["Windows"
+	, "Utilities"
+	],
+	"iconUri": "https://ruckzuck.azurewebsites.net/wcf/GetIcon.ashx?Id=515556",
+	"targetOsType": "Windows",
+	"runCommand": { "commandToExecute": "Dropbox_setup.exe" }
+}

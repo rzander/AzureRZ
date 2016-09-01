@@ -1,0 +1,11 @@
+{
+	"title": "GIMP",
+	"description": "GIMP is an acronym for GNU Image Manipulation Program. It is a freely distributed program for such tasks as photo retouching, image composition and image authoring. It has many capabilities.",
+	"publisher": "The GIMP Team",
+	"tags": ["Windows"
+	, "Imaging"
+	],
+	"iconUri": "https://ruckzuck.azurewebsites.net/wcf/GetIcon.ashx?Id=501380",
+	"targetOsType": "Windows",
+	"runCommand": { "commandToExecute": "GIMP_setup.exe" }
+}

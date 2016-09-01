@@ -1,0 +1,11 @@
+{
+	"title": "JavaRuntime8",
+	"description": "The JRE provides the libraries, Java virtual machine, and other components necessary for you to run applets and applications written in the Java programming language.",
+	"publisher": "Oracle Corporation",
+	"tags": ["Windows"
+	, "Runtime"
+	],
+	"iconUri": "https://ruckzuck.azurewebsites.net/wcf/GetIcon.ashx?Id=501645",
+	"targetOsType": "Windows",
+	"runCommand": { "commandToExecute": "JavaRuntime8_setup.exe" }
+}

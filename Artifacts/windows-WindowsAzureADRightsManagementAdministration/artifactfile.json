@@ -1,0 +1,11 @@
+{
+	"title": "Windows Azure AD Rights Management Administration",
+	"description": "Azure Rights Management Administration Tool installs the Windows PowerShell module for Azure Rights Management. Azure Rights Management provides the ability to enable rights management in organizations that subscribe to the Office 365 or Azure RMS services. Office 365 and Azure RMS customers can enable rights management capabilities for Exchange Online, SharePoint, and Office. These downloads enable an administrator to manage and configure Azure Rights Management features. ",
+	"publisher": "Microsoft Corporation",
+	"tags": ["Windows"
+	, "Other"
+	],
+	"iconUri": "https://ruckzuck.azurewebsites.net/wcf/GetIcon.ashx?Id=515426",
+	"targetOsType": "Windows",
+	"runCommand": { "commandToExecute": "WindowsAzureADRightsManagementAdministration_setup.exe" }
+}

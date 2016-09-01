@@ -1,0 +1,11 @@
+{
+	"title": "Message Analyzer",
+	"description": "Message Analyzer enables you to capture, display, and analyze protocol messaging traffic; and to trace and assess system events and other messages from Windows components. ",
+	"publisher": "Microsoft Corporation",
+	"tags": ["Windows"
+	, "Utilities"
+	],
+	"iconUri": "https://ruckzuck.azurewebsites.net/wcf/GetIcon.ashx?Id=496007",
+	"targetOsType": "Windows",
+	"runCommand": { "commandToExecute": "MessageAnalyzer_setup.exe" }
+}

@@ -1,0 +1,11 @@
+{
+	"title": "SketchUp Make ",
+	"description": "Hobbyists, kids and backyard spaceship builders all agree that SketchUp Make is the easiest, most fun, entirely free 3D drawing tool in the world. We think you will, too. ",
+	"publisher": "Trimble Navigation Limited",
+	"tags": ["Windows"
+	, "Imaging"
+	],
+	"iconUri": "https://ruckzuck.azurewebsites.net/wcf/GetIcon.ashx?Id=423697",
+	"targetOsType": "Windows",
+	"runCommand": { "commandToExecute": "SketchUpMake_setup.exe" }
+}

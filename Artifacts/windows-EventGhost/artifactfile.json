@@ -1,0 +1,11 @@
+{
+	"title": "EventGhost",
+	"description": "EventGhost is an advanced, easy to use and extensible automation tool for MS Windows. It can use different input devices like infrared or wireless remote controls to trigger macros, that on their part control a computer and its attached hardware. So it can be used to control a Media-PC with a normal consumer remote. But its possible uses go much beyond this.",
+	"publisher": "EventGhost Project",
+	"tags": ["Windows"
+	, "Utilities"
+	],
+	"iconUri": "https://ruckzuck.azurewebsites.net/wcf/GetIcon.ashx?Id=421903",
+	"targetOsType": "Windows",
+	"runCommand": { "commandToExecute": "EventGhost_setup.exe" }
+}

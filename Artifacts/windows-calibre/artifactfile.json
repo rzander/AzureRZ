@@ -1,0 +1,11 @@
+{
+	"title": "calibre",
+	"description": "calibre is a free and open source e-book library management application developed by users of e-books for users of e-books.",
+	"publisher": "Kovid Goyal",
+	"tags": ["Windows"
+	, "Office"
+	],
+	"iconUri": "https://ruckzuck.azurewebsites.net/wcf/GetIcon.ashx?Id=515004",
+	"targetOsType": "Windows",
+	"runCommand": { "commandToExecute": "calibre_setup.exe" }
+}

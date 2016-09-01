@@ -1,0 +1,11 @@
+{
+	"title": "FileZilla Server",
+	"description": "FileZilla is a cross-platform graphical FTP, SFTP, and FTPS file management tool for Windows, Linux, Mac OS X, and more. With tons of intuitive tools, FileZilla helps you quickly move files between your computer and Web server. If you plan to use FileZilla regularly, you might like the advanced features like manual configuration and speed limit monitoring. While FTP may seem outdated, it's actually a very reliable way to transfer large files or groups of files to your Web server. And, with FileZilla, you can deploy multiple simultaneous connections to speed up file transfers. Overall, FileZilla has everything you need to support your FTP needs including a documentation wiki and a forum.",
+	"publisher": "FileZilla Project",
+	"tags": ["Windows"
+	, "Utilities"
+	],
+	"iconUri": "https://ruckzuck.azurewebsites.net/wcf/GetIcon.ashx?Id=513641",
+	"targetOsType": "Windows",
+	"runCommand": { "commandToExecute": "FileZillaServer_setup.exe" }
+}

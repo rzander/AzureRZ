@@ -1,0 +1,11 @@
+{
+	"title": "Viber",
+	"description": "Viber for Desktop lets you send free messages as well as make free calls to other Viber users, on any device and network, in any country! ",
+	"publisher": "Viber Media Inc.",
+	"tags": ["Windows"
+	, "Messaging"
+	],
+	"iconUri": "https://ruckzuck.azurewebsites.net/wcf/GetIcon.ashx?Id=512764",
+	"targetOsType": "Windows",
+	"runCommand": { "commandToExecute": "Viber_setup.exe" }
+}

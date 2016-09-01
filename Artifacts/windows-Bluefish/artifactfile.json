@@ -1,0 +1,11 @@
+{
+	"title": "Bluefish",
+	"description": "Bluefish is a powerful editor targeted towards programmers and webdevelopers, with many options to write websites, scripts and programming code. Bluefish supports many programming and markup languages. See features for an extensive overview, take a look at the screenshots, or download it right away. Bluefish is an open source development project, released under the GNU GPL licence.",
+	"publisher": "The Bluefish Developers",
+	"tags": ["Windows"
+	, "Development"
+	],
+	"iconUri": "https://ruckzuck.azurewebsites.net/wcf/GetIcon.ashx?Id=421280",
+	"targetOsType": "Windows",
+	"runCommand": { "commandToExecute": "Bluefish_setup.exe" }
+}

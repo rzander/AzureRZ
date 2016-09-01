@@ -1,0 +1,11 @@
+{
+	"title": "MediaInfo",
+	"description": "MediaInfo is a convenient unified display of the most relevant technical and tag data for video and audio files.",
+	"publisher": "MediaArea.net",
+	"tags": ["Windows"
+	, "Video"
+	],
+	"iconUri": "https://ruckzuck.azurewebsites.net/wcf/GetIcon.ashx?Id=515566",
+	"targetOsType": "Windows",
+	"runCommand": { "commandToExecute": "MediaInfo_setup.exe" }
+}

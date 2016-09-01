@@ -1,0 +1,11 @@
+{
+	"title": "Screenpresso",
+	"description": "Screenpresso captures your desktop (screenshots and HD videos) for your training documents, collaborative design work, IT bug reports, and more?",
+	"publisher": "Learnpulse",
+	"tags": ["Windows"
+	, "Imaging"
+	],
+	"iconUri": "https://ruckzuck.azurewebsites.net/wcf/GetIcon.ashx?Id=495291",
+	"targetOsType": "Windows",
+	"runCommand": { "commandToExecute": "Screenpresso_setup.exe" }
+}

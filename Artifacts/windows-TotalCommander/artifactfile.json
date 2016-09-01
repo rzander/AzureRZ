@@ -1,0 +1,11 @@
+{
+	"title": "TotalCommander",
+	"description": "Total Commander is a file manager for Windows, a program like Windows Explorer to copy, move or delete files. However, Total Commander can do much more than Explorer, e.g. pack and unpack files, access ftp servers, compare files by content, etc! ",
+	"publisher": "Ghisler Software GmbH",
+	"tags": ["Windows"
+	, "Utilities"
+	],
+	"iconUri": "https://ruckzuck.azurewebsites.net/wcf/GetIcon.ashx?Id=333358",
+	"targetOsType": "Windows",
+	"runCommand": { "commandToExecute": "TotalCommander_setup.exe" }
+}

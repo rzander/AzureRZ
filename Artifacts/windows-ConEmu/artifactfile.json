@@ -1,0 +1,11 @@
+{
+	"title": "ConEmu",
+	"description": "ConEmu-Maximus5 is a Windows console emulator with tabs, which presents multiple consoles and simple GUI applications as one customizable GUI window with various features.  Initially, the program was created as a companion to Far Manager (FAR in Wikipedia), my favorite shell replacement - file and archive management, command history and completion, powerful editor. Today, ConEmu can be used with any other console application or simple GUI tools (like PuTTY for example).",
+	"publisher": "ConEmu-Maximus5",
+	"tags": ["Windows"
+	, "Utilities"
+	],
+	"iconUri": "https://ruckzuck.azurewebsites.net/wcf/GetIcon.ashx?Id=515360",
+	"targetOsType": "Windows",
+	"runCommand": { "commandToExecute": "ConEmu_setup.exe" }
+}

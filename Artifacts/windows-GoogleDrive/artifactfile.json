@@ -1,0 +1,11 @@
+{
+	"title": "Google Drive",
+	"description": "Store any file. Drive starts you with 15 GB of free Google online storage, so you can keep photos, stories, designs, drawings, recordings, videos ? anything. ",
+	"publisher": "Google, Inc.",
+	"tags": ["Windows"
+	, "Utilities"
+	],
+	"iconUri": "https://ruckzuck.azurewebsites.net/wcf/GetIcon.ashx?Id=509605",
+	"targetOsType": "Windows",
+	"runCommand": { "commandToExecute": "GoogleDrive_setup.exe" }
+}

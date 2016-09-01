@@ -1,0 +1,11 @@
+{
+	"title": "Git",
+	"description": "Git for Windows focuses on offering a lightweight, native set of tools that bring the full feature set of the Git SCM to Windows while providing appropriate user interfaces for experienced Git users and novices alike.",
+	"publisher": "The Git Development Community",
+	"tags": ["Windows"
+	, "Development"
+	],
+	"iconUri": "https://ruckzuck.azurewebsites.net/wcf/GetIcon.ashx?Id=514848",
+	"targetOsType": "Windows",
+	"runCommand": { "commandToExecute": "Git_setup.exe" }
+}

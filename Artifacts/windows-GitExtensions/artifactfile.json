@@ -1,0 +1,11 @@
+{
+	"title": "Git Extensions",
+	"description": "Git Extensions is the only graphical user interface for Git that allows you control Git without using the commandline",
+	"publisher": "Henk",
+	"tags": ["Windows"
+	, "Development"
+	],
+	"iconUri": "https://ruckzuck.azurewebsites.net/wcf/GetIcon.ashx?Id=282822",
+	"targetOsType": "Windows",
+	"runCommand": { "commandToExecute": "GitExtensions_setup.exe" }
+}

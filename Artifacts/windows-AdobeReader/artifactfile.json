@@ -1,0 +1,11 @@
+{
+	"title": "AdobeReader",
+	"description": "Adobe Reader software is the free trusted standard for reliably viewing, printing, and annotating PDF documents. It's the only PDF file viewer that can open and interact with all types of PDF content, including forms and multimedia.",
+	"publisher": "Adobe Systems Incorporated",
+	"tags": ["Windows"
+	, "Office"
+	],
+	"iconUri": "https://ruckzuck.azurewebsites.net/wcf/GetIcon.ashx?Id=500968",
+	"targetOsType": "Windows",
+	"runCommand": { "commandToExecute": "AdobeReader_setup.exe" }
+}

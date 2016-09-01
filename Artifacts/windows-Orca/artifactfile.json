@@ -1,0 +1,11 @@
+{
+	"title": "Orca",
+	"description": "Orca.exe is a database table editor for creating and editing Windows Installer packages and merge modules. The tool provides a graphical interface for validation, highlighting the particular entries where validation errors or warnings occur. ",
+	"publisher": "Microsoft Corporation",
+	"tags": ["Windows"
+	, "Development"
+	],
+	"iconUri": "https://ruckzuck.azurewebsites.net/wcf/GetIcon.ashx?Id=155844",
+	"targetOsType": "Windows",
+	"runCommand": { "commandToExecute": "Orca_setup.exe" }
+}
