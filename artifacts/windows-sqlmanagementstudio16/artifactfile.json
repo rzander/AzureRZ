@@ -1,0 +1,14 @@
+{
+    "title": "SQL Management Studio 2016",
+    "description": "SQL Server Management Studio is an integrated environment for accessing, configuring, managing, administering, and developing all components of SQL Server. SQL Server Management Studio combines a broad group of graphical tools with a number of rich script editors to provide access to SQL Server to developers and administrators of all skill levels. ",
+	"publisher": "Microsoft Corporation",
+    "tags": [
+        "Windows",
+        "SQL2016"
+    ],
+    "iconUri": "https://ruckzuck.azurewebsites.net/wcf/GetIcon.ashx?Id=512668",
+    "targetOsType": "Windows",
+    "runCommand": {
+        "commandToExecute": "powershell.exe -ExecutionPolicy bypass -File startRuckZuck.ps1 -PackageList 'SQL Management Studio 2016'"
+    }
+}
