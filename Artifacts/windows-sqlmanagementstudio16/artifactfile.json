@@ -9,6 +9,6 @@
     "iconUri": "https://ruckzuck.azurewebsites.net/wcf/GetIcon.ashx?Id=512668",
     "targetOsType": "Windows",
     "runCommand": {
-        "commandToExecute": "powershell.exe -ExecutionPolicy bypass -File startRuckZuck.ps1 -PackageList 'SQL Management Studio 2016'"
+        "commandToExecute": "powershell.exe -ExecutionPolicy bypass -File startRuckZuck.ps1 -PackageList \"SQL Management Studio 2016\""
     }
 }
