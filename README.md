@@ -1,5 +1,7 @@
 # RuckZuck Artifacts Repository for Azure DevTest Labs
-Main Repository on: http://ruckzuck.tools
+You can add this Artifacts Repository in your Azure DevTest Labs...  
+- Main RuckZuck Repository on: http://ruckzuck.tools
+- Default Public Repository for Azure DevTest Labs: https://github.com/Azure/azure-devtestlab
 
 ## Artifact Repository Settings:
 - URI: https://github.com/rzander/AzureRZ.git
