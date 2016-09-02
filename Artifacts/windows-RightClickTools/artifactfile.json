@@ -1,0 +1,11 @@
+{
+	"title": "Right Click Tools",
+	"description": "RCT Free for SCCM was built with Client Actions, Client Tools, Console Tools and User Tools in one place. Client Actions:  allow administrators to interact with client computers without having to navigate outside of the ConfigMgr interface. Client Tools: administrators are given a number of different device property options. Console Tools: allow administrators to perform actions that are not accessible from within the console. User Tools: allow administrators to perform various Active Directory functions on specific users.",
+	"publisher": "Now Micro",
+	"tags": ["Windows"
+	, "SysAdmin"
+	],
+	"iconUri": "https://ruckzuck.azurewebsites.net/wcf/GetIcon.ashx?Id=419605",
+	"targetOsType": "Windows",
+	"runCommand": { "commandToExecute": "RightClickTools_setup.exe" }
+}

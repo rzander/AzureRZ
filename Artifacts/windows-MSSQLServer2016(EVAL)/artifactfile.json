@@ -1,0 +1,11 @@
+{
+	"title": "MS SQL Server 2016 (EVAL)",
+	"description": "Microsoft SQL Server 2014 enables a cloud-ready information platform that will help organizations unlock breakthrough insights across the organization as well as quickly build solutions and extend data across on-premises and public cloud backed by capabilities for mission critical confidence.",
+	"publisher": "Microsoft Corporation",
+	"tags": ["Windows"
+	, "SysAdmin"
+	],
+	"iconUri": "https://ruckzuck.azurewebsites.net/wcf/GetIcon.ashx?Id=500226",
+	"targetOsType": "Windows",
+	"runCommand": { "commandToExecute": "MSSQLServer2016(EVAL)_setup.exe" }
+}

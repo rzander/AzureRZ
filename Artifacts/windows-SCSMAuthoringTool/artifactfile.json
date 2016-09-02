@@ -1,0 +1,11 @@
+{
+	"title": "SCSM Authoring Tool",
+	"description": "The System Center 2012 R2 Service Manager Authoring Tool is a tool for customization and extension of the built in functionality in System Center Service Manager. This release supports modifying existing process management packs and creating new management packs that define extensions to the Service Manager database for tracking additional information, customizations of forms or new forms, and new workflows. This release is available in 10 languages. ",
+	"publisher": "Microsoft Corporation",
+	"tags": ["Windows"
+	, "SysAdmin"
+	],
+	"iconUri": "https://ruckzuck.azurewebsites.net/wcf/GetIcon.ashx?Id=152",
+	"targetOsType": "Windows",
+	"runCommand": { "commandToExecute": "SCSMAuthoringTool_setup.exe" }
+}

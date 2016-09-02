@@ -1,0 +1,11 @@
+{
+	"title": "Microsoft Deployment Toolkit",
+	"description": "Microsoft Deployment Toolkit (MDT) 2013 Update 2 is a Solution Accelerator for operating system and application deployment. MDT 2013 supports deployment of Windows 10,Windows 8.1, Windows 8, Windows 7, Windows Server 2012 R2, Windows Server 2012, and Windows Server 2008 R2",
+	"publisher": "Microsoft Corporation",
+	"tags": ["Windows"
+	, "SysAdmin"
+	],
+	"iconUri": "https://ruckzuck.azurewebsites.net/wcf/GetIcon.ashx?Id=420006",
+	"targetOsType": "Windows",
+	"runCommand": { "commandToExecute": "MicrosoftDeploymentToolkit_setup.exe" }
+}

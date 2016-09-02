@@ -1,0 +1,11 @@
+{
+	"title": "Docker Toolbox",
+	"description": "Docker Toolbox is an installer for quick setup and launch of a Docker environment on Mac and Windows systems.",
+	"publisher": "Docker",
+	"tags": ["Windows"
+	, "SysAdmin"
+	],
+	"iconUri": "https://ruckzuck.azurewebsites.net/wcf/GetIcon.ashx?Id=512989",
+	"targetOsType": "Windows",
+	"runCommand": { "commandToExecute": "DockerToolbox_setup.exe" }
+}

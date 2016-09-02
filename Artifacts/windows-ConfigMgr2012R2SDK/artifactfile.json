@@ -1,0 +1,11 @@
+{
+	"title": "ConfigMgr 2012 R2 SDK",
+	"description": "The System Center 2012 R2 Configuration Manager SDK provides information applicable to administrators who want to automate Configuration Manager through script and to developers adding features and extensions to base Configuration Manager functionality. ",
+	"publisher": "Microsoft Corporation",
+	"tags": ["Windows"
+	, "SysAdmin"
+	],
+	"iconUri": "https://ruckzuck.azurewebsites.net/wcf/GetIcon.ashx?Id=52800",
+	"targetOsType": "Windows",
+	"runCommand": { "commandToExecute": "ConfigMgr2012R2SDK_setup.exe" }
+}

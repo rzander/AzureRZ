@@ -1,0 +1,11 @@
+{
+	"title": "Docker",
+	"description": "A native Windows application which delivers all Docker tools to your Windows computer.",
+	"publisher": "Docker Inc.",
+	"tags": ["Windows"
+	, "SysAdmin"
+	],
+	"iconUri": "https://ruckzuck.azurewebsites.net/wcf/GetIcon.ashx?Id=502502",
+	"targetOsType": "Windows",
+	"runCommand": { "commandToExecute": "Docker_setup.exe" }
+}
