@@ -1,0 +1,11 @@
+{
+	"title": "Acrobat Customization Wizard DC",
+	"description": "Acrobat Customization Wizard DC is a free utility designed to help IT professionals take greater control of enterprise-wide deployments of Adobe Acrobat and Adobe Reader. With it you can customize product installers and application features prior to deployment. The Wizard works with the entire Windows Acrobat DC desktop product family. ",
+	"publisher": "Adobe Systems, Inc.",
+	"tags": ["Windows"
+	, "Office"
+	],
+	"iconUri": "https://ruckzuck.azurewebsites.net/wcf/GetIcon.ashx?Id=488240",
+	"targetOsType": "Windows",
+	"runCommand": { "commandToExecute": "AcrobatCustomizationWizardDC_setup.exe" }
+}

@@ -1,0 +1,11 @@
+{
+	"title": "AdobePDFiFilter",
+	"description": "Adobe PDF iFilter is designed for end users or administrators who wish to index Adobe PDF documents using Microsoft indexing clients. This allows the user to easily search for text within Adobe PDF documents. ",
+	"publisher": "Adobe",
+	"tags": ["Windows"
+	, "Office"
+	],
+	"iconUri": "https://ruckzuck.azurewebsites.net/wcf/GetIcon.ashx?Id=568",
+	"targetOsType": "Windows",
+	"runCommand": { "commandToExecute": "AdobePDFiFilter_setup.exe" }
+}

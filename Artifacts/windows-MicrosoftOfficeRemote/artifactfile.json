@@ -1,0 +1,11 @@
+{
+	"title": "Microsoft Office Remote",
+	"description": "Office Remote turns your phone into a smart remote that interacts with Microsoft Office on your PC. The app lets you control Word, Excel, and PowerPoint from across the room, so you can walk around freely during presentations. ",
+	"publisher": "Microsoft Corporation",
+	"tags": ["Windows"
+	, "Office"
+	],
+	"iconUri": "https://ruckzuck.azurewebsites.net/wcf/GetIcon.ashx?Id=63294",
+	"targetOsType": "Windows",
+	"runCommand": { "commandToExecute": "MicrosoftOfficeRemote_setup.exe" }
+}

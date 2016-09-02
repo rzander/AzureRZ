@@ -1,0 +1,11 @@
+{
+	"title": "TeXstudio",
+	"description": "TeXstudio is an integrated writing environment for creating LaTeX documents. Our goal is to make writing LaTeX as easy and comfortable as possible. Therefore TeXstudio has numerous features like syntax-highlighting, integrated viewer, reference checking and various assistants.",
+	"publisher": "Benito van der Zander",
+	"tags": ["Windows"
+	, "Other"
+	],
+	"iconUri": "https://ruckzuck.azurewebsites.net/wcf/GetIcon.ashx?Id=491669",
+	"targetOsType": "Windows",
+	"runCommand": { "commandToExecute": "TeXstudio_setup.exe" }
+}

@@ -1,0 +1,11 @@
+{
+	"title": "Realterm",
+	"description": "Serial terminal program for engineering. Ideal for development, reverse engineering, debugging, datalogging and capture, and automatic test.",
+	"publisher": "Broadcast Equipment",
+	"tags": ["Windows"
+	, "Development"
+	],
+	"iconUri": "https://ruckzuck.azurewebsites.net/wcf/GetIcon.ashx?Id=430193",
+	"targetOsType": "Windows",
+	"runCommand": { "commandToExecute": "Realterm_setup.exe" }
+}

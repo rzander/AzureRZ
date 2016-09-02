@@ -1,0 +1,11 @@
+{
+	"title": "Scilab",
+	"description": "Scilab is free and open source software for numerical computation providing a powerful computing environment for engineering and scientific applications. Scilab is released as open source under the CeCILL license (GPL compatible), and is available for download free of charge. Scilab is available under GNU/Linux, Mac OS X and Windows XP/Vista/7/8.",
+	"publisher": "Scilab Enterprises",
+	"tags": ["Windows"
+	, "Education"
+	],
+	"iconUri": "https://ruckzuck.azurewebsites.net/wcf/GetIcon.ashx?Id=155493",
+	"targetOsType": "Windows",
+	"runCommand": { "commandToExecute": "Scilab_setup.exe" }
+}

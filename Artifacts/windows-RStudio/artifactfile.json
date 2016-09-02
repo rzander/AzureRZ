@@ -1,0 +1,11 @@
+{
+	"title": "RStudio",
+	"description": "RStudio is an integrated development environment (IDE) for R. It includes a console, syntax-highlighting editor that supports direct code execution, as well as tools for plotting, history, debugging and workspace management. ",
+	"publisher": "RStudio",
+	"tags": ["Windows"
+	, "Development"
+	],
+	"iconUri": "https://ruckzuck.azurewebsites.net/wcf/GetIcon.ashx?Id=501535",
+	"targetOsType": "Windows",
+	"runCommand": { "commandToExecute": "RStudio_setup.exe" }
+}

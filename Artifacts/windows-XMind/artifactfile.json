@@ -1,0 +1,11 @@
+{
+	"title": "XMind",
+	"description": "XMind is a mind mapping and brainstorming software, developed by XMind Ltd. In addition to the management elements, the software can capture ideas, clarify thinking, manage complex information, and promote team collaboration. As of April 2013, XMind was selected as the most popular mind mapping software on Lifehacker.",
+	"publisher": "XMind Ltd.",
+	"tags": ["Windows"
+	, "Office"
+	],
+	"iconUri": "https://ruckzuck.azurewebsites.net/wcf/GetIcon.ashx?Id=501384",
+	"targetOsType": "Windows",
+	"runCommand": { "commandToExecute": "XMind_setup.exe" }
+}

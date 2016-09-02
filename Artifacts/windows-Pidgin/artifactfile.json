@@ -1,0 +1,11 @@
+{
+	"title": "Pidgin",
+	"description": "Pidgin is an instant messaging program which lets you log in to accounts on multiple chat networks simultaneously. It runs on Windows, Linux, and other UNIX operating systems. Pidgin is compatible with the following chat networks out of the box: AIM, ICQ, Google Talk, Jabber/XMPP, MSN Messenger, Yahoo!, Bonjour, Gadu-Gadu, IRC, MXit, Novell GroupWise Messenger, Lotus Sametime, SILC, SIMPLE, MySpaceIM, and Zephyr. It is written in C and makes heavy use of GLib and GTK+.",
+	"publisher": "",
+	"tags": ["Windows"
+	, "Messaging"
+	],
+	"iconUri": "https://ruckzuck.azurewebsites.net/wcf/GetIcon.ashx?Id=497411",
+	"targetOsType": "Windows",
+	"runCommand": { "commandToExecute": "Pidgin_setup.exe" }
+}

@@ -1,0 +1,11 @@
+{
+	"title": "Python",
+	"description": "Python is a programming language that lets you work more quickly and integrate your systems more effectively.",
+	"publisher": "Python Software Foundation",
+	"tags": ["Windows"
+	, "Development"
+	],
+	"iconUri": "https://ruckzuck.azurewebsites.net/wcf/GetIcon.ashx?Id=498367",
+	"targetOsType": "Windows",
+	"runCommand": { "commandToExecute": "Python_setup.exe" }
+}

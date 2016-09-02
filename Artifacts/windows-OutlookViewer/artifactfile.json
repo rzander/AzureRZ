@@ -1,0 +1,12 @@
+{
+	"title": "OutlookViewer",
+	"description": "You have a PST file but can't open it without your Outlook email client? Maybe you'd like to review an old PST file in order to access contact information? Whatever your needs may be, our free Outlook Viewer helps you open and view PST and OST files without having Outlook installed on your machine. This flexible, easy to use viewer features an intuitive interface. Simply select a PST (or OST) file from the file tree and click to view. ",
+	"publisher": "Softplicity, Inc.",
+	"tags": ["Windows"
+	, "Messaging"
+	, "Office"
+	],
+	"iconUri": "https://ruckzuck.azurewebsites.net/wcf/GetIcon.ashx?Id=32237",
+	"targetOsType": "Windows",
+	"runCommand": { "commandToExecute": "OutlookViewer_setup.exe" }
+}

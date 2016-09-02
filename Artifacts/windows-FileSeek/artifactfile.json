@@ -1,0 +1,11 @@
+{
+	"title": "FileSeek",
+	"description": "FileSeek is a simple, easy-to-use file search utility that includes advanced functionality for power users too. Search through your files using simple text queries, or use regular expressions for complete control. You can even sync your search settings between computers.",
+	"publisher": "Binary Fortress Software",
+	"tags": ["Windows"
+	, "Utilities"
+	],
+	"iconUri": "https://ruckzuck.azurewebsites.net/wcf/GetIcon.ashx?Id=511317",
+	"targetOsType": "Windows",
+	"runCommand": { "commandToExecute": "FileSeek_setup.exe" }
+}

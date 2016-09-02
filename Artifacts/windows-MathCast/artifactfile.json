@@ -1,0 +1,11 @@
+{
+	"title": "MathCast",
+	"description": "MathCast is an equation editor, an application that allows you to input mathematical equations. These equations can be used in documents, emails, and webpages. The equations can be rendered graphically to the screen, to picture files, or to MathML. ",
+	"publisher": "",
+	"tags": ["Windows"
+	, "Education"
+	],
+	"iconUri": "https://ruckzuck.azurewebsites.net/wcf/GetIcon.ashx?Id=145045",
+	"targetOsType": "Windows",
+	"runCommand": { "commandToExecute": "MathCast_setup.exe" }
+}

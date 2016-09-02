@@ -1,0 +1,11 @@
+{
+	"title": "PXCViewer",
+	"description": "Those wishing to View/Modify or perform simple editing and even OCR Image based PDF files on their Windows PC's now have a FREE pdf reader alternative to the Adobe Reader! The PDF-XChange Viewer is smaller, faster and more feature rich than any other FREE PDF Reader/ PDF Viewer/ PDF Editor available. This free pdf viewer download also allows users to try the extended functionality offered by the PDF-XChange Viewer 'PRO' in evaluation mode - for free.",
+	"publisher": "Tracker Software Products (Canada) Ltd.",
+	"tags": ["Windows"
+	, "Office"
+	],
+	"iconUri": "https://ruckzuck.azurewebsites.net/wcf/GetIcon.ashx?Id=434439",
+	"targetOsType": "Windows",
+	"runCommand": { "commandToExecute": "PXCViewer_setup.exe" }
+}

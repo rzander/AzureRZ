@@ -1,0 +1,11 @@
+{
+	"title": "Boxcryptor Classic",
+	"description": "Cloud storage users in over 30 countries are using Boxcryptor to protect ther private and business files. Boxcryptor can be quickly and easily integrated into existing business processes and protects all data without sacrificing efficiency. ",
+	"publisher": "Secomba GmbH",
+	"tags": ["Windows"
+	, "Security"
+	],
+	"iconUri": "https://ruckzuck.azurewebsites.net/wcf/GetIcon.ashx?Id=155779",
+	"targetOsType": "Windows",
+	"runCommand": { "commandToExecute": "BoxcryptorClassic_setup.exe" }
+}

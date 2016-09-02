@@ -1,0 +1,11 @@
+{
+	"title": "UltraEdit",
+	"description": "UltraEdit is used across a diverse range of industries, from professional writers, researchers and journalists to advanced programmers, database managers and web developers. Scores of individuals use UltraEdit as a powerful replacement for windows notepad and even more use it as a text editor because of its ability to handle multiple documents at once, large file handling, powerful search/find/replace functionality, spell checking versatility and much more.",
+	"publisher": "IDM Computer Solutions, Inc.",
+	"tags": ["Windows"
+	, "Development"
+	],
+	"iconUri": "https://ruckzuck.azurewebsites.net/wcf/GetIcon.ashx?Id=510017",
+	"targetOsType": "Windows",
+	"runCommand": { "commandToExecute": "UltraEdit_setup.exe" }
+}

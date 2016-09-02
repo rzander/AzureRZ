@@ -1,0 +1,11 @@
+{
+	"title": "EMET",
+	"description": "The Enhanced Mitigation Experience Toolkit (EMET) helps raise the bar against attackers gaining access to computer systems. EMET anticipates the most common actions and techniques adversaries might use in compromising a computer, and helps protect by diverting, terminating, blocking, and invalidating those actions and techniques. EMET helps protect your computer systems even before new and undiscovered threats are formally addressed by security updates and antimalware software. EMET benefits enterprises and all computer users by helping to protect against security threats and breaches that can disrupt businesses and daily lives. ",
+	"publisher": "Microsoft Corporation",
+	"tags": ["Windows"
+	, "Security"
+	],
+	"iconUri": "https://ruckzuck.azurewebsites.net/wcf/GetIcon.ashx?Id=344987",
+	"targetOsType": "Windows",
+	"runCommand": { "commandToExecute": "EMET_setup.exe" }
+}

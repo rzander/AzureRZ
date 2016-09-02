@@ -1,0 +1,11 @@
+{
+	"title": "XmlNotepad",
+	"description": "XML Notepad provides a simple intuitive User Interface for browsing and editing XML documents. This application is built using .NET Framework 4.0 in C#.",
+	"publisher": "Lovett Software",
+	"tags": ["Windows"
+	, "Development"
+	],
+	"iconUri": "https://ruckzuck.azurewebsites.net/wcf/GetIcon.ashx?Id=422873",
+	"targetOsType": "Windows",
+	"runCommand": { "commandToExecute": "XmlNotepad_setup.exe" }
+}

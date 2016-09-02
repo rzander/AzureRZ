@@ -1,0 +1,11 @@
+{
+	"title": "Nitro Pro",
+	"description": "Create smarter documents with Nitro Pro 10, the first and leading alternative to Adobe Acrobat. Create PDF files from scratch, or turn any kind of paper or digital file into a fully editable document.",
+	"publisher": "Nitro",
+	"tags": ["Windows"
+	, "Office"
+	],
+	"iconUri": "https://ruckzuck.azurewebsites.net/wcf/GetIcon.ashx?Id=502446",
+	"targetOsType": "Windows",
+	"runCommand": { "commandToExecute": "NitroPro_setup.exe" }
+}

@@ -1,0 +1,11 @@
+{
+	"title": "Maxima",
+	"description": "Maxima is a computer algebra system comparable to commercial systems like Mathematica and Maple. It emphasizes symbolic mathematical computation: algebra, trigonometry, calculus, and much more.",
+	"publisher": "The Maxima Development Team",
+	"tags": ["Windows"
+	, "Education"
+	],
+	"iconUri": "https://ruckzuck.azurewebsites.net/wcf/GetIcon.ashx?Id=489794",
+	"targetOsType": "Windows",
+	"runCommand": { "commandToExecute": "Maxima_setup.exe" }
+}

@@ -1,0 +1,11 @@
+{
+	"title": "Unity",
+	"description": "Unity is a game development ecosystem: a powerful rendering engine fully integrated with a complete set of intuitive tools and rapid workflows to create interactive 3D and 2D content; easy multiplatform publishing; thousands of quality, ready-made assets in the Asset Store and a knowledge-sharing community.",
+	"publisher": "Unity Technologies ApS",
+	"tags": ["Windows"
+	, "Development"
+	],
+	"iconUri": "https://ruckzuck.azurewebsites.net/wcf/GetIcon.ashx?Id=505624",
+	"targetOsType": "Windows",
+	"runCommand": { "commandToExecute": "Unity_setup.exe" }
+}

@@ -1,0 +1,11 @@
+{
+	"title": "Advanced IP Scanner",
+	"description": "Free network scanner allowing you to quickly retrieve information about network devices and obtain access to their various resources such as shared folders, HTTP, HTTPS, FTP, RDP and Radmin. The program does not require installation and has a simple and user-friendly interface. Advanced IP Scanner is widely used by system administrators and home users for management and monitoring of local networks.",
+	"publisher": "Famatech",
+	"tags": ["Windows"
+	, "Other"
+	],
+	"iconUri": "https://ruckzuck.azurewebsites.net/wcf/GetIcon.ashx?Id=187592",
+	"targetOsType": "Windows",
+	"runCommand": { "commandToExecute": "AdvancedIPScanner_setup.exe" }
+}

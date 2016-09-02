@@ -1,0 +1,11 @@
+{
+	"title": "CitrixReceiver",
+	"description": "Citrix Receiver is the easy-to-install client software that provides access to your XenDesktop and XenApp installations. With this free download you can access applications, desktops and data easily and securely from any device, including smartphones, tablets, PCs and Macs.",
+	"publisher": "Citrix Systems, Inc.",
+	"tags": ["Windows"
+	, "Utilities"
+	],
+	"iconUri": "https://ruckzuck.azurewebsites.net/wcf/GetIcon.ashx?Id=483697",
+	"targetOsType": "Windows",
+	"runCommand": { "commandToExecute": "CitrixReceiver_setup.exe" }
+}

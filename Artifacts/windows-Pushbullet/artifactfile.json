@@ -1,0 +1,11 @@
+{
+	"title": "Pushbullet",
+	"description": "Use Pushbullet to send notes, links, files and more between your devices and friends. Pushbullet is a simple and clean way to bridge the gap between your phones, tablets, and computers, enabling them to work better together. Sharing data between devices can be a real pain, but with Pushbullet, it becomes much easier.",
+	"publisher": "Pushbullet Inc",
+	"tags": ["Windows"
+	, "Utilities"
+	],
+	"iconUri": "https://ruckzuck.azurewebsites.net/wcf/GetIcon.ashx?Id=251010",
+	"targetOsType": "Windows",
+	"runCommand": { "commandToExecute": "Pushbullet_setup.exe" }
+}

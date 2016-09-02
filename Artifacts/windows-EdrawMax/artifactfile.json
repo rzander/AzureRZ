@@ -1,0 +1,11 @@
+{
+	"title": "Edraw Max",
+	"description": "Edraw Max is an all-in-one diagram software that makes it simple to create professional-looking flowcharts, organizational charts, network diagrams, business presentations, building plans, mind maps, science illustration, fashion designs, UML diagrams, workflows, program structures, web design diagrams, electrical engineering diagrams, directional maps, database diagrams and more.",
+	"publisher": "EdrawSoft",
+	"tags": ["Windows"
+	, "Office"
+	],
+	"iconUri": "https://ruckzuck.azurewebsites.net/wcf/GetIcon.ashx?Id=509713",
+	"targetOsType": "Windows",
+	"runCommand": { "commandToExecute": "EdrawMax_setup.exe" }
+}

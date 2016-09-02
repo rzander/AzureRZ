@@ -1,0 +1,11 @@
+{
+	"title": "LAV Filters",
+	"description": "LAV Filters are a set of DirectShow filters based on the libavformat and libavcodec libraries from the ffmpeg project, which will allow you to play virtually any format in a DirectShow player.",
+	"publisher": "Hendrik Leppkes",
+	"tags": ["Windows"
+	, "Video"
+	],
+	"iconUri": "https://ruckzuck.azurewebsites.net/wcf/GetIcon.ashx?Id=485726",
+	"targetOsType": "Windows",
+	"runCommand": { "commandToExecute": "LAVFilters_setup.exe" }
+}

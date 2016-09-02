@@ -1,0 +1,11 @@
+{
+	"title": "DipTrace",
+	"description": "DipTrace is quality Schematic Capture and PCB Design software that offers everything to create simple or complex multi-layer boards from schematic to manufacturing files.",
+	"publisher": "Novarm",
+	"tags": ["Windows"
+	, "Education"
+	],
+	"iconUri": "https://ruckzuck.azurewebsites.net/wcf/GetIcon.ashx?Id=495364",
+	"targetOsType": "Windows",
+	"runCommand": { "commandToExecute": "DipTrace_setup.exe" }
+}

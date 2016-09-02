@@ -1,0 +1,11 @@
+{
+	"title": "Gramps",
+	"description": "Gramps is a genealogy program for Linux, Windows, Mac, and FreeBSD that allows you to easily build and keep track of your family tree. It supports the GEDCOM standard, allows fine grained privacy controls and can generate many different types of reports (descendant trees, graphs, connection diagrams, ....)",
+	"publisher": "The GRAMPS project",
+	"tags": ["Windows"
+	, "Other"
+	],
+	"iconUri": "https://ruckzuck.azurewebsites.net/wcf/GetIcon.ashx?Id=468025",
+	"targetOsType": "Windows",
+	"runCommand": { "commandToExecute": "Gramps_setup.exe" }
+}

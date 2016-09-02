@@ -1,0 +1,11 @@
+{
+	"title": "LastPass",
+	"description": "LastPass remembers your passwords so that you can focus on the more important things in life.",
+	"publisher": "LastPass",
+	"tags": ["Windows"
+	, "Security"
+	],
+	"iconUri": "https://ruckzuck.azurewebsites.net/wcf/GetIcon.ashx?Id=501613",
+	"targetOsType": "Windows",
+	"runCommand": { "commandToExecute": "LastPass_setup.exe" }
+}

@@ -1,0 +1,11 @@
+{
+	"title": "FoxitReader",
+	"description": "Foxit Reader is a small, lightning fast, and feature rich PDF viewer which allows you to create (free PDF creation), open, view, sign, and print any PDF file. Foxit Reader is built upon the industry's fastest and most accurate (high fidelity) PDF rendering engine, providing users with the best PDF viewing and printing experience.",
+	"publisher": "Foxit Software Inc.",
+	"tags": ["Windows"
+	, "Office"
+	],
+	"iconUri": "https://ruckzuck.azurewebsites.net/wcf/GetIcon.ashx?Id=511049",
+	"targetOsType": "Windows",
+	"runCommand": { "commandToExecute": "FoxitReader_setup.exe" }
+}

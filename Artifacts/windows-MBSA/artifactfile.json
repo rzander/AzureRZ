@@ -1,0 +1,11 @@
+{
+	"title": "MBSA",
+	"description": "The Microsoft Baseline Security Analyzer provides a streamlined method to identify missing security updates and common security misconfigurations. MBSA 2.3 release adds support for Windows 8.1, Windows 8, Windows Server 2012 R2, and Windows Server 2012. Windows 2000 will no longer be supported with this release.",
+	"publisher": "Microsoft Corporation",
+	"tags": ["Windows"
+	, "Security"
+	],
+	"iconUri": "https://ruckzuck.azurewebsites.net/wcf/GetIcon.ashx?Id=239928",
+	"targetOsType": "Windows",
+	"runCommand": { "commandToExecute": "MBSA_setup.exe" }
+}

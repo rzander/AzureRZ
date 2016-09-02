@@ -1,0 +1,11 @@
+{
+	"title": "SharpSetup",
+	"description": "SharpSetup is a framework and a set of tools that allows you to create complete application installer solutions for Windows platform using well established technologies like Visual Studio, .NET, C#, C++, Windows Forms, Windows Installer XML and MsBuild. It can be treated as a way to create flexible graphical user interface (GUI) for your Windows Installer XML (WiX) based installer quickly and easily, but it is much more than that.",
+	"publisher": "SharpSetup Systems",
+	"tags": ["Windows"
+	, "Development"
+	],
+	"iconUri": "https://ruckzuck.azurewebsites.net/wcf/GetIcon.ashx?Id=492423",
+	"targetOsType": "Windows",
+	"runCommand": { "commandToExecute": "SharpSetup_setup.exe" }
+}

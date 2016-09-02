@@ -1,0 +1,11 @@
+{
+	"title": "Nitriq",
+	"description": "Nitriq Code Analysis helps .Net developers perform thorough code reviews so they can better understand and refine their code base. It includes over 40 pre-written queries that are immediately helpful out of the box, but the best thing about Nitriq is how easy it is to add your own rules because you?ll write them in the familiar Linq query language.",
+	"publisher": "Nitriq LLC",
+	"tags": ["Windows"
+	, "Development"
+	],
+	"iconUri": "https://ruckzuck.azurewebsites.net/wcf/GetIcon.ashx?Id=20891",
+	"targetOsType": "Windows",
+	"runCommand": { "commandToExecute": "Nitriq_setup.exe" }
+}

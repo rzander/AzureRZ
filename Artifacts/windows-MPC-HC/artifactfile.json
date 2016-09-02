@@ -1,0 +1,11 @@
+{
+	"title": "MPC-HC",
+	"description": "Media Player Classic - Home Cinema (MPC-HC), a derivative of Media Player Classic, is a no-nonsense alternative to the Windows Media Player. MPC-HC isn?t flashy but it works with nearly any media format. So dig out your old AVIs along with your modern H.264 and VC-1 videos, you won?t be disappointed. As for high-definition content, MPC-HC uses DXVA technology to pass decoding operations to your modern video card, enhancing your viewing experience. And MPC-HC supports both physical and software DVDs with menus, chapter navigation, and subtitles.",
+	"publisher": "MPC-HC Team",
+	"tags": ["Windows"
+	, "Video"
+	],
+	"iconUri": "https://ruckzuck.azurewebsites.net/wcf/GetIcon.ashx?Id=421584",
+	"targetOsType": "Windows",
+	"runCommand": { "commandToExecute": "MPC-HC_setup.exe" }
+}

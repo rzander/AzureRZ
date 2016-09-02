@@ -1,0 +1,11 @@
+{
+	"title": "NETMF",
+	"description": "The Microsoft .NET Micro Framework combines the reliability and efficiency of managed code with the premier development tools of Microsoft Visual StudioÂ® to deliver exceptional productivity for developing embedded applications on small devices.",
+	"publisher": "Microsoft Corporation",
+	"tags": ["Windows"
+	, "Development"
+	],
+	"iconUri": "https://ruckzuck.azurewebsites.net/wcf/GetIcon.ashx?Id=62830",
+	"targetOsType": "Windows",
+	"runCommand": { "commandToExecute": "NETMF_setup.exe" }
+}

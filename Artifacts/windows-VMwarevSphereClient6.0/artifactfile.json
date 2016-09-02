@@ -1,0 +1,11 @@
+{
+	"title": "VMware vSphere Client 6.0",
+	"description": "VMware vSphere, the industry-leading server virtualization platform, lets you virtualize applications with confidence. vSphere empowers users to virtualize scale-up and scale-out applications with confidence, redefines availability, and simplifies the virtual data center.",
+	"publisher": "VMware, Inc.",
+	"tags": ["Windows"
+	, "Other"
+	],
+	"iconUri": "https://ruckzuck.azurewebsites.net/wcf/GetIcon.ashx?Id=176768",
+	"targetOsType": "Windows",
+	"runCommand": { "commandToExecute": "VMwarevSphereClient6.0_setup.exe" }
+}

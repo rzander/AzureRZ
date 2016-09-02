@@ -1,0 +1,12 @@
+{
+	"title": "SQLReportBuilder2014",
+	"description": "Report Builder provides a productive report-authoring environment for IT professionals and power users. It supports the full capabilities of SQL Server 2014 Reporting Services. ",
+	"publisher": "Microsoft Corporation",
+	"tags": ["Windows"
+	, "Development"
+	, "SysAdmin"
+	],
+	"iconUri": "https://ruckzuck.azurewebsites.net/wcf/GetIcon.ashx?Id=52669",
+	"targetOsType": "Windows",
+	"runCommand": { "commandToExecute": "SQLReportBuilder2014_setup.exe" }
+}

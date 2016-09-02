@@ -1,0 +1,11 @@
+{
+	"title": "RoyalTS",
+	"description": "Royal TS is the perfect tool for server admins, system engineers, developers and IT focused information workers who constantly need to access remote systems with different protocols (RDP, VNC, SSH, HTTP/S, etc.).",
+	"publisher": "code4ward.net",
+	"tags": ["Windows"
+	, "Utilities"
+	],
+	"iconUri": "https://ruckzuck.azurewebsites.net/wcf/GetIcon.ashx?Id=498758",
+	"targetOsType": "Windows",
+	"runCommand": { "commandToExecute": "RoyalTS_setup.exe" }
+}

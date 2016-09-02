@@ -1,0 +1,11 @@
+{
+	"title": "Microsoft Azure PowerShell",
+	"description": "This repository contains a set of PowerShell cmdlets for developers and administrators to develop, deploy and manage Microsoft Azure applications.",
+	"publisher": "Microsoft Corporation",
+	"tags": ["Windows"
+	, "Development"
+	],
+	"iconUri": "https://ruckzuck.azurewebsites.net/wcf/GetIcon.ashx?Id=511585",
+	"targetOsType": "Windows",
+	"runCommand": { "commandToExecute": "MicrosoftAzurePowerShell_setup.exe" }
+}

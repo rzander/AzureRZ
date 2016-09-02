@@ -1,0 +1,11 @@
+{
+	"title": "Vidiot",
+	"description": "Vidiot is a non-linear video editor targeted for home video editing. It supports operations like compositing, scaling/rotating, adding transitions and titles, trimming, etc.",
+	"publisher": "Eric Raijmakers",
+	"tags": ["Windows"
+	, "Video"
+	],
+	"iconUri": "https://ruckzuck.azurewebsites.net/wcf/GetIcon.ashx?Id=500138",
+	"targetOsType": "Windows",
+	"runCommand": { "commandToExecute": "Vidiot_setup.exe" }
+}

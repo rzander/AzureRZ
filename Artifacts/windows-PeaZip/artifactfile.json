@@ -1,0 +1,11 @@
+{
+	"title": "PeaZip",
+	"description": "Free archiver and file compressor. Extract RAR 7Z CAB TAR ZIP files. Over 150 file formats supported for extraction",
+	"publisher": "Giorgio Tani",
+	"tags": ["Windows"
+	, "Compression"
+	],
+	"iconUri": "https://ruckzuck.azurewebsites.net/wcf/GetIcon.ashx?Id=501892",
+	"targetOsType": "Windows",
+	"runCommand": { "commandToExecute": "PeaZip_setup.exe" }
+}

@@ -1,0 +1,11 @@
+{
+	"title": "Graph",
+	"description": "Graph is an open source application used to draw mathematical graphs in a coordinate system. Anyone who wants to draw graphs of functions will find this program useful. The program makes it very easy to visualize a function and paste it into another program. It is also possible to do some mathematical calculations on the functions.",
+	"publisher": "Ivan Johansen",
+	"tags": ["Windows"
+	, "Education"
+	],
+	"iconUri": "https://ruckzuck.azurewebsites.net/wcf/GetIcon.ashx?Id=32332",
+	"targetOsType": "Windows",
+	"runCommand": { "commandToExecute": "Graph_setup.exe" }
+}

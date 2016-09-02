@@ -1,0 +1,11 @@
+{
+	"title": "Bandizip",
+	"description": "Bandizip is a lightweight, fast and  free All-In-One Zip Archiver.  Bandizip has a very fast Zip algorithm for compression & extraction with Fast Drag and Drop, High Speed Archiving, and Multi-core compression. It handles the most popular compression formats, including Zip, 7z, Rar, and so on.",
+	"publisher": "Bandisoft.com",
+	"tags": ["Windows"
+	, "Compression"
+	],
+	"iconUri": "https://ruckzuck.azurewebsites.net/wcf/GetIcon.ashx?Id=497814",
+	"targetOsType": "Windows",
+	"runCommand": { "commandToExecute": "Bandizip_setup.exe" }
+}

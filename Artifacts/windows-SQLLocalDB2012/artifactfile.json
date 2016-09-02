@@ -1,0 +1,11 @@
+{
+	"title": "SQLLocalDB2012",
+	"description": "LocalDB is a lightweight version of Express that has all its programmability features, yet runs in user mode and has a fast, zero-configuration installation and short list of pre-requisites. Use this if you need a simple way to create and work with databases from code. It can be bundled with Application and Database Development tools like Visual Studio and or embedded with an application that needs local databases.",
+	"publisher": "Microsoft Corporation",
+	"tags": ["Windows"
+	, "Development"
+	],
+	"iconUri": "https://ruckzuck.azurewebsites.net/wcf/GetIcon.ashx?Id=63448",
+	"targetOsType": "Windows",
+	"runCommand": { "commandToExecute": "SQLLocalDB2012_setup.exe" }
+}

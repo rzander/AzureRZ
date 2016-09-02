@@ -1,0 +1,11 @@
+{
+	"title": "fxCalc",
+	"description": "fx-Calc  is actually one of the most advanced desktop calculators for Windows. The biggest advantage is the simple and intuitive handling of complex mathematical tasks. Starting with a well known calculator window, it allows already calculating self defined functions, sums and product's. It takes for instance just a few clicks to run the Leibnitz iteration to calculate Pi.",
+	"publisher": "Hans Joerg schmidt",
+	"tags": ["Windows"
+	, "Education"
+	],
+	"iconUri": "https://ruckzuck.azurewebsites.net/wcf/GetIcon.ashx?Id=510890",
+	"targetOsType": "Windows",
+	"runCommand": { "commandToExecute": "fxCalc_setup.exe" }
+}

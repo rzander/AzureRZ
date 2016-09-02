@@ -1,0 +1,11 @@
+{
+	"title": "Celestia",
+	"description": "The free space simulation that lets you explore our universe in three dimensions. Celestia doesn't confine you to the surface of the Earth. You can travel throughout the solar system, to any of over 100,000 stars, or even beyond the galaxy. ",
+	"publisher": "Shatters Software",
+	"tags": ["Windows"
+	, "Education"
+	],
+	"iconUri": "https://ruckzuck.azurewebsites.net/wcf/GetIcon.ashx?Id=31925",
+	"targetOsType": "Windows",
+	"runCommand": { "commandToExecute": "Celestia_setup.exe" }
+}

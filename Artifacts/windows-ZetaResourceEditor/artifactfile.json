@@ -1,0 +1,11 @@
+{
+	"title": "ZetaResourceEditor",
+	"description": "Zeta Resource Editor is a free application that enables you to edit standard Microsoft .NET string resources from multiple different resource files together inside one single data grid.",
+	"publisher": "Zeta Software GmbH",
+	"tags": ["Windows"
+	, "Development"
+	],
+	"iconUri": "https://ruckzuck.azurewebsites.net/wcf/GetIcon.ashx?Id=499762",
+	"targetOsType": "Windows",
+	"runCommand": { "commandToExecute": "ZetaResourceEditor_setup.exe" }
+}

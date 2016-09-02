@@ -1,0 +1,11 @@
+{
+	"title": "ILMerge",
+	"description": "ILMerge is a utility for merging multiple .NET assemblies into a single .NET assembly. It works on executables and DLLs alike and comes with several options for controlling the processing and format of the output. See the accompanying documentation for details. ",
+	"publisher": "Microsoft",
+	"tags": ["Windows"
+	, "Development"
+	],
+	"iconUri": "https://ruckzuck.azurewebsites.net/wcf/GetIcon.ashx?Id=585",
+	"targetOsType": "Windows",
+	"runCommand": { "commandToExecute": "ILMerge_setup.exe" }
+}

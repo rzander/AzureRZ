@@ -1,0 +1,11 @@
+{
+	"title": "Seafile",
+	"description": "Seafile is a file hosting software system. Files are stored on a central server and can by synchronized with personal computers and mobile devices via the Seafile client. Files can also be accessed via the server's web interface. Seafile's functionality is similar to other popular services such as Dropbox and Google Drive, with the primary difference being that Seafile is free and open-source, enabling users to host their own Seafile servers without artificially imposed limits on storage space or client connections.",
+	"publisher": "HaiWenHuZhi ltd.",
+	"tags": ["Windows"
+	, "Utilities"
+	],
+	"iconUri": "https://ruckzuck.azurewebsites.net/wcf/GetIcon.ashx?Id=505933",
+	"targetOsType": "Windows",
+	"runCommand": { "commandToExecute": "Seafile_setup.exe" }
+}

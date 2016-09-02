@@ -1,0 +1,11 @@
+{
+	"title": "XAMPP",
+	"description": "XAMPP is a completely free, easy to install Apache distribution containing MySQL, PHP, and Perl. The XAMPP open source package has been set up to be incredibly easy to install and to use.",
+	"publisher": "Bitnami",
+	"tags": ["Windows"
+	, "Development"
+	],
+	"iconUri": "https://ruckzuck.azurewebsites.net/wcf/GetIcon.ashx?Id=515580",
+	"targetOsType": "Windows",
+	"runCommand": { "commandToExecute": "XAMPP_setup.exe" }
+}

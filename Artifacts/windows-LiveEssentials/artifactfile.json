@@ -1,0 +1,11 @@
+{
+	"title": "LiveEssentials",
+	"description": "Windows Essentials (formerly Windows Live Essentials and Windows Live Installer) is a suite of freeware applications by Microsoft that aims to offer integrated and bundled e-mail, instant messaging, photo-sharing, blog publishing, and security services.",
+	"publisher": "Microsoft Corporation",
+	"tags": ["Windows"
+	, "Utilities"
+	],
+	"iconUri": "https://ruckzuck.azurewebsites.net/wcf/GetIcon.ashx?Id=13",
+	"targetOsType": "Windows",
+	"runCommand": { "commandToExecute": "LiveEssentials_setup.exe" }
+}

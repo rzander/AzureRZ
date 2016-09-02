@@ -1,0 +1,11 @@
+{
+	"title": "Firebird",
+	"description": "Firebird is a relational database offering many ANSI SQL standard features that runs on Linux, Windows, and a variety of Unix platforms. Firebird offers excellent concurrency, high performance, and powerful language support for stored procedures and triggers. It has been used in production systems, under a variety of names, since 1981.",
+	"publisher": "Firebird Project",
+	"tags": ["Windows"
+	, "Development"
+	],
+	"iconUri": "https://ruckzuck.azurewebsites.net/wcf/GetIcon.ashx?Id=480729",
+	"targetOsType": "Windows",
+	"runCommand": { "commandToExecute": "Firebird_setup.exe" }
+}

@@ -1,0 +1,11 @@
+{
+	"title": "PhET",
+	"description": "PhET provides fun, free, interactive, research-based science and mathematics simulations. We extensively test and evaluate each simulation to ensure educational effectiveness. These tests include student interviews and observation of simulation use in classrooms.",
+	"publisher": "PhET",
+	"tags": ["Windows"
+	, "Education"
+	],
+	"iconUri": "https://ruckzuck.azurewebsites.net/wcf/GetIcon.ashx?Id=32361",
+	"targetOsType": "Windows",
+	"runCommand": { "commandToExecute": "PhET_setup.exe" }
+}

@@ -1,0 +1,11 @@
+{
+	"title": ".NET",
+	"description": "Microsoft .NET Framework 4.6.2 (Offline Installer) for Windows 7 SP1, Windows 8.1, Windows 10, Windows Server 2008 R2 SP1, Windows Server 2012 and Windows Server 2012 R2",
+	"publisher": "Microsoft Corporation",
+	"tags": ["Windows"
+	, "Runtime"
+	],
+	"iconUri": "https://ruckzuck.azurewebsites.net/wcf/GetIcon.ashx?Id=509489",
+	"targetOsType": "Windows",
+	"runCommand": { "commandToExecute": ".NET_setup.exe" }
+}

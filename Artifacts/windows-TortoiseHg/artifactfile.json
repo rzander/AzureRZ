@@ -1,0 +1,11 @@
+{
+	"title": "TortoiseHg",
+	"description": "TortoiseHg is a Windows shell extension and a series of applications for the Mercurial distributed revision control system.",
+	"publisher": "Steve Borho and others",
+	"tags": ["Windows"
+	, "Other"
+	],
+	"iconUri": "https://ruckzuck.azurewebsites.net/wcf/GetIcon.ashx?Id=509495",
+	"targetOsType": "Windows",
+	"runCommand": { "commandToExecute": "TortoiseHg_setup.exe" }
+}

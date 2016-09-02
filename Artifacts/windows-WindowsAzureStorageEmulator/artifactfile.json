@@ -1,0 +1,11 @@
+{
+	"title": "WindowsAzureStorageEmulator",
+	"description": "A tool that locally emulates the services of Windows Azure storage.",
+	"publisher": "Microsoft Corporation",
+	"tags": ["Windows"
+	, "Development"
+	],
+	"iconUri": "https://ruckzuck.azurewebsites.net/wcf/GetIcon.ashx?Id=20973",
+	"targetOsType": "Windows",
+	"runCommand": { "commandToExecute": "WindowsAzureStorageEmulator_setup.exe" }
+}

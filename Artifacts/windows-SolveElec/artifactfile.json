@@ -1,0 +1,11 @@
+{
+	"title": "Solve Elec",
+	"description": "With Solve Elec you can: draw and analyze electrical circuits functioning in direct or alternating current, get literal formulas and values for current intensities and voltages defined in the circuit.",
+	"publisher": "",
+	"tags": ["Windows"
+	, "Education"
+	],
+	"iconUri": "https://ruckzuck.azurewebsites.net/wcf/GetIcon.ashx?Id=32360",
+	"targetOsType": "Windows",
+	"runCommand": { "commandToExecute": "SolveElec_setup.exe" }
+}

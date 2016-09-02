@@ -1,0 +1,11 @@
+{
+	"title": "Unity Web Player",
+	"description": "The Unity Web Player enables you to view blazing 3D content created with Unity directly in your browser, and autoupdates as necessary.",
+	"publisher": "Unity Technologies ApS",
+	"tags": ["Windows"
+	, "Other"
+	],
+	"iconUri": "https://ruckzuck.azurewebsites.net/wcf/GetIcon.ashx?Id=502102",
+	"targetOsType": "Windows",
+	"runCommand": { "commandToExecute": "UnityWebPlayer_setup.exe" }
+}

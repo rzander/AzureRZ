@@ -1,0 +1,11 @@
+{
+	"title": "Expresso",
+	"description": "The award-winning Expresso editor is equally suitable as a teaching tool for the beginning user of regular expressions or as a full-featured development environment for the experienced programmer or web designer with an extensive knowledge of regular expressions.",
+	"publisher": "Ultrapico",
+	"tags": ["Windows"
+	, "Development"
+	],
+	"iconUri": "https://ruckzuck.azurewebsites.net/wcf/GetIcon.ashx?Id=432921",
+	"targetOsType": "Windows",
+	"runCommand": { "commandToExecute": "Expresso_setup.exe" }
+}

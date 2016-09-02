@@ -1,0 +1,11 @@
+{
+	"title": "StarUML",
+	"description": "StarUML is a UML tool by MKLab. StarUML supports most of the diagram types specified in UML 2.0. It is currently missing object, package, timing and interaction overview diagrams (though the first two can be adequately modeled through the class diagram editor).",
+	"publisher": "MKLab",
+	"tags": ["Windows"
+	, "Development"
+	],
+	"iconUri": "https://ruckzuck.azurewebsites.net/wcf/GetIcon.ashx?Id=481195",
+	"targetOsType": "Windows",
+	"runCommand": { "commandToExecute": "StarUML_setup.exe" }
+}

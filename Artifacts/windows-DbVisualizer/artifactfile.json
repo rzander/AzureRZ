@@ -1,0 +1,11 @@
+{
+	"title": "DbVisualizer",
+	"description": "DbVisualizer is the universal database tool for developers,  DBAs and analysts. It is the perfect solution since the same tool can be used on all major operating systems accessing a wide range of databases.",
+	"publisher": "DbVis Software AB",
+	"tags": ["Windows"
+	, "Development"
+	],
+	"iconUri": "https://ruckzuck.azurewebsites.net/wcf/GetIcon.ashx?Id=512984",
+	"targetOsType": "Windows",
+	"runCommand": { "commandToExecute": "DbVisualizer_setup.exe" }
+}

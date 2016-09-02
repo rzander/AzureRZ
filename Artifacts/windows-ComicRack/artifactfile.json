@@ -1,0 +1,11 @@
+{
+	"title": "ComicRack",
+	"description": "ComicRack is the best eComic reader and manager for Windows computers. It is an all-in-one solution to read and manage your eComic library. It is actively maintained, has a strong user base and is FREE.",
+	"publisher": "cYo Soft",
+	"tags": ["Windows"
+	, "Other"
+	],
+	"iconUri": "https://ruckzuck.azurewebsites.net/wcf/GetIcon.ashx?Id=423442",
+	"targetOsType": "Windows",
+	"runCommand": { "commandToExecute": "ComicRack_setup.exe" }
+}

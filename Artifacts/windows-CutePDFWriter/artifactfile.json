@@ -1,0 +1,11 @@
+{
+	"title": "CutePDF Writer",
+	"description": "Portable Document Format (PDF) is the de facto standard for the secure and reliable distribution and exchange of electronic documents and forms around the world.  CutePDF Writer is the free version of commercial PDF converter software. CutePDF Writer installs itself as a "printer subsystem". This enables virtually any Windows applications (must be able to print) to convert to professional quality PDF documents - with just a push of a button!",
+	"publisher": "Acro Software Inc.",
+	"tags": ["Windows"
+	, "Office"
+	],
+	"iconUri": "https://ruckzuck.azurewebsites.net/wcf/GetIcon.ashx?Id=421122",
+	"targetOsType": "Windows",
+	"runCommand": { "commandToExecute": "CutePDFWriter_setup.exe" }
+}

@@ -1,0 +1,11 @@
+{
+	"title": "PowerArchiver",
+	"description": "Create ZIP, ZIPX, TAR/GZ/BZ2, CAB, ISO, open 20 other formats. Full Windows 7/8 support with UAC elevation and VSS! FIPS 140-2. Multicore compression and fastest RAR extraction.Create Fastest ZIP/ZIPX engine, now up to 50% faster. ",
+	"publisher": "ConeXware, Inc.",
+	"tags": ["Windows"
+	, "Compression"
+	],
+	"iconUri": "https://ruckzuck.azurewebsites.net/wcf/GetIcon.ashx?Id=498039",
+	"targetOsType": "Windows",
+	"runCommand": { "commandToExecute": "PowerArchiver_setup.exe" }
+}

@@ -1,0 +1,11 @@
+{
+	"title": "iSpy",
+	"description": "iSpy is our free, open source video surveillance platform. You can use iSpy and iSpyConnect (web based access to your iSpy server) for free on the same network iSpy is running on.",
+	"publisher": "DeveloperInABox",
+	"tags": ["Windows"
+	, "Other"
+	],
+	"iconUri": "https://ruckzuck.azurewebsites.net/wcf/GetIcon.ashx?Id=505873",
+	"targetOsType": "Windows",
+	"runCommand": { "commandToExecute": "iSpy_setup.exe" }
+}

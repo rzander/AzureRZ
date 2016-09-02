@@ -1,0 +1,11 @@
+{
+	"title": "PDF Split And Merge Basic",
+	"description": "What is PDFsam? PDF Split and Merge is a free and open source desktop utility designed to perform pdf documents manipulation (pdf merge, pdf split, page rotation etc). It?s platform independent and can run on any major platform where Java Runtime Environment 6+ is available. What is the license? PDF Split and Merge (Basic or Enhanced) is released under the GNU General Public License, version 2 (GPLv2)",
+	"publisher": "Andrea Vacondio",
+	"tags": ["Windows"
+	, "Office"
+	],
+	"iconUri": "https://ruckzuck.azurewebsites.net/wcf/GetIcon.ashx?Id=498997",
+	"targetOsType": "Windows",
+	"runCommand": { "commandToExecute": "PDFSplitAndMergeBasic_setup.exe" }
+}

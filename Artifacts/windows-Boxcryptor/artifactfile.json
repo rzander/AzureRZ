@@ -1,0 +1,11 @@
+{
+	"title": "Boxcryptor ",
+	"description": "With Boxcryptor you can encrypt your files on Dropbox, Google Drive, Microsoft OneDrive, SugarSync, Box and many other storage providers",
+	"publisher": "Secomba GmbH",
+	"tags": ["Windows"
+	, "Security"
+	],
+	"iconUri": "https://ruckzuck.azurewebsites.net/wcf/GetIcon.ashx?Id=515659",
+	"targetOsType": "Windows",
+	"runCommand": { "commandToExecute": "Boxcryptor_setup.exe" }
+}

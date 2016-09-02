@@ -1,0 +1,12 @@
+{
+	"title": "QuickTime",
+	"description": "Watch Internet video, HD movie trailers, and personal media clips. Whether it?s on the web or on your desktop, QuickTime Player brings your digital media brilliantly to life.",
+	"publisher": "Apple Inc.",
+	"tags": ["Windows"
+	, "Audio"
+	, "Video"
+	],
+	"iconUri": "https://ruckzuck.azurewebsites.net/wcf/GetIcon.ashx?Id=420561",
+	"targetOsType": "Windows",
+	"runCommand": { "commandToExecute": "QuickTime_setup.exe" }
+}

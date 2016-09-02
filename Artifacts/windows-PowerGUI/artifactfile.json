@@ -1,0 +1,11 @@
+{
+	"title": "PowerGUI",
+	"description": "PowerGUI is a comprehensive solution helping you get the most of Windows PowerShell. The product has two components: Administrative Console Script Editor and debugger PowerGUI Administrative Console is a graphical user interface for the Microsoft PowerShell scripting environment and runtime, bundled with an advanced PowerShell script editor.",
+	"publisher": "Quest Software, Inc.",
+	"tags": ["Windows"
+	, "Development"
+	],
+	"iconUri": "https://ruckzuck.azurewebsites.net/wcf/GetIcon.ashx?Id=610",
+	"targetOsType": "Windows",
+	"runCommand": { "commandToExecute": "PowerGUI_setup.exe" }
+}

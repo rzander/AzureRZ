@@ -1,0 +1,11 @@
+{
+	"title": "SHAREit",
+	"description": "Share your files with any device. Anytime, anywhere. SHAREit allows you to send content including files, photos, video and documents, at lightning fast speed.",
+	"publisher": "Lenovo Group Limited",
+	"tags": ["Windows"
+	, "Utilities"
+	],
+	"iconUri": "https://ruckzuck.azurewebsites.net/wcf/GetIcon.ashx?Id=422274",
+	"targetOsType": "Windows",
+	"runCommand": { "commandToExecute": "SHAREit_setup.exe" }
+}

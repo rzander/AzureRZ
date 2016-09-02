@@ -1,0 +1,11 @@
+{
+	"title": "Remote Desktop Manager",
+	"description": "Remote Desktop Manager lets you centralize all your remote connections, passwords and credentials into a unique platform that people love to work with. Drive security, speed and productivity through your organization while reducing risks for your IT department.",
+	"publisher": "Devolutions inc.",
+	"tags": ["Windows"
+	, "Utilities"
+	],
+	"iconUri": "https://ruckzuck.azurewebsites.net/wcf/GetIcon.ashx?Id=515832",
+	"targetOsType": "Windows",
+	"runCommand": { "commandToExecute": "RemoteDesktopManager_setup.exe" }
+}

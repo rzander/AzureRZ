@@ -1,0 +1,11 @@
+{
+	"title": "CCleaner",
+	"description": "CCleaner is the number-one tool for cleaning your PC. Is your computer running slow? As it gets older it collects unused files and settings which take up hard drive space making it slower and slower. CCleaner cleans up these files and makes it faster instantly.",
+	"publisher": "Piriform",
+	"tags": ["Windows"
+	, "Utilities"
+	],
+	"iconUri": "https://ruckzuck.azurewebsites.net/wcf/GetIcon.ashx?Id=512629",
+	"targetOsType": "Windows",
+	"runCommand": { "commandToExecute": "CCleaner_setup.exe" }
+}

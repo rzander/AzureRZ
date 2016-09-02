@@ -1,0 +1,11 @@
+{
+	"title": "Xcas",
+	"description": "Xcas is an interface to perform computer algebra, function graphs, interactive geometry (2-d and 3-d), spreadsheet and statistics, programmation. It may be used as a replacement for high end graphic calculators for example on netbooks (for about the same price as a calculator but with much more performances). Xcas is based on the FLTK graphic toolkit, there is an alternate less mature interface based on QT named qcas. Giac is a C++ library, it is the CAS computing kernel, it may be used inside other C++ programs, and also Python, Java and Javascript programs. Examples of software using Giac as CAS kernel: Geogebra (Java and javascript interface), HP Prime Calculator (C++), Pocket CAS (C++), CAS Calc P11 (C++). Giac/Xcas has a compatibility mode for people used to the Maple or Mupad CAS as well as for users of TI calculators (TI89, Voyage 200, TI Nspire CAS). Short history: The Giac/Xcas project began in year 2000, following the development of the CAS for HP calculators. It has now around 150,000 lines of C++ code (most written by B. Parisse), and around 300 pages of English documentation (most written by R. De Graeve). It has interfaces with php, latex, texmacs, java, javascript, python playing the role of computation kernel. It also interfaces with the following C/C++ libraries PARI, CoCoA, NTL, GSL, GMP, MPFR.",
+	"publisher": "",
+	"tags": ["Windows"
+	, "Education"
+	],
+	"iconUri": "https://ruckzuck.azurewebsites.net/wcf/GetIcon.ashx?Id=430768",
+	"targetOsType": "Windows",
+	"runCommand": { "commandToExecute": "Xcas_setup.exe" }
+}

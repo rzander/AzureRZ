@@ -1,0 +1,11 @@
+{
+	"title": "MindMaple Lite",
+	"description": "MindMaple will increase your productivity and creativity by visually organizing your ideas and thoughts onto a mind map. MindMapleÂ® is perfect for project managing, concept mapping, brainstorming and task scheduling. Experience the difference with MindMaple.",
+	"publisher": "MindMaple Inc.",
+	"tags": ["Windows"
+	, "Office"
+	],
+	"iconUri": "https://ruckzuck.azurewebsites.net/wcf/GetIcon.ashx?Id=251047",
+	"targetOsType": "Windows",
+	"runCommand": { "commandToExecute": "MindMapleLite_setup.exe" }
+}

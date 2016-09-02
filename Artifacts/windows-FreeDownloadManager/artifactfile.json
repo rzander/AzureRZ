@@ -1,0 +1,11 @@
+{
+	"title": "Free Download Manager",
+	"description": "What is Free Download Manager? It is a powerful, easy-to-use and absolutely free download accelerator and manager. Moreover, FDM is 100% safe, open-source software distributed under GPL license.",
+	"publisher": "FreeDownloadManager.ORG",
+	"tags": ["Windows"
+	, "Utilities"
+	],
+	"iconUri": "https://ruckzuck.azurewebsites.net/wcf/GetIcon.ashx?Id=506024",
+	"targetOsType": "Windows",
+	"runCommand": { "commandToExecute": "FreeDownloadManager_setup.exe" }
+}

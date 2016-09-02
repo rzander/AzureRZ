@@ -1,0 +1,11 @@
+{
+	"title": "WorldWide Telescope",
+	"description": "The WorldWide Telescope (WWT) is a visualization environment that enables your computer to function as a virtual telescopeâ€”bringing together imagery from the worldâ€™s best ground- and space-based telescopes for the exploration of the universe. WWT blends terabytes of images, information, and stories from multiple sources into a seamless, immersive, rich media experience. Explorers of all ages will feel empowered to explore and understand the cosmos using WWTâ€™s simple and powerful user interface.",
+	"publisher": "WorldWide Telescope",
+	"tags": ["Windows"
+	, "Education"
+	],
+	"iconUri": "https://ruckzuck.azurewebsites.net/wcf/GetIcon.ashx?Id=500388",
+	"targetOsType": "Windows",
+	"runCommand": { "commandToExecute": "WorldWideTelescope_setup.exe" }
+}

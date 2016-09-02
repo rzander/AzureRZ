@@ -1,0 +1,11 @@
+{
+	"title": "WinDjView",
+	"description": "WinDjView is a fast, compact and powerful DjVu viewer for Windows with tabbed interface, continuous scrolling and advanced printing options. It uses the free DjVuLibre library to decode DjVu documents. DjVu is a web-centric format and software platform for distributing documents and images.",
+	"publisher": "Andrew Zhezherun",
+	"tags": ["Windows"
+	, "Office"
+	],
+	"iconUri": "https://ruckzuck.azurewebsites.net/wcf/GetIcon.ashx?Id=74269",
+	"targetOsType": "Windows",
+	"runCommand": { "commandToExecute": "WinDjView_setup.exe" }
+}

@@ -1,0 +1,11 @@
+{
+	"title": "Secunia PSI",
+	"description": "The Secunia Personal Software Inspector (PSI) is a free computer security solution that identifies vulnerabilities in non-Microsoft (third-party) programs on your PC. Vulnerable programs can leave your PC open to attacks.",
+	"publisher": "Secunia",
+	"tags": ["Windows"
+	, "Security"
+	],
+	"iconUri": "https://ruckzuck.azurewebsites.net/wcf/GetIcon.ashx?Id=422466",
+	"targetOsType": "Windows",
+	"runCommand": { "commandToExecute": "SecuniaPSI_setup.exe" }
+}

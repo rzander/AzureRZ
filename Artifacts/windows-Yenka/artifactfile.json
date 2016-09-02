@@ -1,0 +1,11 @@
+{
+	"title": "Yenka",
+	"description": "Yenka is a new generation of educational modelling tools from Crocodile Clips. Equally at home on whiteboards or when used by individual students, they let you experiment with the topics you're teaching in a safe, accurate virtual world.",
+	"publisher": "Crocodile Clips Ltd",
+	"tags": ["Windows"
+	, "Education"
+	],
+	"iconUri": "https://ruckzuck.azurewebsites.net/wcf/GetIcon.ashx?Id=494274",
+	"targetOsType": "Windows",
+	"runCommand": { "commandToExecute": "Yenka_setup.exe" }
+}

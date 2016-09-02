@@ -1,0 +1,11 @@
+{
+	"title": "SublimeText",
+	"description": "Sublime Text is a sophisticated text editor for code, markup and prose. You'll love the slick user interface, extraordinary features and amazing performance.",
+	"publisher": "",
+	"tags": ["Windows"
+	, "Development"
+	],
+	"iconUri": "https://ruckzuck.azurewebsites.net/wcf/GetIcon.ashx?Id=21241",
+	"targetOsType": "Windows",
+	"runCommand": { "commandToExecute": "SublimeText_setup.exe" }
+}

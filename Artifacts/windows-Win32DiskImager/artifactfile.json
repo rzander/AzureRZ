@@ -1,0 +1,11 @@
+{
+	"title": "Win32DiskImager",
+	"description": "This program is designed to write a raw disk image to a removable device or backup a removable device to a raw image file. It is very useful for embedded development, namely Arm development projects (Android, Ubuntu on Arm, etc). Anyone is free to branch and modify this program. Patches are always welcome.",
+	"publisher": "ImageWriter Developers",
+	"tags": ["Windows"
+	, "Utilities"
+	],
+	"iconUri": "https://ruckzuck.azurewebsites.net/wcf/GetIcon.ashx?Id=52698",
+	"targetOsType": "Windows",
+	"runCommand": { "commandToExecute": "Win32DiskImager_setup.exe" }
+}

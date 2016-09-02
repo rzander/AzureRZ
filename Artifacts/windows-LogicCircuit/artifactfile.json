@@ -1,0 +1,11 @@
+{
+	"title": "LogicCircuit",
+	"description": "LogicCircuit - is free, open source educational software for designing and simulating digital logic circuits. Intuitive graphical user interface, allows you to create unrestricted circuit hierarchy with multi bit buses, debug circuits behavior with oscilloscope, and navigate running circuits hierarchy.",
+	"publisher": "LogicCircuit",
+	"tags": ["Windows"
+	, "Education"
+	],
+	"iconUri": "https://ruckzuck.azurewebsites.net/wcf/GetIcon.ashx?Id=250199",
+	"targetOsType": "Windows",
+	"runCommand": { "commandToExecute": "LogicCircuit_setup.exe" }
+}

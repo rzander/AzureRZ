@@ -1,0 +1,11 @@
+{
+	"title": "UltraCompare",
+	"description": "UltraCompare is a folder compare and file compare application loaded with features to enable you to compare text files and folders, word documents, and even zip files and jar archives. UltraCompare includes text compare, binary file compare with the capability to merge differences between compared files. Got folders? UltraCompare also supports Folder compare - including local/network directory compare, zip file compare , and FTP Compare. UltraCompare supports automatic, easy folder synchronization, and a duplicate file finder as well.",
+	"publisher": "IDM Computer Solutions, Inc.",
+	"tags": ["Windows"
+	, "Development"
+	],
+	"iconUri": "https://ruckzuck.azurewebsites.net/wcf/GetIcon.ashx?Id=494743",
+	"targetOsType": "Windows",
+	"runCommand": { "commandToExecute": "UltraCompare_setup.exe" }
+}

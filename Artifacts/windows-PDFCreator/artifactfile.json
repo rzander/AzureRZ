@@ -1,0 +1,12 @@
+{
+	"title": "PDFCreator",
+	"description": "Create PDF files from any application with PDFCreator. And the best: PDFCreator can be used by everybody for free.",
+	"publisher": "pdfforge",
+	"tags": ["Windows"
+	, "Office"
+	, "Utilities"
+	],
+	"iconUri": "https://ruckzuck.azurewebsites.net/wcf/GetIcon.ashx?Id=501518",
+	"targetOsType": "Windows",
+	"runCommand": { "commandToExecute": "PDFCreator_setup.exe" }
+}

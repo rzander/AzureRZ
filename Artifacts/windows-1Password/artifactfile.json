@@ -1,0 +1,11 @@
+{
+	"title": "1Password",
+	"description": "1Password creates strong, unique passwords for all of your sites and logs you in with a single tap. It's simple, convenient security.",
+	"publisher": "AgileBits",
+	"tags": ["Windows"
+	, "Security"
+	],
+	"iconUri": "https://ruckzuck.azurewebsites.net/wcf/GetIcon.ashx?Id=423267",
+	"targetOsType": "Windows",
+	"runCommand": { "commandToExecute": "1Password_setup.exe" }
+}

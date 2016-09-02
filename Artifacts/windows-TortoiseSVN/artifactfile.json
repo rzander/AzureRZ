@@ -1,0 +1,11 @@
+{
+	"title": "TortoiseSVN",
+	"description": "TortoiseSVN is an Apache Subversion (SVN) client, implemented as a Windows shell extension. It's intuitive and easy to use, since it doesn't require the Subversion command line client to run. And it is free to use, even in a commercial environment. Simply the coolest Interface to (Sub)Version Control!",
+	"publisher": "TortoiseSVN",
+	"tags": ["Windows"
+	, "Development"
+	],
+	"iconUri": "https://ruckzuck.azurewebsites.net/wcf/GetIcon.ashx?Id=483407",
+	"targetOsType": "Windows",
+	"runCommand": { "commandToExecute": "TortoiseSVN_setup.exe" }
+}

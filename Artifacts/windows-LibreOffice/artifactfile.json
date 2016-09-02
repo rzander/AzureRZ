@@ -1,0 +1,11 @@
+{
+	"title": "LibreOffice",
+	"description": "LibreOffice is a powerful office suite; Its clean interface and its powerful tools let you unleash your creativity and grow your productivity. LibreOffice embeds several applications that make it the most powerful Free & Open Source Office suite on the market.",
+	"publisher": "The Document Foundation",
+	"tags": ["Windows"
+	, "Office"
+	],
+	"iconUri": "https://ruckzuck.azurewebsites.net/wcf/GetIcon.ashx?Id=509490",
+	"targetOsType": "Windows",
+	"runCommand": { "commandToExecute": "LibreOffice_setup.exe" }
+}

@@ -1,0 +1,11 @@
+{
+	"title": "LAPS",
+	"description": "The "Local Administrator Password Solution" (LAPS) provides management of local account passwords of domain joined computers. Passwords are stored in Active Directory (AD) and protected by ACL, so only eligible users can read it or request its reset. ",
+	"publisher": "Microsoft Corporation",
+	"tags": ["Windows"
+	, "Security"
+	],
+	"iconUri": "https://ruckzuck.azurewebsites.net/wcf/GetIcon.ashx?Id=261137",
+	"targetOsType": "Windows",
+	"runCommand": { "commandToExecute": "LAPS_setup.exe" }
+}

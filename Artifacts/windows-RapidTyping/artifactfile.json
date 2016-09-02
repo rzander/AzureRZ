@@ -1,0 +1,11 @@
+{
+	"title": "RapidTyping",
+	"description": "Learn how to use your keyboard in a fun and entertaining way for absolutely free. Rapid Typing Tutor is designed to teach adults and kids to use their computer keyboard more efficiently than ever. Learning to type can be easy and fun!",
+	"publisher": "RapidTyping Software",
+	"tags": ["Windows"
+	, "Education"
+	],
+	"iconUri": "https://ruckzuck.azurewebsites.net/wcf/GetIcon.ashx?Id=514588",
+	"targetOsType": "Windows",
+	"runCommand": { "commandToExecute": "RapidTyping_setup.exe" }
+}

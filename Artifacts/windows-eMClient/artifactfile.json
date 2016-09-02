@@ -1,0 +1,11 @@
+{
+	"title": "eMClient",
+	"description": "eM Client is a full featured e-mail client with modern and easy to use interface. eM Client also offers calendar, tasks, contacts and even chat. ",
+	"publisher": "eM Client Inc.",
+	"tags": ["Windows"
+	, "Messaging"
+	],
+	"iconUri": "https://ruckzuck.azurewebsites.net/wcf/GetIcon.ashx?Id=32460",
+	"targetOsType": "Windows",
+	"runCommand": { "commandToExecute": "eMClient_setup.exe" }
+}

@@ -1,0 +1,11 @@
+{
+	"title": "AdobeDigitalEditions ",
+	"description": "Readers want choice, flexibility, and ease to buy or borrow books and read them on their preferred reading devices.  Adobe Digital Editions software offers an engaging way to view and manage media rich eBooks and other digital publications. Use it to download and purchase digital content, which can be read both online and offline. Transfer copy-protected eBooks from your personal computer to other computers or devices. Organize your eBooks into a custom library and annotate pages.",
+	"publisher": "Adobe Systems Incorporated",
+	"tags": ["Windows"
+	, "Office"
+	],
+	"iconUri": "https://ruckzuck.azurewebsites.net/wcf/GetIcon.ashx?Id=511313",
+	"targetOsType": "Windows",
+	"runCommand": { "commandToExecute": "AdobeDigitalEditions_setup.exe" }
+}

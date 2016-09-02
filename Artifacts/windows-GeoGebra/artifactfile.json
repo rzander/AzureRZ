@@ -1,0 +1,11 @@
+{
+	"title": "GeoGebra",
+	"description": "GeoGebra is a multi-platform mathematics software that gives everyone the chance to experience the  extraordinary insights that math makes possible",
+	"publisher": "International GeoGebra Institute",
+	"tags": ["Windows"
+	, "Education"
+	],
+	"iconUri": "https://ruckzuck.azurewebsites.net/wcf/GetIcon.ashx?Id=511923",
+	"targetOsType": "Windows",
+	"runCommand": { "commandToExecute": "GeoGebra_setup.exe" }
+}

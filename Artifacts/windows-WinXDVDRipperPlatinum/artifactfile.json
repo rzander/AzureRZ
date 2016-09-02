@@ -1,0 +1,11 @@
+{
+	"title": "WinX DVD Ripper Platinum",
+	"description": "WinX DVD Ripper Platinum is a Windows-based DVD ripper software capable of ripping any DVD (even latest encrypted DVD discs/ISO images) to mainstream videos, such as rip DVD to AVI, DVD to MP4, H.264, MPEG, WMV, MOV, FLV and M2TS. It also helps faultlessly convert DVD to Apple (iPhone/6/6 Plus/5S, iPad/Air 2/mini 3, iPod/5, Apple TV/3, iTunes), Android (Google New Nexus 7, Samsung Galaxy Note 4/Edge/S5 (Mini), HTC One M8, Amazon Kindle Fire HDX), Microsoft (WP8, Surface Pro 3, Xbox One), Chromecast, Sony PSP/PS4, Nokia Lumia 2520, etc. This DVD ripper brings No.1 fast DVD ripping solution thanks to the cutting-edge tech to support Multi-core (up to 8) CPU and Hyper-threading.",
+	"publisher": "Digiarty Software, Inc.",
+	"tags": ["Windows"
+	, "Video"
+	],
+	"iconUri": "https://ruckzuck.azurewebsites.net/wcf/GetIcon.ashx?Id=441260",
+	"targetOsType": "Windows",
+	"runCommand": { "commandToExecute": "WinXDVDRipperPlatinum_setup.exe" }
+}

@@ -1,0 +1,12 @@
+{
+	"title": "novaPDF",
+	"description": "novaPDF is a PDF printer for Windows that allows you to easily create 100% industry-standard PDF files (searchable and optionally PDF/A compliant). It's never been easier to print to PDF, you simply open your document, click on "Print" and select novaPDF as the printer to generate the PDF.",
+	"publisher": "Softland",
+	"tags": ["Windows"
+	, "Office"
+	, "Utilities"
+	],
+	"iconUri": "https://ruckzuck.azurewebsites.net/wcf/GetIcon.ashx?Id=498369",
+	"targetOsType": "Windows",
+	"runCommand": { "commandToExecute": "novaPDF_setup.exe" }
+}

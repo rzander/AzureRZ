@@ -1,0 +1,12 @@
+{
+	"title": "PSMSI",
+	"description": "Exposes Windows Installer functionality to PowerShell, providing means to query installed product and patch information and to query views on packages.",
+	"publisher": "Microsoft Corporation",
+	"tags": ["Windows"
+	, "Development"
+	, "SysAdmin"
+	],
+	"iconUri": "https://ruckzuck.azurewebsites.net/wcf/GetIcon.ashx?Id=32342",
+	"targetOsType": "Windows",
+	"runCommand": { "commandToExecute": "PSMSI_setup.exe" }
+}

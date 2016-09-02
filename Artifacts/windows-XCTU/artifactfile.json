@@ -1,0 +1,11 @@
+{
+	"title": "XCTU",
+	"description": "XCTU is a free multi-platform application designed to enable developers to interact with Digi RF modules through a simple-to-use graphical interface. It includes new tools that make it easy to set-up, configure and test XBee? RF modules.",
+	"publisher": "Digi International Inc.",
+	"tags": ["Windows"
+	, "Development"
+	],
+	"iconUri": "https://ruckzuck.azurewebsites.net/wcf/GetIcon.ashx?Id=484770",
+	"targetOsType": "Windows",
+	"runCommand": { "commandToExecute": "XCTU_setup.exe" }
+}

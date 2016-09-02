@@ -1,0 +1,11 @@
+{
+	"title": "Mathematics",
+	"description": "Microsoft Mathematics provides a set of mathematical tools that help students get school work done quickly and easily. With Microsoft Mathematics, students can learn to solve equations step-by-step while gaining a better understanding of fundamental concepts in pre-algebra, algebra, trigonometry, physics, chemistry, and calculus. Microsoft Mathematics includes a full-featured graphing calculator thatâ€™s designed to work just like a handheld calculator. Additional math tools help you evaluate triangles, convert from one system of units to another, and solve systems of equations.",
+	"publisher": "Microsoft Corporation",
+	"tags": ["Windows"
+	, "Education"
+	],
+	"iconUri": "https://ruckzuck.azurewebsites.net/wcf/GetIcon.ashx?Id=458",
+	"targetOsType": "Windows",
+	"runCommand": { "commandToExecute": "Mathematics_setup.exe" }
+}

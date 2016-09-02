@@ -1,0 +1,11 @@
+{
+	"title": "TextPad",
+	"description": "TextPad 8.0 is a powerful, general purpose editor for plain text files. Easy to use, with all the features a power user requires.",
+	"publisher": "Helios",
+	"tags": ["Windows"
+	, "Other"
+	],
+	"iconUri": "https://ruckzuck.azurewebsites.net/wcf/GetIcon.ashx?Id=423473",
+	"targetOsType": "Windows",
+	"runCommand": { "commandToExecute": "TextPad_setup.exe" }
+}

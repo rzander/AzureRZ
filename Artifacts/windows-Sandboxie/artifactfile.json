@@ -1,0 +1,11 @@
+{
+	"title": "Sandboxie",
+	"description": "Protection from rogue software, spyware and malware by isolating your browser, PDF reader, and applications in a sandbox",
+	"publisher": "Sandboxie Holdings, LLC",
+	"tags": ["Windows"
+	, "Utilities"
+	],
+	"iconUri": "https://ruckzuck.azurewebsites.net/wcf/GetIcon.ashx?Id=495827",
+	"targetOsType": "Windows",
+	"runCommand": { "commandToExecute": "Sandboxie_setup.exe" }
+}

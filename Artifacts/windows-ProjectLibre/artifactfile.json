@@ -1,0 +1,11 @@
+{
+	"title": "ProjectLibre",
+	"description": "ProjectLibre is the open source replacement of Microsoft Project.  We have been downloaded over 1,200,000 times in over 210 countries.  ProjectLibre was awarded ComputerWorld's "Best of Open Source" software.",
+	"publisher": "ProjectLibre",
+	"tags": ["Windows"
+	, "Office"
+	],
+	"iconUri": "https://ruckzuck.azurewebsites.net/wcf/GetIcon.ashx?Id=333244",
+	"targetOsType": "Windows",
+	"runCommand": { "commandToExecute": "ProjectLibre_setup.exe" }
+}

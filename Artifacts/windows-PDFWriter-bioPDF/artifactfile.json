@@ -1,0 +1,11 @@
+{
+	"title": "PDF Writer - bioPDF",
+	"description": "The bioPDF PDF Writer works as a Microsoft Windows printer and allows you to write PDF documents from virtually any Microsoft Windows application.",
+	"publisher": "bioPDF",
+	"tags": ["Windows"
+	, "Office"
+	],
+	"iconUri": "https://ruckzuck.azurewebsites.net/wcf/GetIcon.ashx?Id=514794",
+	"targetOsType": "Windows",
+	"runCommand": { "commandToExecute": "PDFWriter-bioPDF_setup.exe" }
+}

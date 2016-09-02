@@ -1,0 +1,11 @@
+{
+	"title": "Stellarium",
+	"description": "Stellarium renders 3D photo-realistic skies in real time with OpenGL. It displays stars, constellations, planets, nebulae and others things like ground, landscape, atmosphere, etc.",
+	"publisher": "Stellarium team",
+	"tags": ["Windows"
+	, "Education"
+	],
+	"iconUri": "https://ruckzuck.azurewebsites.net/wcf/GetIcon.ashx?Id=507127",
+	"targetOsType": "Windows",
+	"runCommand": { "commandToExecute": "Stellarium_setup.exe" }
+}

@@ -1,0 +1,11 @@
+{
+	"title": "SoapUI",
+	"description": "SoapUI is a free and open source cross-platform Functional Testing solution. With an easy-to-use graphical interface, and enterprise-class features, SoapUI allows you to easily and rapidly create and execute automated functional, regression, compliance, and load tests. In a single test environment, SoapUI provides complete test coverage and supports all the standard protocols and technologies. There are simply no limits to what you can do with your tests. Meet SoapUI, the world's most complete testing tool!",
+	"publisher": "SmartBear Software",
+	"tags": ["Windows"
+	, "Development"
+	],
+	"iconUri": "https://ruckzuck.azurewebsites.net/wcf/GetIcon.ashx?Id=344403",
+	"targetOsType": "Windows",
+	"runCommand": { "commandToExecute": "SoapUI_setup.exe" }
+}
