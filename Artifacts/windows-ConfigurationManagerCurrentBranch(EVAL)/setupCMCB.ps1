@@ -104,4 +104,19 @@ Install-ADDSForest -CreateDnsDelegation:$false `
     #& ".\MSSQLServer2016_setup.exe"
     & ".\ADK10_setup.exe"
     & ".\CMCB_setup.exe"
+    & ".\SCCMCmdletLibrary_setup.exe"
+
+    #Add Domain Admins as Full Admins
+    #Import SCCM PowerShell Module
+    import-module (Join-Path $(Split-Path $env:SMS_ADMIN_UI_PATH) ConfigurationManager.psd1)  
+    cd ((Get-PSDrive -PSProvider CMSite).Name + ':')
+    New-CMAdministrativeUser -Name "$($env:userdomain)\domain admins" -RoleName "Full Administrator"
+
+    & ".\ConfigMgrTools_setup.exe"
+    & ".\CollectionCommander_setup.exe"
+    & ".\SCCMCliCtr_setup.exe"
+    & ".\RuckZuck4SCCM_setup.exe"
+    & ".\SCUP_setup.exe"
+    #& ".\NET_setup.exe"
+    #& ".\CMSupportCenter_setup.exe"
  }

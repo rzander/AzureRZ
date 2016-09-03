@@ -1,0 +1,11 @@
+{
+	"title": "RuckZuck import for Configuration Manager",
+	"description": "System Center Configuration Manager Console extension to import Applications from the RuckZuck repository. Application, Deployment Types, Collection and deployment will be created automatically.",
+	"publisher": "Zander Tools",
+	"tags": ["Windows"
+	, "SysAdmin"
+	],
+	"iconUri": "https://ruckzuck.azurewebsites.net/wcf/GetIcon.ashx?Id=498610",
+	"targetOsType": "Windows",
+	"runCommand": { "commandToExecute": "RuckZuckimportforConfigurationManager_setup.exe" }
+}

@@ -1,0 +1,11 @@
+{
+	"title": "System Center Configuration Manager Cmdlet Library",
+	"description": "The System Center Configuration Manager Cmdlet Library lets you manage a Configuration Manager hierarchy by using Windows PowerShell cmdlets and scripts. Microsoft regularly updates the cmdlets for Configuration Manager. The System Center Configuration Manager Cmdlet Library checks for library updates on a daily basis, and notifies you to download the updated library. NOTE: SCCM Admin Console is a prerequisite. ",
+	"publisher": "Microsoft Corporation",
+	"tags": ["Windows"
+	, "SysAdmin"
+	],
+	"iconUri": "https://ruckzuck.azurewebsites.net/wcf/GetIcon.ashx?Id=494122",
+	"targetOsType": "Windows",
+	"runCommand": { "commandToExecute": "SystemCenterConfigurationManagerCmdletLibrary_setup.exe" }
+}
