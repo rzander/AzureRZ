@@ -10,14 +10,14 @@ Tested with the base Image: "SQL Server 2014 SP1 Standard on Windows Server 2012
 
 ### Domain Join:
 If ther Server is not Domain-Joined, the Artifact will create a "contoso.com" Domain on the target Server and reboot.
-For Workgroup Servers: **you have to assign this Artifact twice !**
+For Workgroup Servers: **you have to assign this Artifact twice !** The first time to create and join the Domain and the second time to install ConfigMgr.
 
 ### Input Parameters:
 The Artifact contains two Parameters:
 - SCCM Site Code (3-Digit)
 - SCCM Site Name
 
-If you leave these Parameters blank, it will use the Site-Code "TST" and Site Name "Test Site"
+If you leave these Parameters blank, it will use the Site-Code "TST" and Site Name "Test Site".
 
 
 ###Installation Steps
@@ -42,4 +42,4 @@ If Domain-Joined:
 ```
 
 ###Duration:
-End-to-End setup on a single core Machine with 4GB Memory took less than 2hours.
+End-to-End setup on a single core Machine with 4GB Memory took a bit more than one hour...
