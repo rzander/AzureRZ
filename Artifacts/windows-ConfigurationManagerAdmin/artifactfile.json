@@ -1,0 +1,11 @@
+{
+	"title": "Configuration Manager Admin",
+	"description": "Grant DomainAdmin rights in SCCM",
+	"publisher": "Roger Zander",
+	"tags": ["Windows", "SysAdmin"],
+	"iconUri": "https://ruckzuck.azurewebsites.net/wcf/GetIcon.ashx?Id=509715",
+	"targetOsType": "Windows",
+    "runCommand": {
+        "commandToExecute": "powershell.exe -ExecutionPolicy bypass -File SetAdmin.ps1"
+	}
+}
