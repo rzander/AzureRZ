@@ -122,5 +122,6 @@ if((gwmi win32_computersystem).partofdomain -eq $false)
     & ".\SCCMCliCtr_setup.exe"
     & ".\RuckZuck4SCCM_setup.exe"
     & ".\SCUP_setup.exe"
+    & ".\RightClickTools_setup.exe"
 
  }
