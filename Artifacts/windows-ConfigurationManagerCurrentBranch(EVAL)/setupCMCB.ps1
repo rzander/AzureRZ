@@ -55,6 +55,12 @@ Install-ADDSForest -CreateDnsDelegation:$false `
     '[HierarchyExpansionOption]' | out-file -filepath C:\sccmsetup.ini -append 
 }
 
+    #Set SQL to run as LocalSystem
+    $service = gwmi win32_service -filter "name='MSSQLSERVER'"
+    $service.Change($null, $null, $null, $null, $null, $null, "LocalSystem", $null, $null, $null, $null)
+    Stop-Service 'MSSQLSERVER' -Force
+    Start-Service 'MSSQLSERVER'
+
     cd $($PSScriptRoot)
     #Copy-Item .\sccmsetup.ini c:\ -Force
     #& ".\MSSQLServer2016_setup.exe"
