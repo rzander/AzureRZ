@@ -5,11 +5,13 @@ Param(
 
 cd $($PSScriptRoot)
 
+#Check if System is Domain-Joined
 if((gwmi win32_computersystem).partofdomain -eq $false)
 {
-Install-windowsfeature AD-domain-services
-Import-Module ADDSDeployment
-Install-ADDSForest -CreateDnsDelegation:$false `
+    #Create new Domain
+    Install-windowsfeature AD-domain-services
+    Import-Module ADDSDeployment
+    Install-ADDSForest -CreateDnsDelegation:$false `
  -DatabasePath "C:\Windows\NTDS" `
  -DomainMode "Win2012R2" `
  -DomainName "contoso.com" `
@@ -21,10 +23,9 @@ Install-ADDSForest -CreateDnsDelegation:$false `
  -SysvolPath "C:\Windows\SYSVOL" `
  -Force:$true `
  -SafeModeAdministratorPassword (ConvertTo-SecureString 'P@ssw0rd' –AsPlainText –Force)
-
- #restart-computer -Force
  } else  {
 
+ #Check if an unattend File already exists; otherwise create a new one...
  if(!(Test-Path c:\sccmsetup.ini))
 {
     $hostname = [System.Net.Dns]::GetHostByName(($env:computerName)).Hostname;
@@ -58,9 +59,10 @@ Install-ADDSForest -CreateDnsDelegation:$false `
 }
 
     #Add LocalSystem as SysAdmin
+    #GITHUB Link : https://github.com/codykonior/HackSql
+    
     . .\InvokeTokenManipulation.ps1
 
-    #GITHUB Link : https://github.com/codykonior/HackSql
     $userName = [System.Security.Principal.WindowsIdentity]::GetCurrent().Name
 
     $services = Get-Service | Where { ($_.Name -eq 'MSSQLSERVER' -or $_.Name -like 'MSSQL$*') -and $_.Status -eq "Running" }
@@ -101,13 +103,11 @@ Install-ADDSForest -CreateDnsDelegation:$false `
     Start-Service 'MSSQLSERVER'
 
     #Copy-Item .\sccmsetup.ini c:\ -Force
-    #& ".\MSSQLServer2016_setup.exe"
     & ".\ADK10_setup.exe"
     & ".\CMCB_setup.exe"
     & ".\SCCMCmdletLibrary_setup.exe"
 
     #Add Domain Admins as Full Admins
-    #Import SCCM PowerShell Module
     import-module (Join-Path $(Split-Path $env:SMS_ADMIN_UI_PATH) ConfigurationManager.psd1)  
     new-psdrive -Name $SiteCode -PSProvider "AdminUI.PS.Provider\CMSite" -Root "localhost"
     cd ((Get-PSDrive -PSProvider CMSite).Name + ':')
@@ -121,6 +121,5 @@ Install-ADDSForest -CreateDnsDelegation:$false `
     & ".\SCCMCliCtr_setup.exe"
     & ".\RuckZuck4SCCM_setup.exe"
     & ".\SCUP_setup.exe"
-    #& ".\NET_setup.exe"
-    #& ".\CMSupportCenter_setup.exe"
+
  }
