@@ -108,7 +108,8 @@ if((gwmi win32_computersystem).partofdomain -eq $false)
     & ".\SCCMCmdletLibrary_setup.exe"
 
     #Add Domain Admins as Full Admins
-    import-module (Join-Path $(Split-Path $env:SMS_ADMIN_UI_PATH) ConfigurationManager.psd1)  
+    #import-module (Join-Path $(Split-Path $env:SMS_ADMIN_UI_PATH) ConfigurationManager.psd1) 
+    import-module ("C:\Microsoft Configuration Manager\AdminConsole\bin\ConfigurationManager.psd1")   
     new-psdrive -Name $SiteCode -PSProvider "AdminUI.PS.Provider\CMSite" -Root "localhost"
     cd ((Get-PSDrive -PSProvider CMSite).Name + ':')
     
