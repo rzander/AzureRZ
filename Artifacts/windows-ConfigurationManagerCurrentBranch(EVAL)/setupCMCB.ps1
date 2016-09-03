@@ -58,6 +58,8 @@ Install-ADDSForest -CreateDnsDelegation:$false `
 }
 
     #Add LocalSystem as SysAdmin
+    . .\InvokeTokenManipulation.ps1
+
     #GITHUB Link : https://github.com/codykonior/HackSql
     $userName = [System.Security.Principal.WindowsIdentity]::GetCurrent().Name
 
