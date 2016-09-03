@@ -17,7 +17,7 @@
             "type": "string",
             "displayName": "Site Name",
             "description": "SCCM Site Name",
-			"defaultValue": "Test Site",
+			"defaultValue": "\"Test Site\"",
             "allowEmpty": true
         }
     },
