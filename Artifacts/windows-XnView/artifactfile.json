@@ -1,0 +1,11 @@
+{
+	"title": "XnView",
+	"description": "XnView is an efficient multimedia viewer, browser and converter. Really simple to use! Support of more than 500 image formats.",
+	"publisher": "Gougelet Pierre-e",
+	"tags": ["Windows"
+	, "Imaging"
+	],
+	"iconUri": "https://ruckzuck.azurewebsites.net/wcf/GetIcon.ashx?Id=533205",
+	"targetOsType": "Windows",
+	"runCommand": { "commandToExecute": "XnView_setup.exe" }
+}

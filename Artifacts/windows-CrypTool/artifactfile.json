@@ -1,0 +1,11 @@
+{
+	"title": "CrypTool",
+	"description": "CrypTool 2 (CT2) is an open-source program offering an innovative visual programming GUI to experiment with cryptographic procedures and to animate their cascades.",
+	"publisher": "University of Kassel (Applied Information Security Group)",
+	"tags": ["Windows"
+	, "Education"
+	],
+	"iconUri": "https://ruckzuck.azurewebsites.net/wcf/GetIcon.ashx?Id=94499",
+	"targetOsType": "Windows",
+	"runCommand": { "commandToExecute": "CrypTool_setup.exe" }
+}

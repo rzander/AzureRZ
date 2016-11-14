@@ -1,0 +1,11 @@
+{
+	"title": "Teams",
+	"description": "Microsoft Teams is the chat-based workspace in Office 365 that integrates all the people, content, and tools your team needs to be more engaged and effective.",
+	"publisher": "Microsoft Corporation",
+	"tags": ["Windows"
+	, "Other"
+	],
+	"iconUri": "https://ruckzuck.azurewebsites.net/wcf/GetIcon.ashx?Id=528920",
+	"targetOsType": "Windows",
+	"runCommand": { "commandToExecute": "Teams_setup.exe" }
+}

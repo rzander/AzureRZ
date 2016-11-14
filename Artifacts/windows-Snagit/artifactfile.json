@@ -1,0 +1,11 @@
+{
+	"title": "Snagit",
+	"description": "No matter what you're working on, Snagit helps you capture great looking images and videos with just a few clicks. Easily customize your screen captures with effects, or show off what's important with Snagit's markup tools. You can also create quick videos by recording your screen.",
+	"publisher": "TechSmith Corporation",
+	"tags": ["Windows"
+	, "Imaging"
+	],
+	"iconUri": "https://ruckzuck.azurewebsites.net/wcf/GetIcon.ashx?Id=526744",
+	"targetOsType": "Windows",
+	"runCommand": { "commandToExecute": "Snagit_setup.exe" }
+}
