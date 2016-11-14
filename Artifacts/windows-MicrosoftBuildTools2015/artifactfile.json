@@ -1,0 +1,11 @@
+{
+	"title": "Microsoft Build Tools 2015",
+	"description": "Microsoft Build Tools 2015 provides the essential tools for building managed applications. ",
+	"publisher": "Microsoft Corporation",
+	"tags": ["Windows"
+	, "Development"
+	],
+	"iconUri": "https://ruckzuck.azurewebsites.net/wcf/GetIcon.ashx?Id=333995",
+	"targetOsType": "Windows",
+	"runCommand": { "commandToExecute": "MicrosoftBuildTools2015_setup.exe" }
+}

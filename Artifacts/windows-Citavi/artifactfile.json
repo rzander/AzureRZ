@@ -1,0 +1,11 @@
+{
+	"title": "Citavi",
+	"description": "Citavi's core features are reference management, knowledge organization, and task planning. An online search feature lets the user search databases and catalogs from within the program",
+	"publisher": "Swiss Academic Software",
+	"tags": ["Windows"
+	, "Education"
+	],
+	"iconUri": "https://ruckzuck.azurewebsites.net/wcf/GetIcon.ashx?Id=526446",
+	"targetOsType": "Windows",
+	"runCommand": { "commandToExecute": "Citavi_setup.exe" }
+}

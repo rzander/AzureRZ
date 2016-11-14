@@ -1,0 +1,11 @@
+{
+	"title": "Postman",
+	"description": "Modern software is built on APIs. Postman helps you develop APIs faster. Save requests and organize your APIs into Collections. The API library for your team Onboard developers to your API in seconds",
+	"publisher": "Postman",
+	"tags": ["Windows"
+	, "Other"
+	],
+	"iconUri": "https://ruckzuck.azurewebsites.net/wcf/GetIcon.ashx?Id=533932",
+	"targetOsType": "Windows",
+	"runCommand": { "commandToExecute": "Postman_setup.exe" }
+}

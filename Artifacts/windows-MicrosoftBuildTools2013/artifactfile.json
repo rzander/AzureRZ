@@ -1,0 +1,11 @@
+{
+	"title": "Microsoft Build Tools 2013",
+	"description": "Build Tools 2013 provides the essential tools for building managed applications. ",
+	"publisher": "Microsoft Corporation",
+	"tags": ["Windows"
+	, "Development"
+	],
+	"iconUri": "https://ruckzuck.azurewebsites.net/wcf/GetIcon.ashx?Id=427982",
+	"targetOsType": "Windows",
+	"runCommand": { "commandToExecute": "MicrosoftBuildTools2013_setup.exe" }
+}

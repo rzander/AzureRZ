@@ -1,0 +1,11 @@
+{
+	"title": "Microsoft Azure Information Protection",
+	"description": "Microsoft Azure Information Protection helps you classify and label data in your organization at the time of creation, as well as apply protection, based on encryption and usage rights for sensitive data. Labels, and protection are persistent, traveling with the data throughout its lifecycle, so that it's detectable and controlled at all times - regardless of where it's stored or with whom it's shared - internally or externally.",
+	"publisher": "Microsoft Corporation",
+	"tags": ["Windows"
+	, "Security"
+	],
+	"iconUri": "https://ruckzuck.azurewebsites.net/wcf/GetIcon.ashx?Id=527242",
+	"targetOsType": "Windows",
+	"runCommand": { "commandToExecute": "MicrosoftAzureInformationProtection_setup.exe" }
+}

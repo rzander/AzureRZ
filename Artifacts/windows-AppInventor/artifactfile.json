@@ -1,0 +1,11 @@
+{
+	"title": "AppInventor",
+	"description": "MIT App Inventor is an innovative beginner's introduction to programming and app creation that transforms the complex language of text-based coding into visual, drag-and-drop building blocks. The simple graphical interface grants even an inexperienced novice the ability to create a basic, fully functional app within an hour or less.",
+	"publisher": "Massachusetts Institute of Technology",
+	"tags": ["Windows"
+	, "Development"
+	],
+	"iconUri": "https://ruckzuck.azurewebsites.net/wcf/GetIcon.ashx?Id=177253",
+	"targetOsType": "Windows",
+	"runCommand": { "commandToExecute": "AppInventor_setup.exe" }
+}
